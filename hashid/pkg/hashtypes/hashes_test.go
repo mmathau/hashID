@@ -203,6 +203,13 @@ var tests = []testCases{
 		},
 		want: "BLAKE2b-512($pass.$salt)",
 	},
+	{
+		name: "BLAKE2b512SaltPass",
+		hashes: []string{
+			"$BLAKE2$f0325fdfc3f82a014935442f7adbc069d4636d67276a85b09f8de368f122cf5195a0b780d7fee709fbf1dcd02ddcb581df84508cf1fb0f3393af1be0565491c6:3301",
+		},
+		want: "BLAKE2b-512($salt.$pass)",
+	},
 }
 
 func TestMain(m *testing.M) {

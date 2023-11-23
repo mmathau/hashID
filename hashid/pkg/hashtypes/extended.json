@@ -30,6 +30,12 @@
     "name": "BLAKE2b-512($pass.$salt)"
   },
   {
+    "regex": "^\\$blake2\\$[a-f0-9]{128}(:.+)?$",
+    "john": null,
+    "hashcat": "620",
+    "name": "BLAKE2b-512($salt.$pass)"
+  },
+  {
     "regex": "^[a-f0-9]{16}:[0-9]{16}$",
     "john": null,
     "hashcat": "14000",
