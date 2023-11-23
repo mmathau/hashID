@@ -29,7 +29,7 @@ var rootCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		hashid, err := hashtypes.New()
 		if err != nil {
-			cmd.PrintErr(fmt.Errorf("error initializing hashtypes: %w", err))
+			cmd.PrintErrln(fmt.Errorf("error initializing hashtypes: %w", err))
 			return
 		}
 		// trim possible whitespace
@@ -39,7 +39,7 @@ var rootCmd = &cobra.Command{
 		matches := hashid.FindHashType(s)
 		if len(matches) == 0 {
 			// exit early if no match was found
-			cmd.PrintErr("[-] Unknown Hash\n")
+			cmd.PrintErrln("[-] Unknown Hash")
 			return
 		}
 

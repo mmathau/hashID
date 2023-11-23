@@ -30,7 +30,7 @@ var fileCmd = &cobra.Command{
 
 		filePath, err := filepath.Abs(filepath.Clean(args[0]))
 		if err != nil {
-			cmd.PrintErr(fmt.Errorf("error getting absolute path: %w", err))
+			cmd.PrintErrln(fmt.Errorf("error getting absolute path: %w", err))
 			return
 		}
 		file, err := os.Open(filePath)
