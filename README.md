@@ -6,15 +6,13 @@ It is able to identify a single hash or parse a file and identify the hashes wit
 hashID is also capable of including the corresponding [hashcat](https://hashcat.net/hashcat/) mode and/or [JohnTheRipper](https://www.openwall.com/john/) format in its output.  
 **Note:** When identifying a hash on *nix operating systems use single quotes to prevent interpolation.
 
-## Install
-
-TODO
-
 ## Usage
 
-TODO
+```shell
+hashid [options] <hash|file>
+```
 
-## Example
+### Example
 
 ```cmd
 $ hashid '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
