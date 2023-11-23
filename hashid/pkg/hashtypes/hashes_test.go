@@ -415,6 +415,125 @@ var tests = []testCases{
 		},
 		want: "Crypt16",
 	},
+	{
+		name: "DNSSECNSEC3",
+		hashes: []string{
+			"7b5n74kq8r441blc2c5qbbat19baj79r:.lvdsiqfj.net:33164473:1",
+		},
+		want: "DNSSEC (NSEC3)",
+	},
+	{
+		name: "DPAPIMasterkeyFilev1LocalContext",
+		hashes: []string{
+			"$DPAPImk$1*1*S-15-21-466364039-425773974-453930460-1925*des3*sha1*24000*b038489dee5ad04e3e3cab4d957258b5*208*cb9b5b7d96a0d2a00305ca403d3fd9c47c561e35b4b2cf3aebfd1d3199a6481d56972be7ebd6c291b199e6f1c2ffaee91978706737e9b1209e6c7d3aa3d8c3c3e38ad1ccfa39400d62c2415961c17fd0bd6b0f7bbd49cc1de1a394e64b7237f56244238da8d37d78",
+		},
+		want: "DPAPI masterkey file v1 + local context",
+	},
+	{
+		name: "DPAPIMasterkeyFilev1Context3",
+		hashes: []string{
+			"$DPAPImk$1*3*S-15-21-407415836-404165111-436049749-1915*des3*sha1*14825*3e86e7d8437c4d5582ff668a83632cb2*208*96ad763b59e67c9f5c3d925e42bbe28a1412b919d1dc4abf03b2bed4c5c244056c14931d94d441117529b7171dfd6ebbe6eecf5d958b65574c293778fbadb892351cc59d5c65d65d2fcda73f5b056548a4a5550106d03d0c39d3cca7e5cdc0d521f48ac9e51cecc5",
+		},
+		want: "DPAPI masterkey file v1 (context 3)",
+	},
+	{
+		name: "DPAPIMasterkeyFilev2ActiveDirectoryDomainContext",
+		hashes: []string{
+			"$DPAPImk$2*2*S-15-21-423929668-478423897-489523715-1834*aes256*sha512*8000*740866e4105c77f800f02d367dd96699*288*ebc2907e16245dfe6c902ad4be70a079e62204c8a947498455056d150e6babb3c90b1616a8dff0e390dd26dda1978dffcbd7b9d7d1ea5c6d3e4df36db4d977051ec01fd6f0882a597c51834cb86445cad50c716f48b37cfd24339d8b43da771526fb01376798251edaa868fa2b1fa85c4142864b899987d4bbdc87b53433ed945fa4ab49c7f9d4d01df3ae19f25013b2",
+		},
+		want: "DPAPI masterkey file v2 + Active Directory domain context",
+	},
+	{
+		name: "DahuaAuthenticationMD5",
+		hashes: []string{
+			"GRuHbyVp",
+		},
+		want: "Dahua Authentication MD5",
+	},
+	{
+		name: "DjangoDESCryptWrapper",
+		hashes: []string{
+			"crypt$cd1a4$cdlRbNJGImptk",
+		},
+		want: "Django (DES Crypt Wrapper)",
+	},
+	{
+		name: "DjangoMD5",
+		hashes: []string{
+			"md5$be7b1$4e9c5b51bd070727b0ed21956cb68de7",
+		},
+		want: "Django (MD5)",
+	},
+	{
+		name: "DjangoPBKDF2HMACSHA1",
+		hashes: []string{
+			"pbkdf2_sha1$60000$VK7NMb1gBMQJ$5frCW3jgMceSkjJgNdAq4LxOg0s=",
+		},
+		want: "Django (PBKDF2-HMAC-SHA1)",
+	},
+	{
+		name: "DjangoPBKDF2SHA256",
+		hashes: []string{
+			"pbkdf2_sha256$20000$H0dPx8NeajVu$GiC4k5kqbbR9qWBlsRgDywNqC2vd9kqfk7zdorEnNas=",
+		},
+		want: "Django (PBKDF2-SHA256)",
+	},
+	{
+		name: "DjangoSHA1",
+		hashes: []string{
+			"sha1$fe76b$02d5916550edf7fc8c886f044887f4b1abf9b013",
+		},
+		want: "Django (SHA-1)",
+	},
+	{
+		name: "DjangoSHA256",
+		hashes: []string{
+			"sha256$12345678$9171fc5e7cd440fac61adc27cbebb78ff028a19a1abeaa041807a5ea936fbd94",
+		},
+		want: "Django (SHA-256)",
+	},
+	{
+		name: "DjangoSHA384",
+		hashes: []string{
+			"sha384$12345678$fe014d8b5dc1733a9727330fb8b4695f82c7e833382a27c513b258f46f29ababb9d9963ddaa13db306b2bbd1459b95e6",
+		},
+		want: "Django (SHA-384)",
+	},
+	{
+		name: "Djangobcrypt",
+		hashes: []string{
+			"bcrypt$2a$05$LhayLxezLhK1LhWvKxCyLOj0j1u.Kj0jZ0pEmm134uzrQlFvQJLF6",
+		},
+		want: "Django (bcrypt)",
+	},
+	{
+		name: "DjangobcryptSHA256",
+		hashes: []string{
+			"bcrypt_sha256$$2a$12$KQV0bIQYx798IUJmJFjm7.IKJoxrZSiAVKDLWCcLFBFF.gdcCVuz6",
+		},
+		want: "Django (bcrypt-SHA256)",
+	},
+	{
+		name: "DomainCachedCredentialsDCCMSCache",
+		hashes: []string{
+			"4dd8965d1d476fa0d026722989a6b772:3060147285011",
+		},
+		want: "Domain Cached Credentials (DCC), MS Cache",
+	},
+	{
+		name: "DomainCachedCredentials2DCC2MSCache2",
+		hashes: []string{
+			"$DCC2$10240#tom#e4e938d12fe5974dc42a90120bd9c90f",
+		},
+		want: "Domain Cached Credentials 2 (DCC2), MS Cache 2",
+	},
+	{
+		name: "Drupal7",
+		hashes: []string{
+			"$S$C33783772bRXEx1aCsvY.dqgaaSu76XmVlKrW9Qu8IQlvxHlmzLf",
+		},
+		want: "Drupal7",
+	},
 }
 
 func TestMain(m *testing.M) {
