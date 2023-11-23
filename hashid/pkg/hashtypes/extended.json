@@ -24,6 +24,12 @@
     "name": "AES-256-ECB NOKDF (PT = $salt, key = $pass)"
   },
   {
+    "regex": "^\\$blake2\\$[a-f0-9]{128}(:.+)?$",
+    "john": null,
+    "hashcat": "610",
+    "name": "BLAKE2b-512($pass.$salt)"
+  },
+  {
     "regex": "^[a-f0-9]{16}:[0-9]{16}$",
     "john": null,
     "hashcat": "14000",
