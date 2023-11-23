@@ -1,242 +1,242 @@
 [
-	{
-		"regex": "^0x[a-f0-9]{60}\\s0x[a-f0-9]{40}$",
-		"john": null,
-		"hashcat": "123",
-		"name": "EPi"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": "haval-128-4",
-		"hashcat": null,
-		"name": "Haval-128"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Haval-160"
-	},
-	{
-		"regex": "^[a-f0-9]{48}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Haval-192"
-	},
-	{
-		"regex": "^[a-f0-9]{56}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Haval-224"
-	},
-	{
-		"regex": "^[a-f0-9]{64}(:.+)?$",
-		"john": "haval-256-3",
-		"hashcat": null,
-		"name": "Haval-256"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": "raw-sha1-linkedin",
-		"hashcat": "190",
-		"name": "LinkedIn"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": "lotus5",
-		"hashcat": "8600",
-		"name": "Lotus Notes/Domino 5"
-	},
-	{
-		"regex": "^(\\$md2\\$)?[a-f0-9]{32}$",
-		"john": "md2",
-		"hashcat": null,
-		"name": "MD2"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": "raw-md4",
-		"hashcat": "900",
-		"name": "MD4"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "MangosWeb Enhanced CMS"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": "13900",
-		"name": "OpenCart"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": null,
-		"hashcat": "11000",
-		"name": "PrestaShop"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": "4522",
-		"name": "PunBB"
-	},
-	{
-		"regex": "^[a-f0-9]{40}:[a-f0-9]{0,32}$",
-		"john": null,
-		"hashcat": "4521",
-		"name": "Redmine"
-	},
-	{
-		"regex": "^[a-f0-9]{128}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Salsa10"
-	},
-	{
-		"regex": "^[a-f0-9]{128}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Salsa20"
-	},
-	{
-		"regex": "^[a-f0-9]{256}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-1024"
-	},
-	{
-		"regex": "^[a-f0-9]{96}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-1024(384)"
-	},
-	{
-		"regex": "^[a-f0-9]{128}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-1024(512)"
-	},
-	{
-		"regex": "^[a-f0-9]{64}(:.+)?$",
-		"john": "skein-256",
-		"hashcat": null,
-		"name": "Skein-256"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-256(128)"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-256(160)"
-	},
-	{
-		"regex": "^[a-f0-9]{56}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-256(224)"
-	},
-	{
-		"regex": "^[a-f0-9]{128}(:.+)?$",
-		"john": "skein-512",
-		"hashcat": null,
-		"name": "Skein-512"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-512(128)"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-512(160)"
-	},
-	{
-		"regex": "^[a-f0-9]{56}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-512(224)"
-	},
-	{
-		"regex": "^[a-f0-9]{64}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-512(256)"
-	},
-	{
-		"regex": "^[a-f0-9]{96}$",
-		"john": null,
-		"hashcat": null,
-		"name": "Skein-512(384)"
-	},
-	{
-		"regex": "^(\\$snefru\\$)?[a-f0-9]{32}$",
-		"john": "snefru-128",
-		"hashcat": null,
-		"name": "Snefru-128"
-	},
-	{
-		"regex": "^(\\$snefru\\$)?[a-f0-9]{64}$",
-		"john": "snefru-256",
-		"hashcat": null,
-		"name": "Snefru-256"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": null,
-		"hashcat": "24",
-		"name": "SolarWinds Serv-U"
-	},
-	{
-		"regex": "^(\\$md5,rounds=[0-9]+\\$|\\$md5\\$rounds=[0-9]+\\$|\\$md5\\$)[a-z0-9/.]{0,16}(\\$|\\$\\$)[a-z0-9/.]{22}$",
-		"john": "sunmd5",
-		"hashcat": "3300",
-		"name": "Sun MD5 Crypt"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Tiger-128"
-	},
-	{
-		"regex": "^[a-f0-9]{40}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Tiger-160"
-	},
-	{
-		"regex": "^[a-f0-9]{48}$",
-		"john": "tiger",
-		"hashcat": null,
-		"name": "Tiger-192"
-	},
-	{
-		"regex": "^[a-f0-9]{64}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "Ventrilo"
-	},
-	{
-		"regex": "^[a-f0-9]{32}:[a-f0-9]{32}$",
-		"john": null,
-		"hashcat": "3721",
-		"name": "WebEdition CMS"
-	},
-	{
-		"regex": "^[a-f0-9]{32}(:.+)?$",
-		"john": null,
-		"hashcat": null,
-		"name": "ZipMonster"
-	}
+  {
+    "regex": "^0x[a-f0-9]{60}\\s0x[a-f0-9]{40}$",
+    "john": null,
+    "hashcat": "123",
+    "name": "EPi"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": "haval-128-4",
+    "hashcat": null,
+    "name": "Haval-128"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Haval-160"
+  },
+  {
+    "regex": "^[a-f0-9]{48}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Haval-192"
+  },
+  {
+    "regex": "^[a-f0-9]{56}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Haval-224"
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": "haval-256-3",
+    "hashcat": null,
+    "name": "Haval-256"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": "raw-sha1-linkedin",
+    "hashcat": "190",
+    "name": "LinkedIn"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": "lotus5",
+    "hashcat": "8600",
+    "name": "Lotus Notes/Domino 5"
+  },
+  {
+    "regex": "^(\\$md2\\$)?[a-f0-9]{32}$",
+    "john": "md2",
+    "hashcat": null,
+    "name": "MD2"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": "raw-md4",
+    "hashcat": "900",
+    "name": "MD4"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "MangosWeb Enhanced CMS"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "13900",
+    "name": "OpenCart"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "11000",
+    "name": "PrestaShop"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4522",
+    "name": "PunBB"
+  },
+  {
+    "regex": "^[a-f0-9]{40}:[a-f0-9]{0,32}$",
+    "john": null,
+    "hashcat": "4521",
+    "name": "Redmine"
+  },
+  {
+    "regex": "^[a-f0-9]{128}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Salsa10"
+  },
+  {
+    "regex": "^[a-f0-9]{128}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Salsa20"
+  },
+  {
+    "regex": "^[a-f0-9]{256}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-1024"
+  },
+  {
+    "regex": "^[a-f0-9]{96}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-1024(384)"
+  },
+  {
+    "regex": "^[a-f0-9]{128}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-1024(512)"
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": "skein-256",
+    "hashcat": null,
+    "name": "Skein-256"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-256(128)"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-256(160)"
+  },
+  {
+    "regex": "^[a-f0-9]{56}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-256(224)"
+  },
+  {
+    "regex": "^[a-f0-9]{128}(:.+)?$",
+    "john": "skein-512",
+    "hashcat": null,
+    "name": "Skein-512"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-512(128)"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-512(160)"
+  },
+  {
+    "regex": "^[a-f0-9]{56}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-512(224)"
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-512(256)"
+  },
+  {
+    "regex": "^[a-f0-9]{96}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Skein-512(384)"
+  },
+  {
+    "regex": "^(\\$snefru\\$)?[a-f0-9]{32}$",
+    "john": "snefru-128",
+    "hashcat": null,
+    "name": "Snefru-128"
+  },
+  {
+    "regex": "^(\\$snefru\\$)?[a-f0-9]{64}$",
+    "john": "snefru-256",
+    "hashcat": null,
+    "name": "Snefru-256"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "24",
+    "name": "SolarWinds Serv-U"
+  },
+  {
+    "regex": "^(\\$md5,rounds=[0-9]+\\$|\\$md5\\$rounds=[0-9]+\\$|\\$md5\\$)[a-z0-9/.]{0,16}(\\$|\\$\\$)[a-z0-9/.]{22}$",
+    "john": "sunmd5",
+    "hashcat": "3300",
+    "name": "Sun MD5 Crypt"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Tiger-128"
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Tiger-160"
+  },
+  {
+    "regex": "^[a-f0-9]{48}$",
+    "john": "tiger",
+    "hashcat": null,
+    "name": "Tiger-192"
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "Ventrilo"
+  },
+  {
+    "regex": "^[a-f0-9]{32}:[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "3721",
+    "name": "WebEdition CMS"
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "ZipMonster"
+  }
 ]
