@@ -39,7 +39,7 @@ Analyzing '$2a$08$VPzNKPAY60FsAbnq.c.h5.XTCZtC1z.j3hnlDFGImN9FcpfR1QnLq'
 
 ## Resources
 
-- [http://pythonhosted.org/passlib/index.html](http://pythonhosted.org/passlib/index.html)
+- [https://passlib.readthedocs.io/en/stable/index.html](https://passlib.readthedocs.io/en/stable/index.html)
 - [http://openwall.info/wiki/john](http://openwall.info/wiki/john)
 - [http://openwall.info/wiki/john/sample-hashes](http://openwall.info/wiki/john/sample-hashes)
 - [http://hashcat.net/wiki/doku.php?id=example_hashes](http://hashcat.net/wiki/doku.php?id=example_hashes)
