@@ -19,9 +19,8 @@ TODO
 ```cmd
 $ hashid '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 Analyzing '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
-[+] Wordpress ≥ v2.6.2
-[+] Joomla ≥ v2.5.18
 [+] PHPass' Portable Hash
+[+] phpass, WordPress (MD5), Joomla (MD5)
 
 $ hashid -mj '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
 Analyzing '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
@@ -30,12 +29,13 @@ Analyzing '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
 $ hashid file hashes.txt
 --File 'hashes.txt'--
 Analyzing '*85ADE5DDF71E348162894C71D73324C043838751'
-[+] MySQL5.x
-[+] MySQL4.1
+[+] MySQL4.1/MySQL5
 Analyzing '$2a$08$VPzNKPAY60FsAbnq.c.h5.XTCZtC1z.j3hnlDFGImN9FcpfR1QnLq'
-[+] Blowfish(OpenBSD)
-[+] Woltlab Burning Board 4.x
+[+] WBB4 (Woltlab Burning Board)
 [+] bcrypt
+[+] bcrypt $2*$, Blowfish (Unix)
+[+] bcrypt(md5($pass)) / bcryptmd5
+[+] bcrypt(sha1($pass)) / bcryptsha1
 --End of file 'hashes.txt'--
 ```
 
