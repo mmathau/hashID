@@ -1,4 +1,4 @@
-.PHONY: clean vendor upgrade-dependencies build run
+.PHONY: clean vendor upgrade-dependencies build test run
 
 BINARY_NAME=hashID
 
@@ -10,6 +10,9 @@ vendor:
 
 upgrade-dependencies:
 	cd hashid && go get -u && go mod tidy
+
+test:
+	cd hashid && go test -v ./...
 
 build:
 	cd hashid && go build -o bin/${BINARY_NAME} main.go
