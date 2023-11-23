@@ -210,6 +210,48 @@ var tests = []testCases{
 		},
 		want: "BLAKE2b-512($salt.$pass)",
 	},
+	{
+		name: "BSDiCryptExtendedDES",
+		hashes: []string{
+			"_9G..8147mpcfKT8g0U.",
+		},
+		want: "BSDi Crypt, Extended DES",
+	},
+	{
+		name: "BestCryptv3VolumeEncryption",
+		hashes: []string{
+			"$bcve$3$08$234b8182cee7098b$35c12ef76a1e88175c4c222da3558310a0075bc7a06ecf46746d149c02a81fb8a97637d1103d2e13ddd5deaf982889594b18c12d7ca18a54875c5da4a47f90ae615ab94b8e3ed9e3c793d872a1b5ac35cfdb66c221d6d0853e9ff2e0f4435b43",
+		},
+		want: "BestCrypt v3 Volume Encryption",
+	},
+	{
+		name: "BitLocker",
+		hashes: []string{
+			"$bitlocker$1$16$6f972989ddc209f1eccf07313a7266a2$1048576$12$3a33a8eaff5e6f81d907b591$60$316b0f6d4cb445fb056f0e3e0633c413526ff4481bbf588917b70a4e8f8075f5ceb45958a800b42cb7ff9b7f5e17c6145bf8561ea86f52d3592059fb",
+		},
+		want: "BitLocker",
+	},
+	{
+		name: "BitSharesv0XSHA512",
+		hashes: []string{
+			"caec04bdf7c17f763a9ec7439f7c9abda112f1bfc9b1bb684fef9b6142636979b9896cfc236896d821a69a961a143dd19c96d59777258201f1bbe5ecc2a2ecf5",
+		},
+		want: "BitShares v0.x - sha512(sha512_bin(pass))",
+	},
+	{
+		name: "BitcoinLitecoinWalletDat",
+		hashes: []string{
+			"$bitcoin$96$d011a1b6a8d675b7a36d0cd2efaca32a9f8dc1d57d6d01a58399ea04e703e8bbb44899039326f7a00f171a7bbc854a54$16$1563277210780230$158555$96$628835426818227243334570448571536352510740823233055715845322741625407685873076027233865346542174$66$625882875480513751851333441623702852811440775888122046360561760525",
+		},
+		want: "Bitcoin/Litecoin wallet.dat",
+	},
+	{
+		name: "Bitwarden",
+		hashes: []string{
+			"$bitwarden$2*100000*2*bm9yZXBseUBoYXNoY2F0Lm5ldA==*+v5rHxYydSRUDlan+4pSoiYQwAgEhdmivlb+exQX+fg=",
+		},
+		want: "Bitwarden",
+	},
 }
 
 func TestMain(m *testing.M) {

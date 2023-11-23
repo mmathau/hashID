@@ -186,7 +186,7 @@
     "name": "Bitcoin/Litecoin wallet.dat"
   },
   {
-    "regex": "^\\$bitwarden\\$[0-9]\\*[0-9]+\\*[a-z0-9/+=]+\\*[a-z0-9/+=]+$",
+    "regex": "^\\$bitwarden\\$[0-9]\\*[0-9]+\\*[0-9]\\*[a-z0-9/+=]+\\*[a-z0-9/+=]+$",
     "john": null,
     "hashcat": "23400",
     "name": "Bitwarden"
