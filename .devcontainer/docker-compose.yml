@@ -5,4 +5,8 @@ services:
     container_name: hashID-dev
     volumes:
       - ..:/workspace:cached
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
     command: sleep infinity
