@@ -642,12 +642,6 @@
     "name": "IKE-PSK SHA1"
   },
   {
-    "regex": "^[a-f0-9]{32}:.{5}$",
-    "john": null,
-    "hashcat": "2811",
-    "name": "IP.Board >= v2+"
-  },
-  {
     "regex": "^[a-f0-9]{130}(:[a-f0-9]{40})?$",
     "john": null,
     "hashcat": "7300",
