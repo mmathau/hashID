@@ -273,7 +273,7 @@
     "regex": "^[a-f0-9]{112}$",
     "john": null,
     "hashcat": null,
-    "name": "Cisco VPN Client(PCF-File)"
+    "name": "Cisco VPN Client (PCF-File)"
   },
   {
     "regex": "^[a-z0-9/.]{16}([:$].+)?$",
