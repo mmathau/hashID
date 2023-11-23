@@ -92,9 +92,9 @@ func (h *hashType) Extended() bool {
 
 func (h *Hashes) FindHashType(hash string) []hashType {
 	var found []hashType
-	for _, hashType := range h.types {
-		if hashType.regex.MatchString(hash) {
-			found = append(found, hashType)
+	for _, ht := range h.types {
+		if ht.regex.MatchString(hash) {
+			found = append(found, ht)
 		}
 	}
 
