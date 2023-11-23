@@ -336,12 +336,6 @@
     "name": "Crypt16"
   },
   {
-    "regex": "^[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": "3100",
-    "name": "DES(Oracle)"
-  },
-  {
     "regex": "^[a-z0-9]{32}(:([a-z0-9-]+\\.)?[a-z0-9-.]+\\.[a-z]{2,7}:.+:[0-9]+)?$",
     "john": null,
     "hashcat": "8300",
@@ -352,6 +346,12 @@
     "john": null,
     "hashcat": "15300",
     "name": "DPAPI masterkey file v1 + local context"
+  },
+  {
+    "regex": "^\\$dpapimk\\$1\\*3\\*.+\\*[a-f0-9]{208}$",
+    "john": null,
+    "hashcat": "15310",
+    "name": "DPAPI masterkey file v1 (context 3)"
   },
   {
     "regex": "^\\$dpapimk\\$2\\*2\\*.+\\*aes256\\*sha512\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
