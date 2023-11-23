@@ -252,6 +252,169 @@ var tests = []testCases{
 		},
 		want: "Bitwarden",
 	},
+	{
+		name: "BlockchainMyWallet",
+		hashes: []string{
+			"$blockchain$288$5420055827231730710301348670802335e45a6f5f631113cb1148a6e96ce645ac69881625a115fd35256636d0908217182f89bdd53256a764e3552d3bfe68624f4f89bb6de60687ff1ebb3cbf4e253ee3bea0fe9d12d6e8325ddc48cc924666dc017024101b7dfb96f1f45cfcf642c45c83228fe656b2f88897ced2984860bf322c6a89616f6ea5800aadc4b293ddd46940b3171a40e0cca86f66f0d4a487aa3a1beb82569740d3bc90bc1cb6b4a11bc6f0e058432cc193cb6f41e60959d03a84e90f38e54ba106fb7e2bfe58ce39e0397231f7c53a4ed4fd8d2e886de75d2475cc8fdc30bf07843ed6e3513e218e0bb75c04649f053a115267098251fd0079272ec023162505725cc681d8be12507c2d3e1c9520674c68428df1739944b8ac",
+		},
+		want: "Blockchain, My Wallet",
+	},
+	{
+		name: "BlockchainMyWalletV2",
+		hashes: []string{
+			"$blockchain$v2$5000$288$06063152445005516247820607861028813ccf6dcc5793dc0c7a82dcd604c5c3e8d91bea9531e628c2027c56328380c87356f86ae88968f179c366da9f0f11b09492cea4f4d591493a06b2ba9647faee437c2f2c0caaec9ec795026af51bfa68fc713eaac522431da8045cc6199695556fc2918ceaaabbe096f48876f81ddbbc20bec9209c6c7bc06f24097a0e9a656047ea0f90a2a2f28adfb349a9cd13852a452741e2a607dae0733851a19a670513bcf8f2070f30b115f8bcb56be2625e15139f2a357cf49d72b1c81c18b24c7485ad8af1e1a8db0dc04d906935d7475e1d3757aba32428fdc135fee63f40b16a5ea701766026066fb9fb17166a53aa2b1b5c10b65bfe685dce6962442ece2b526890bcecdeadffbac95c3e3ad32ba57c9e",
+		},
+		want: "Blockchain, My Wallet V2",
+	},
+	{
+		name: "CRAMMD5Dovecot",
+		hashes: []string{
+			"{CRAM-MD5}5389b33b9725e5657cb631dc50017ff1535ce4e2a1c414009126506fc4327d0d",
+		},
+		want: "CRAM-MD5 Dovecot",
+	},
+	{
+		name: "CRC16",
+		hashes: []string{
+			"c301",
+		},
+		want: "CRC16",
+	},
+	{
+		name: "CRC16CCITT",
+		hashes: []string{
+			"d309",
+		},
+		want: "CRC16-CCITT",
+	},
+	{
+		name: "CRC24",
+		hashes: []string{
+			"1108c0",
+		},
+		want: "CRC24",
+	},
+	{
+		name: "CRC32",
+		hashes: []string{
+			"3099922c",
+			"c762de4a:00000000",
+		},
+		want: "CRC32",
+	},
+	{
+		name: "CRC32B",
+		hashes: []string{
+			"3099922c",
+		},
+		want: "CRC32B",
+	},
+	{
+		name: "CRC32C",
+		hashes: []string{
+			"3099922c",
+			"c762de4a:00000000",
+		},
+		want: "CRC32C",
+	},
+	{
+		name: "CRC64",
+		hashes: []string{
+			"07022f35f1bd9d09",
+		},
+		want: "CRC64",
+	},
+	{
+		name: "CRC64Jones",
+		hashes: []string{
+			"65c1f848fe38cce6:4260950400318054",
+		},
+		want: "CRC64Jones",
+	},
+	{
+		name: "ChaCha20",
+		hashes: []string{
+			"$chacha20$*0400000000000003*16*0200000000000001*5152535455565758*6b05fe554b0bc3b3",
+		},
+		want: "ChaCha20",
+	},
+	{
+		name: "CiscoVPNClientPCFFile",
+		hashes: []string{
+			"071B15CA6E98F1D339D9B25BE350DAAB9A1C5E0B6499850B610E631FCBFB79A91E4E8FDFF813E064DCECFE6A5233998DC58C9DB8099435DE",
+		},
+		want: "Cisco VPN Client (PCF-File)",
+	},
+	{
+		name: "CiscoASAMD5",
+		hashes: []string{
+			"02dMBMYkTdC5Ziyp:36",
+		},
+		want: "Cisco-ASA MD5",
+	},
+	{
+		name: "CiscoIOS$8$PBKDF2SHA256",
+		hashes: []string{
+			"$8$TnGX/fE4KGHOVU$pEhnEvxrvaynpi8j4f.EMHr6M.FzU8xnZnBr/tJdFWk",
+		},
+		want: "Cisco-IOS $8$ (PBKDF2-SHA256)",
+	},
+	{
+		name: "CiscoIOS$9$scrypt",
+		hashes: []string{
+			"$9$2MJBozw/9R3UsU$2lFhcKvpghcyw8deP25GOfyZaagyUOGBymkryvOdfo6",
+		},
+		want: "Cisco-IOS $9$ (scrypt)",
+	},
+	{
+		name: "CiscoIOStype4SHA256",
+		hashes: []string{
+			"2btjjy78REtmYkkW0csHUbJZOstRXoWdX1mGrmmfeHI",
+		},
+		want: "Cisco-IOS type 4 (SHA256)",
+	},
+	{
+		name: "CiscoPIXMD5",
+		hashes: []string{
+			"dRRVnUmUHXOTt9nk",
+		},
+		want: "Cisco-PIX MD5",
+	},
+	{
+		name: "CitrixNetScalerSHA1",
+		hashes: []string{
+			"1765058016a22f1b4e076dccd1c3df4e8e5c0839ccded98ea",
+		},
+		want: "Citrix NetScaler (SHA1)",
+	},
+	{
+		name: "CitrixNetScalerSHA512",
+		hashes: []string{
+			"2f9282ade42ce148175dc3b4d8b5916dae5211eee49886c3f7cc768f6b9f2eb982a5ac2f2672a0223999bfd15349093278adf12f6276e8b61dacf5572b3f93d0b4fa886ce",
+		},
+		want: "Citrix NetScaler (SHA512)",
+	},
+	{
+		name: "ClavisterSecureGateway",
+		hashes: []string{
+			"crypt1:fnd+8xl+U1E=:Wc30H8MPgAc=",
+		},
+		want: "Clavister Secure Gateway",
+	},
+	{
+		name: "ColdFusion10",
+		hashes: []string{
+			"aee9edab5653f509c4c63e559a5e967b4c112273bc6bd84525e630a3f9028dcb:5136256866783777334574783782810410706883233321141647265340462733",
+		},
+		want: "ColdFusion 10+",
+	},
+	{
+		name: "Crypt16",
+		hashes: []string{
+			"aaX/UmCcBrceQ0kQGGWKTbuE",
+		},
+		want: "Crypt16",
+	},
 }
 
 func TestMain(m *testing.M) {
