@@ -4054,5 +4054,13 @@
     "name": "VeraCrypt Streebog-512 + XTS 1536 bit + boot-mode",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$keepass\\$\\*[0-9]\\*[0-9]+\\*[0-9]\\*[a-f0-9]{64}\\*[a-f0-9]{64}\\*[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "29700",
+    "name": "KeePass 1 (AES/Twofish) and KeePass 2 (AES) - keyfile only mode",
+    "exotic": false,
+    "extended": false
   }
 ]
