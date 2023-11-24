@@ -3167,6 +3167,13 @@ var tests = []testCases{
 		},
 		want: "DPAPI masterkey file v2 (context 3)",
 	},
+	{
+		name: "BlockchainMyWalletSecondPasswordSHA256",
+		hashes: []string{
+			"YnM6WYERjJfhxwepT7zV6odWoEUz1X4esYQb4bQ3KZ7bbZAyOTc1MDM3OTc1NjMyODA0ECcAAD3vFoc=",
+		},
+		want: "Blockchain, My Wallet, Second Password (SHA256)",
+	},
 }
 
 func TestMain(m *testing.M) {

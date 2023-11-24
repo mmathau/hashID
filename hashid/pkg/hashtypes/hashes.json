@@ -3606,5 +3606,13 @@
     "name": "DPAPI masterkey file v2 (context 3)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-z0-9]+(=|==)?$",
+    "john": null,
+    "hashcat": "18800",
+    "name": "Blockchain, My Wallet, Second Password (SHA256)",
+    "exotic": false,
+    "extended": false
   }
 ]
