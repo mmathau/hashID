@@ -3330,22 +3330,6 @@
   {
     "regex": "^[a-f0-9]{40}(:.+)?$",
     "john": null,
-    "hashcat": "4710",
-    "name": "sha1(md5($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4710",
-    "name": "sha1(md5($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
     "hashcat": "21100",
     "name": "sha1(md5($pass.$salt))",
     "exotic": false,
