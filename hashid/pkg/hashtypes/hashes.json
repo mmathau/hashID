@@ -1584,11 +1584,11 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{32}:.{8}$",
+    "regex": "^[a-f0-9]{32}(:.+)?$",
     "john": null,
     "hashcat": "2811",
     "name": "MyBB 1.2+, IPB2+ (Invision Power Board)",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
