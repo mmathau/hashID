@@ -3378,14 +3378,6 @@
   {
     "regex": "^[a-f0-9]{40}(:.+)?$",
     "john": null,
-    "hashcat": "170",
-    "name": "sha1(utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
     "hashcat": "130",
     "name": "sha1(utf16le($pass).$salt)",
     "exotic": false,
