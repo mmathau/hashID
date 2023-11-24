@@ -3202,6 +3202,13 @@ var tests = []testCases{
 		},
 		want: "Exodus Desktop Wallet (scrypt)",
 	},
+	{
+		name: "Teamspeak3ChannelHash",
+		hashes: []string{
+			"$teamspeak$3$E0aV0IQ29EDyxRfkFoQflUGJ6zo=$mRgDUkNpd0IwUEcTJQBmE0NHYwdDEhFzQ0VgMRcFJUIRYnaHBwNXRZJwk2ZUaURzdXkVYiUROERmI0hYYGFYCDiIJCeIU3N5EhRVcZFnSIRCJlkUFkY4YFMDcheYeTl4RYZEdpKGJYhxAIQJEYGYEA==",
+		},
+		want: "Teamspeak 3 (channel hash)",
+	},
 }
 
 func TestMain(m *testing.M) {

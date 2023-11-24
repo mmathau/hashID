@@ -3646,5 +3646,13 @@
     "name": "Exodus Desktop Wallet (scrypt)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$teamspeak\\$3\\$[a-z0-9+=]+\\$[a-z0-9+=]+$",
+    "john": null,
+    "hashcat": "28300",
+    "name": "Teamspeak 3 (channel hash)",
+    "exotic": false,
+    "extended": false
   }
 ]
