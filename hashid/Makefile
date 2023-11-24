@@ -4,7 +4,7 @@ BINARY_NAME=hashID
 
 clean:
 	go clean
-	rm bin/${BINARY_NAME}
+	rm -f bin/${BINARY_NAME}
 
 vendor:
 	go mod vendor
