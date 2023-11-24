@@ -29,6 +29,13 @@ var tests = []testCases{
 		want: "1Password(Cloud Keychain)",
 	},
 	{
+		name: "3DESPT$SaltKey$Pass)",
+		hashes: []string{
+			"37387ff8d8dafe15:8152001061460743",
+		},
+		want: "3DES (PT = $salt, key = $pass)",
+	},
+	{
 		name: "7Zip",
 		hashes: []string{
 			"$7z$0$19$0$salt$8$f6196259a7326e3f0000000000000000$185065650$112$98$f3bc2a88062c419a25acd40c0c2d75421cf23263f69c51b13f9b1aada41a8a09f9adeae45d67c60b56aad338f20c0dcc5eb811c7a61128ee0746f922cdb9c59096869f341c7a9cb1ac7bb7d771f546b82cf4e6f11a5ecd4b61751e4d8de66dd6e2dfb5b7d1022d2211e2d66ea1703f96",
@@ -41,6 +48,27 @@ var tests = []testCases{
 			"$aescrypt$1*efc648908ca7ec727f37f3316dfd885c*eff5c87a35545406a57b56de57bd0554*3a66401271aec08cbd10cf2070332214093a33f36bd0dced4a4bb09fab817184*6a3c49fea0cafb19190dc4bdadb787e73b1df244c51780beef912598bd3bdf7e",
 		},
 		want: "AES Crypt (SHA256)",
+	},
+	{
+		name: "AES128ECBNOKDFPT$SaltKey$Pass)",
+		hashes: []string{
+			"e7a32f3210455cc044f26117c4612aab:86046627772965328523223752173724",
+		},
+		want: "AES-128-ECB NOKDF (PT = $salt, key = $pass)",
+	},
+	{
+		name: "AES192ECBNOKDFPT$SaltKey$Pass)",
+		hashes: []string{
+			"2995e91b798ef51232a91579edb1d176:49869364034411376791729962721320",
+		},
+		want: "AES-192-ECB NOKDF (PT = $salt, key = $pass)",
+	},
+	{
+		name: "AES256ECBNOKDFPT$SaltKey$Pass)",
+		hashes: []string{
+			"264a4248c9522cb74d33fe26cb596895:61270210011294880287232432636227",
+		},
+		want: "AES-256-ECB NOKDF (PT = $salt, key = $pass)",
 	},
 	{
 		name: "AIXSMD5",
@@ -267,6 +295,13 @@ var tests = []testCases{
 		want: "Blockchain, My Wallet V2",
 	},
 	{
+		name: "CRAMMD5",
+		hashes: []string{
+			"$cram_md5$PG5vLXJlcGx5QGhhc2hjYXQubmV0Pg==$dXNlciA0NGVhZmQyMmZlNzY2NzBmNmIyODc5MDgxYTdmNWY3MQ==",
+		},
+		want: "CRAM-MD5",
+	},
+	{
 		name: "CRAMMD5Dovecot",
 		hashes: []string{
 			"{CRAM-MD5}5389b33b9725e5657cb631dc50017ff1535ce4e2a1c414009126506fc4327d0d",
@@ -416,6 +451,13 @@ var tests = []testCases{
 		want: "Crypt16",
 	},
 	{
+		name: "DESPT$SaltKey$Pass)",
+		hashes: []string{
+			"a28bc61d44bb815c:1172075784504605",
+		},
+		want: "DES (PT = $salt, key = $pass)",
+	},
+	{
 		name: "DNSSECNSEC3",
 		hashes: []string{
 			"7b5n74kq8r441blc2c5qbbat19baj79r:.lvdsiqfj.net:33164473:1",
@@ -540,6 +582,13 @@ var tests = []testCases{
 			"00067894",
 		},
 		want: "ELF-32",
+	},
+	{
+		name: "EPi",
+		hashes: []string{
+			"0x326C6D7B4E4F794B79474E36704F35723958397163735263516265456E31 0xAFC55E260B8F45C0C6512BCE776C1AD8312B56E6",
+		},
+		want: "EPi",
 	},
 	{
 		name: "EggdropIRCBot",
@@ -752,11 +801,137 @@ var tests = []testCases{
 		want: "HAS-160",
 	},
 	{
+		name: "HMACMD5Key$Pass",
+		hashes: []string{
+			"fc741db0a2968c39d9c2a5cc75b05370:1234",
+		},
+		want: "HMAC-MD5 (key = $pass)",
+	},
+	{
+		name: "HMACMD5Key$Salt",
+		hashes: []string{
+			"bfd280436f45fa38eaacac3b00518f29:1234",
+		},
+		want: "HMAC-MD5 (key = $salt)",
+	},
+	{
+		name: "HMACSHA1Key$Pass",
+		hashes: []string{
+			"c898896f3f70f61bc3fb19bef222aa860e5ea717:1234",
+		},
+		want: "HMAC-SHA1 (key = $pass)",
+	},
+	{
+		name: "HMACSHA1Key$Salt",
+		hashes: []string{
+			"d89c92b4400b15c39e462a8caa939ab40c3aeeea:1234",
+		},
+		want: "HMAC-SHA1 (key = $salt)",
+	},
+	{
+		name: "HMACSHA256Key$Pass",
+		hashes: []string{
+			"abaf88d66bf2334a4a8b207cc61a96fb46c3e38e882e6f6f886742f688b8588c:1234",
+		},
+		want: "HMAC-SHA256 (key = $pass)",
+	},
+	{
+		name: "HMACSHA256Key$Salt",
+		hashes: []string{
+			"8efbef4cec28f228fa948daaf4893ac3638fbae81358ff9020be1d7a9a509fc6:1234",
+		},
+		want: "HMAC-SHA256 (key = $salt)",
+	},
+	{
+		name: "HMACSHA512Key$Pass",
+		hashes: []string{
+			"94cb9e31137913665dbea7b058e10be5f050cc356062a2c9679ed0ad6119648e7be620e9d4e1199220cd02b9efb2b1c78234fa1000c728f82bf9f14ed82c1976:1234",
+		},
+		want: "HMAC-SHA512 (key = $pass)",
+	},
+	{
+		name: "HMACSHA512Key$Salt",
+		hashes: []string{
+			"7cce966f5503e292a51381f238d071971ad5442488f340f98e379b3aeae2f33778e3e732fcc2f7bdc04f3d460eebf6f8cb77da32df25500c09160dd3bf7d2a6b:1234",
+		},
+		want: "HMAC-SHA512 (key = $salt)",
+	},
+	{
+		name: "HMACStreebog256Key$PassBigEndian",
+		hashes: []string{
+			"0f71c7c82700c9094ca95eee3d804cc283b538bec49428a9ef8da7b34effb3ba:08151337",
+		},
+		want: "HMAC-Streebog-256 (key = $pass), big-endian",
+	},
+	{
+		name: "HMACStreebog256Key$SaltBigEndian",
+		hashes: []string{
+			"d5c6b874338a492ac57ddc6871afc3c70dcfd264185a69d84cf839a07ef92b2c:08151337",
+		},
+		want: "HMAC-Streebog-256 (key = $salt), big-endian",
+	},
+	{
+		name: "HMACStreebog512Key$PassBigEndian",
+		hashes: []string{
+			"be4555415af4a05078dcf260bb3c0a35948135df3dbf93f7c8b80574ceb0d71ea4312127f839b7707bf39ccc932d9e7cb799671183455889e8dde3738dfab5b6:08151337",
+		},
+		want: "HMAC-Streebog-512 (key = $pass), big-endian",
+	},
+	{
+		name: "HMACStreebog512Key$SaltBigEndian",
+		hashes: []string{
+			"bebf6831b3f9f958acb345a88cb98f30cb0374cff13e6012818487c8dc8d5857f23bca2caed280195ad558b8ce393503e632e901e8d1eb2ccb349a544ac195fd:08151337",
+		},
+		want: "HMAC-Streebog-512 (key = $salt), big-endian",
+	},
+	{
 		name: "HalfMD5",
 		hashes: []string{
 			"8743b52063cd8409",
 		},
 		want: "Half MD5",
+	},
+	{
+		name: "Haval128",
+		hashes: []string{
+			"c68f39913f901f3ddf44c707357a7d70",
+		},
+		want: "Haval-128",
+	},
+	{
+		name: "Haval160",
+		hashes: []string{
+			"d353c3ae22a25401d257643836d7231a9a95f953",
+		},
+		want: "Haval-160",
+	},
+	{
+		name: "Haval192",
+		hashes: []string{
+			"e9c48d7903eaf2a91c5b350151efcb175c0fc82de2289a4e",
+		},
+		want: "Haval-192",
+	},
+	{
+		name: "Haval224",
+		hashes: []string{
+			"c5aae9d47bffcaaf84a8c6e7ccacd60a0dd1932be7b1a192b9214b6d",
+		},
+		want: "Haval-224",
+	},
+	{
+		name: "Haval256",
+		hashes: []string{
+			"4f6938531f0bc8991f62da7bbd6f7de3fad44562b8c6f4ebf146d5b4e46f7c17",
+		},
+		want: "Haval-256",
+	},
+	{
+		name: "HuaweiSHA1MD5$Pass$Salt",
+		hashes: []string{
+			"53c724b7f34f09787ed3f1b316215fc35c789504:hashcat1",
+		},
+		want: "Huawei sha1(md5($pass).$salt)",
 	},
 	{
 		name: "IKEPSKMD5",
