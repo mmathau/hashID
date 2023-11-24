@@ -3226,9 +3226,16 @@ var tests = []testCases{
 	{
 		name: "BitcoinWIFPrivateKeyP2PKHUncompressed",
 		hashes: []string{
-			"1Jv6EonXm9x4Dw4QjEPAhGfmzFxTL7b3Zj",
+			"1L9nr4GX4Zmd7gDL1UT75QPUqxSgNTvdHb",
 		},
 		want: "Bitcoin WIF private key (P2PKH), uncompressed",
+	},
+	{
+		name: "BitcoinWIFPrivateKeyP2WPKHBech32Compressed",
+		hashes: []string{
+			"bc1qxd76a5zamfyw0g2d2rxkdh0zt9m0uzmxmwjf0q",
+		},
+		want: "Bitcoin WIF private key (P2WPKH, Bech32), compressed",
 	},
 }
 
