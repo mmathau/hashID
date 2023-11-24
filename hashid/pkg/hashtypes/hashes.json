@@ -2496,7 +2496,7 @@
     "extended": false
   },
   {
-    "regex": "^\\$siemens-s7\\$[0-9]\\$[a-f0-9]{40}\\$[a-f0-9]{40}$",
+    "regex": "^\\$siemens-s7\\$\\$[0-9]\\$[a-f0-9]{40}\\$[a-f0-9]{40}$",
     "john": "siemens-s7",
     "hashcat": null,
     "name": "Siemens-S7",
