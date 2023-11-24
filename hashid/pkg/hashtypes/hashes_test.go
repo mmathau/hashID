@@ -3686,6 +3686,13 @@ var tests = []testCases{
 		},
 		want: "BLAKE2s-256",
 	},
+	{
+		name: "SM3",
+		hashes: []string{
+			"51227e48ea74827b77fc142c3ec21d25cc42c794e6ac422825cd47ad4ac7913d",
+		},
+		want: "SM3",
+	},
 }
 
 func TestMain(m *testing.M) {

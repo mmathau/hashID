@@ -4198,5 +4198,13 @@
     "name": "BLAKE2s-256",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "31100",
+    "name": "SM3",
+    "exotic": false,
+    "extended": false
   }
 ]
