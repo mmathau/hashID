@@ -3587,6 +3587,13 @@ var tests = []testCases{
 		},
 		want: "ENCsecurity Datavault (PBKDF2/keychain)",
 	},
+	{
+		name: "ENCsecurityDatavaultMD5NoKeychain",
+		hashes: []string{
+			"$encdv$1$1$3a427b9ee5851118$4f52176bb9a1b3b6",
+		},
+		want: "ENCsecurity Datavault (MD5/no keychain)",
+	},
 }
 
 func TestMain(m *testing.M) {
