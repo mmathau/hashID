@@ -1616,7 +1616,7 @@
     "extended": false
   },
   {
-    "regex": "^\\*[a-f0-9]{40}$",
+    "regex": "^(\\*)?[a-f0-9]{40}$",
     "john": "mysql-sha1",
     "hashcat": "300",
     "name": "MySQL4.1/MySQL5",
