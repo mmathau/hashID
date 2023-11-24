@@ -3209,6 +3209,13 @@ var tests = []testCases{
 		},
 		want: "Teamspeak 3 (channel hash)",
 	},
+	{
+		name: "bcryptsha512$Passbcryptsha512",
+		hashes: []string{
+			"$2a$12$KhivLhCuLhSyMBOxLxCyLu78x4z2X/EJdZNfS3Gy36fvRt56P2jbS",
+		},
+		want: "bcrypt(sha512($pass)) / bcryptsha512",
+	},
 }
 
 func TestMain(m *testing.M) {

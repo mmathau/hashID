@@ -3654,5 +3654,13 @@
     "name": "Teamspeak 3 (channel hash)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": "28400",
+    "name": "bcrypt(sha512($pass)) / bcryptsha512",
+    "exotic": false,
+    "extended": true
   }
 ]
