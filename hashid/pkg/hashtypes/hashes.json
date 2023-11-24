@@ -1968,7 +1968,7 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{32}$(:.+)?$",
+    "regex": "^[a-f0-9]{32}(:.+)?$",
     "john": null,
     "hashcat": "12",
     "name": "PostgreSQL",
