@@ -3628,8 +3628,8 @@
     "john": null,
     "hashcat": "24800",
     "name": "Umbraco HMAC-SHA1",
-    "exotic": false,
-    "extended": true
+    "exotic": true,
+    "extended": false
   },
   {
     "regex": "^\\$metamask-short\\$[a-z0-9+=]+\\$[a-z0-9+=]+\\$[a-z0-9+/=]+$",
