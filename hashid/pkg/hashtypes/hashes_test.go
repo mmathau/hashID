@@ -3139,6 +3139,13 @@ var tests = []testCases{
 		},
 		want: "vBulletin >= v3.8.5",
 	},
+	{
+		name: "DahuaNVRDVRHVRmd5$Salt1strtouppermd5$Salt2$Pass",
+		hashes: []string{
+			"0e1484eb061b8e9cfd81868bba1dc4a0:229381927:182719643",
+		},
+		want: "Dahua NVR/DVR/HVR (md5($salt1.strtoupper(md5($salt2.$pass))))",
+	},
 }
 
 func TestMain(m *testing.M) {
