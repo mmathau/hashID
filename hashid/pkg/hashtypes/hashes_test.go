@@ -3146,6 +3146,13 @@ var tests = []testCases{
 		},
 		want: "md5(sha1($pass).$salt)",
 	},
+	{
+		name: "HMACRIPEMD160Key=$Pass",
+		hashes: []string{
+			"4f5edca01734e03dd7e735362625a76e6bcb61b2:52355614946067",
+		},
+		want: "HMAC-RIPEMD160 (key = $pass)",
+	},
 }
 
 func TestMain(m *testing.M) {

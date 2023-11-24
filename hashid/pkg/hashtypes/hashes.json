@@ -3582,5 +3582,13 @@
     "name": "md5(sha1($pass).$salt)",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4410",
+    "name": "HMAC-RIPEMD160 (key = $pass)",
+    "exotic": false,
+    "extended": true
   }
 ]
