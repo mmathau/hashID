@@ -1948,7 +1948,7 @@
     "john": null,
     "hashcat": null,
     "name": "Palshop CMS",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
