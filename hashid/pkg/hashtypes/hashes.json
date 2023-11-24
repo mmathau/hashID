@@ -4190,5 +4190,13 @@
     "name": "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$blake2\\$[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "31000",
+    "name": "BLAKE2s-256",
+    "exotic": false,
+    "extended": false
   }
 ]

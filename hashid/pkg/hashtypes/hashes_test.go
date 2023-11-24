@@ -3679,6 +3679,13 @@ var tests = []testCases{
 		},
 		want: "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
 	},
+	{
+		name: "BLAKE2s256",
+		hashes: []string{
+			"$BLAKE2$2c719b484789ad5f6fc1739012182169b25484af156adc91d4f64f72400e574a",
+		},
+		want: "BLAKE2s-256",
+	},
 }
 
 func TestMain(m *testing.M) {
