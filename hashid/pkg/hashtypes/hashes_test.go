@@ -500,13 +500,6 @@ var tests = []testCases{
 		want: "Django (DES Crypt Wrapper)",
 	},
 	{
-		name: "DjangoMD5",
-		hashes: []string{
-			"md5$be7b1$4e9c5b51bd070727b0ed21956cb68de7",
-		},
-		want: "Django (MD5)",
-	},
-	{
 		name: "DjangoPBKDF2HMACSHA1",
 		hashes: []string{
 			"pbkdf2_sha1$60000$VK7NMb1gBMQJ$5frCW3jgMceSkjJgNdAq4LxOg0s=",
@@ -3600,6 +3593,14 @@ var tests = []testCases{
 			"$encdv$3$1$91b9babb3820c527$1ff4cb6657adad34$d9067c4d059879dfee2edeb3999871973d422ff5fa868c51b025d07f644187889dc5509ec75d4a120184d619d10d02b138d64ba82f9d0936162c9e64d97771de3e74d6e52e5ab9b900c25fb446e14cbe3ef1fa34328a13f9473c669f22d7020bc036d9e99194c959e4c5ba885d6f9ff9ccc2299d67b26e68b850a02363fb2646",
 		},
 		want: "ENCsecurity Datavault (MD5/keychain)",
+	},
+	{
+		name: "PythonWerkzeugSHA256HMACSHA256Key$Salt",
+		hashes: []string{
+			"md5$84143$7f51edecfa6fb401a0b5e63d33fc8c0e",
+			"md5$be7b1$4e9c5b51bd070727b0ed21956cb68de7",
+		},
+		want: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 	},
 }
 

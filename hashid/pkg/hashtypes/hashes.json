@@ -554,8 +554,8 @@
   {
     "regex": "^md5\\$[a-f0-9]+\\$[a-f0-9]{32}$",
     "john": null,
-    "hashcat": null,
-    "name": "Django (MD5)",
+    "hashcat": "30000",
+    "name": "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
     "exotic": false,
     "extended": false
   },
