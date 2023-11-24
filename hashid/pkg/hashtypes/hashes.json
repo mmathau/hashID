@@ -3710,5 +3710,13 @@
     "name": "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^scram-sha-256\\$4096:[a-z0-9+=]+\\$[a-z0-9+=]+:[a-z0-9+=]+$",
+    "john": null,
+    "hashcat": "28600",
+    "name": "PostgreSQL SCRAM-SHA-256",
+    "exotic": false,
+    "extended": false
   }
 ]

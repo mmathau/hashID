@@ -3258,6 +3258,13 @@ var tests = []testCases{
 		},
 		want: "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
 	},
+	{
+		name: "PostgreSQLSCRAMSHA256",
+		hashes: []string{
+			"SCRAM-SHA-256$4096:IKfxzJ8Nq4PkLJCfgKcPmA==$iRw3qwTp18uaBnsTOEExbtgWdKeBMbSSnZvqD4sdqLQ=:hPciC1CcnBna3szR8Mf3MVc8t0W7QPbIHoMMrh4zRV0=",
+		},
+		want: "PostgreSQL SCRAM-SHA-256",
+	},
 }
 
 func TestMain(m *testing.M) {
