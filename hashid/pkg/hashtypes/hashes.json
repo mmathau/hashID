@@ -3966,5 +3966,13 @@
     "name": "VeraCrypt SHA256 + XTS 512 bit",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29452",
+    "name": "VeraCrypt SHA256 + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
   }
 ]
