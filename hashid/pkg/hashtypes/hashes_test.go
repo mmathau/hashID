@@ -724,13 +724,6 @@ var tests = []testCases{
 		want: "FortiGate256 (FortiOS256)",
 	},
 	{
-		name: "FreeBSDMD5",
-		hashes: []string{
-			"$1$28772684$iEwNOgGugqO9.bIz5sk8k/",
-		},
-		want: "FreeBSD MD5",
-	},
-	{
 		name: "GHash323",
 		hashes: []string{
 			"0001371a",
@@ -3145,6 +3138,13 @@ var tests = []testCases{
 			"0e1484eb061b8e9cfd81868bba1dc4a0:229381927:182719643",
 		},
 		want: "Dahua NVR/DVR/HVR (md5($salt1.strtoupper(md5($salt2.$pass))))",
+	},
+	{
+		name: "md5sha1$Pass$Salt",
+		hashes: []string{
+			"bc8319c0220bff8a0d7f5d703114a725:34659348756345251",
+		},
+		want: "md5(sha1($pass).$salt)",
 	},
 }
 

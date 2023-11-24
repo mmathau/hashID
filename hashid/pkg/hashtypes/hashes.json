@@ -3574,5 +3574,13 @@
     "name": "Dahua NVR/DVR/HVR (md5($salt1.strtoupper(md5($salt2.$pass))))",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?",
+    "john": null,
+    "hashcat": "4410",
+    "name": "md5(sha1($pass).$salt)",
+    "exotic": false,
+    "extended": true
   }
 ]
