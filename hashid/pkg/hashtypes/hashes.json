@@ -3538,14 +3538,6 @@
   {
     "regex": "^[a-f0-9]{128}(:.+)?$",
     "john": null,
-    "hashcat": "1730",
-    "name": "sha512(unicode($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{128}(:.+)?$",
-    "john": null,
     "hashcat": "1770",
     "name": "sha512(utf16le($pass))",
     "exotic": false,
