@@ -3846,5 +3846,13 @@
     "name": "TrueCrypt RIPEMD160 + XTS 512 bit + boot-mode",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29342",
+    "name": "TrueCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
+    "exotic": false,
+    "extended": false
   }
 ]
