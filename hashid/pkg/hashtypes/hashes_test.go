@@ -2447,13 +2447,6 @@ var tests = []testCases{
 		want: "VNC",
 	},
 	{
-		name: "Ventrilo",
-		hashes: []string{
-			"1621a36cbd1ce49c5810c9b69468cc9c8eb16089cd7ed3493143f92c2d8064fe",
-		},
-		want: "Ventrilo",
-	},
-	{
 		name: "VirtualBoxPBKDF2HMACSHA256AES128XTS",
 		hashes: []string{
 			"$vbox$0$260000$fcc37189521686699a43e49514b91f159306be108b98895666583cd15c3e206b$8$288c3957db47e7c3dff2f7932121eb3395d21ab76b9cf3de2dc660310a25e7ad$20000$8847cd90f8acef74bae41155392908780eebb1d16452aa09b2f7b6cd7d8a4096$9f4d615b484f95c73944a98f392a3ce04f93403e8bb6257e6b6c854273d3a08a",
@@ -2564,13 +2557,6 @@ var tests = []testCases{
 			"00000004",
 		},
 		want: "XOR-32",
-	},
-	{
-		name: "ZipMonster",
-		hashes: []string{
-			"dfcbda4dad0d7600e2096ce4bf09c117",
-		},
-		want: "ZipMonster",
 	},
 	{
 		name: "bcrypt",

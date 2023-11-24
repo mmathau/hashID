@@ -2784,14 +2784,6 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": null,
-    "name": "Ventrilo",
-    "exotic": true,
-    "extended": false
-  },
-  {
     "regex": "^\\$vbox\\$[0-9]\\$[0-9]+\\$[a-f0-9]{64}\\$[0-9]\\$[a-f0-9]{64}\\$[0-9]+\\$[a-f0-9]{64}\\$[a-f0-9]{64}$",
     "john": null,
     "hashcat": "27500",
@@ -2917,14 +2909,6 @@
     "hashcat": null,
     "name": "XOR-32",
     "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": null,
-    "name": "ZipMonster",
-    "exotic": true,
     "extended": false
   },
   {
