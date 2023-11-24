@@ -3192,14 +3192,6 @@
     "extended": true
   },
   {
-    "regex": "^\\$apr1\\$[a-z0-9/.]{0,8}\\$[a-z0-9/.]{22}$",
-    "john": null,
-    "hashcat": "1600",
-    "name": "md5apr1",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^\\$1\\$[a-z0-9/.]{0,8}\\$[a-z0-9/.]{22}(:.*)?$",
     "john": "md5crypt",
     "hashcat": "500",
