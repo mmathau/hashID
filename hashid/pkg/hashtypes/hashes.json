@@ -1352,22 +1352,6 @@
     "extended": false
   },
   {
-    "regex": "^\\$apr1\\$[a-z0-9/.]{0,8}\\$[a-z0-9/.]{22}$",
-    "john": null,
-    "hashcat": "1600",
-    "name": "MD5(APR)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$chap\\$0\\*)?[a-f0-9]{32}[\\*:][a-f0-9]{32}(:[0-9]{2})?$",
-    "john": "chap",
-    "hashcat": "4800",
-    "name": "MD5(Chap)",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^\\$office\\$\\*2007\\*[0-9]{2}\\*[0-9]{3}\\*[0-9]{2}\\*[a-z0-9]{32}\\*[a-z0-9]{32}\\*[a-z0-9]{40}$",
     "john": "office",
     "hashcat": "9400",
