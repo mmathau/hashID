@@ -2852,6 +2852,293 @@ var tests = []testCases{
 		},
 		want: "scrypt",
 	},
+	{
+		name: "sha1$Pass$Salt",
+		hashes: []string{
+			"2fc5a684737ce1bf7b3b239df432416e0dd07357:2014",
+		},
+		want: "sha1($pass.$salt)",
+	},
+	{
+		name: "sha1$Salt$Pass",
+		hashes: []string{
+			"cac35ec206d868b7d7cb0b55f31d9425b075082b:5363620024",
+		},
+		want: "sha1($salt.$pass)",
+	},
+	{
+		name: "sha1$Salt$Pass$Salt",
+		hashes: []string{
+			"85087a691a55cbb41ae335d459a9121d54080b80:488387841",
+		},
+		want: "sha1($salt.$pass.$salt)",
+	},
+	{
+		name: "sha1$Saltsha1$Pass",
+		hashes: []string{
+			"a0f835fdf57d36ebd8d0399cc44e6c2b86a1072b:511358214352751667201107073531735211566650747315",
+		},
+		want: "sha1($salt.sha1($pass))",
+	},
+	{
+		name: "sha1$Saltsha1$Pass$Salt",
+		hashes: []string{
+			"94520b02c04e79e08a75a84c2a6e3ed4e3874fe8:ThisIsATestSalt",
+		},
+		want: "sha1($salt.sha1($pass.$salt))",
+	},
+	{
+		name: "sha1$Saltutf16le$Pass",
+		hashes: []string{
+			"5db61e4cd8776c7969cfd62456da639a4c87683a:8763434884872",
+		},
+		want: "sha1($salt.utf16le($pass))",
+	},
+	{
+		name: "sha1$Salt1$Pass$Salt2",
+		hashes: []string{
+			"630d2e918ab98e5fad9c61c0e4697654c4c16d73:18463812876898603420835420139870031762867:4449516425193605979760642927684590668549584534278112685644182848763890902699756869283142014018311837025441092624864168514500447147373198033271040848851687108629922695275682773136540885737874252666804716579965812709728589952868736177317883550827482248620334",
+		},
+		want: "sha1($salt1.$pass.$salt2)",
+	},
+	{
+		name: "sha1CX",
+		hashes: []string{
+			"fd9149fb3ae37085dc6ed1314449f449fbf77aba:87740665218240877702",
+		},
+		want: "sha1(CX)",
+	},
+	{
+		name: "sha1md5$Pass",
+		hashes: []string{
+			"92d85978d884eb1d99a51652b1139c8279fa8663",
+		},
+		want: "sha1(md5($pass))",
+	},
+	{
+		name: "sha1md5$Pass$Salt",
+		hashes: []string{
+			"53c724b7f34f09787ed3f1b316215fc35c789504:hashcat1",
+		},
+		want: "sha1(md5($pass).$salt)",
+	},
+	{
+		name: "sha1md5$Pass$Salt",
+		hashes: []string{
+			"aade80a61c6e3cd3cac614f47c1991e0a87dd028:6",
+		},
+		want: "sha1(md5($pass.$salt))",
+	},
+	{
+		name: "sha1md5md5$Pass",
+		hashes: []string{
+			"888a2ffcb3854fba0321110c5d0d434ad1aa2880",
+		},
+		want: "sha1(md5(md5($pass)))",
+	},
+	{
+		name: "sha1sha1$Pass",
+		hashes: []string{
+			"3db9184f5da4e463832b086211af8d2314919951",
+		},
+		want: "sha1(sha1($pass))",
+	},
+	{
+		name: "sha1sha1$Pass$Salt",
+		hashes: []string{
+			"9138d472fce6fe50e2a32da4eec4ecdc8860f4d5:hashcat1",
+		},
+		want: "sha1(sha1($pass).$salt)",
+	},
+	{
+		name: "sha1sha1$Salt$Pass$Salt",
+		hashes: []string{
+			"05ac0c544060af48f993f9c3cdf2fc03937ea35b:232725102020",
+		},
+		want: "sha1(sha1($salt.$pass.$salt))",
+	},
+	{
+		name: "sha1utf16le$Pass",
+		hashes: []string{
+			"b9798556b741befdbddcbf640d1dd59d19b1e193",
+		},
+		want: "sha1(utf16le($pass))",
+	},
+	{
+		name: "sha1utf16le$Pass$Salt",
+		hashes: []string{
+			"c57f6ac1b71f45a07dbd91a59fa47c23abcd87c2:631225",
+		},
+		want: "sha1(utf16le($pass).$salt)",
+	},
+	{
+		name: "sha256$Pass$Salt",
+		hashes: []string{
+			"c73d08de890479518ed60cf670d17faa26a4a71f995c1dcc978165399401a6c4:53743528",
+		},
+		want: "sha256($pass.$salt)",
+	},
+	{
+		name: "sha256$Salt$Pass",
+		hashes: []string{
+			"eb368a2dfd38b405f014118c7d9747fcc97f4f0ee75c05963cd9da6ee65ef498:560407001617",
+		},
+		want: "sha256($salt.$pass)",
+	},
+	{
+		name: "sha256$Salt$Pass$Salt",
+		hashes: []string{
+			"755a8ce4e0cf0baee41d714aa35c9fca803106608f718f973eab006578285007:11265",
+		},
+		want: "sha256($salt.$pass.$salt)",
+	},
+	{
+		name: "sha256$Saltsha256$Pass",
+		hashes: []string{
+			"bae9edada8358fcebcd811f7d362f46277fb9d488379869fba65d79701d48b8b:869dc2ed80187919",
+		},
+		want: "sha256($salt.sha256($pass))",
+	},
+	{
+		name: "sha256$Saltutf16le$Pass",
+		hashes: []string{
+			"a4bd99e1e0aba51814e81388badb23ecc560312c4324b2018ea76393ea1caca9:12345678",
+		},
+		want: "sha256($salt.utf16le($pass))",
+	},
+	{
+		name: "sha256md5$Pass",
+		hashes: []string{
+			"74ee1fae245edd6f27bf36efc3604942479fceefbadab5dc5c0b538c196eb0f1",
+		},
+		want: "sha256(md5($pass))",
+	},
+	{
+		name: "sha256sha256$Pass$Salt",
+		hashes: []string{
+			"bfede293ecf6539211a7305ea218b9f3f608953130405cda9eaba6fb6250f824:7218532375810603",
+		},
+		want: "sha256(sha256($pass).$salt)",
+	},
+	{
+		name: "sha256sha256bin$Pass",
+		hashes: []string{
+			"0cc1b58a543f372327aa0281e97ab56e345267ee46feabf7709515debb7ec43c",
+		},
+		want: "sha256(sha256_bin($pass))",
+	},
+	{
+		name: "sha256utf16le$Pass",
+		hashes: []string{
+			"9e9283e633f4a7a42d3abc93701155be8afe5660da24c8758e7d3533e2f2dc82",
+		},
+		want: "sha256(utf16le($pass))",
+	},
+	{
+		name: "sha256utf16le$Pass$Salt",
+		hashes: []string{
+			"4cc8eb60476c33edac52b5a7548c2c50ef0f9e31ce656c6f4b213f901bc87421:890128",
+		},
+		want: "sha256(utf16le($pass).$salt)",
+	},
+	{
+		name: "sha256crypt$5$SHA256Unix",
+		hashes: []string{
+			"$5$rounds=5000$GX7BopJZJxPc/KEK$le16UF8I2Anb.rOrn22AUPWvzUETDGefUmAV8AZkGcD",
+		},
+		want: "sha256crypt $5$, SHA256 (Unix)",
+	},
+	{
+		name: "sha384$Pass$Salt",
+		hashes: []string{
+			"ca1c843a7a336234baf9db2e10bc38824ce523402fbd7741286b1602bdf6cb869a45289bb9fb706bd404b9f3842ff729:2746460797049820734631508",
+		},
+		want: "sha384($pass.$salt)",
+	},
+	{
+		name: "sha384$Salt$Pass",
+		hashes: []string{
+			"63f63d7f82d4a4cb6b9ff37a6bc7c5ec39faaf9c9078551f5cbf7960e76ded87b643d37ac53c45bc544325e7ff83a1f2",
+		},
+		want: "sha384($salt.$pass)",
+	},
+	{
+		name: "sha384$Saltutf16le$Pass",
+		hashes: []string{
+			"316e93ea8e04de3e5a909c53d36923a31a16c1b9e89b44201d6082f87ca49c5bca53cad65f685207db3ea2ccc7ca40f8:700067651",
+		},
+		want: "sha384($salt.utf16le($pass))",
+	},
+	{
+		name: "sha384utf16le$Pass",
+		hashes: []string{
+			"48e61d68e93027fae35d405ed16cd01b6f1ae66267833b4a7aa1759e45bab9bba652da2e4c07c155a3d8cf1d81f3a7e8",
+		},
+		want: "sha384(utf16le($pass))",
+	},
+	{
+		name: "sha384utf16le$Pass$Salt",
+		hashes: []string{
+			"3516a589d2ed4071bf5e36f22e11212b3ad9050b9094b23067103d51e99dcb25c4dc397dba8034fed11a8184acfbb699:577730514588712",
+		},
+		want: "sha384(utf16le($pass).$salt)",
+	},
+	{
+		name: "sha512$Pass$Salt",
+		hashes: []string{
+			"e5c3ede3e49fb86592fb03f471c35ba13e8d89b8ab65142c9a8fdafb635fa2223c24e5558fd9313e8995019dcbec1fb584146b7bb12685c7765fc8c0d51379fd",
+		},
+		want: "sha512($pass.$salt)",
+	},
+	{
+		name: "sha512$Salt$Pass",
+		hashes: []string{
+			"976b451818634a1e2acba682da3fd6efa72adf8a7a08d7939550c244b237c72c7d42367544e826c0c83fe5c02f97c0373b6b1386cc794bf0d21d2df01bb9c08a:2613516180127",
+		},
+		want: "sha512($salt.$pass)",
+	},
+	{
+		name: "sha512$Saltutf16le$Pass",
+		hashes: []string{
+			"bae3a3358b3459c761a3ed40d34022f0609a02d90a0d7274610b16147e58ece00cd849a0bd5cf6a92ee5eb5687075b4e754324dfa70deca6993a85b2ca865bc8",
+		},
+		want: "sha512($salt.utf16le($pass))",
+	},
+	{
+		name: "sha512utf16le$Pass",
+		hashes: []string{
+			"79bba09eb9354412d0f2c037c22a777b8bf549ab12d49b77d5b25faa839e4378d8f6fa11aceb6d9413977ae5ad5d011568bad2de4f998d75fd4ce916eda83697",
+		},
+		want: "sha512(utf16le($pass))",
+	},
+	{
+		name: "sha512utf16le$Pass$Salt",
+		hashes: []string{
+			"13070359002b6fbb3d28e50fba55efcf3d7cc115fe6e3f6c98bf0e3210f1c6923427a1e1a3b214c1de92c467683f6466727ba3a51684022be5cc2ffcb78457d2",
+		},
+		want: "sha512(utf16le($pass).$salt)",
+	},
+	{
+		name: "sha512crypt$6$SHA512Unix",
+		hashes: []string{
+			"$6$52450745$k5ka2p8bFuSmoVT1tzOyyuaREkkKBcCNqoDKzYiJL9RaE8yMnPgh2XzzF0NDrUhgrcLwg78xs1w5pJiypEdFX/",
+		},
+		want: "sha512crypt $6$, SHA512 (Unix)",
+	},
+	{
+		name: "vBulletin<v385",
+		hashes: []string{
+			"16780ba78d2d5f02f3202901c1b6d975:568",
+		},
+		want: "vBulletin < v3.8.5",
+	},
+	{
+		name: "vBulletin>=v385",
+		hashes: []string{
+			"bf366348c53ddcfbd16e63edfdd1eee6:181264250056774603641874043270",
+		},
+		want: "vBulletin >= v3.8.5",
+	},
 }
 
 func TestMain(m *testing.M) {
