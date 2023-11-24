@@ -3742,5 +3742,13 @@
     "name": "Kerberos 5, etype 18, DB",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:[a-f0-9]{64}:[a-f0-9]{16})?$",
+    "john": null,
+    "hashcat": "29000",
+    "name": "sha1($salt.sha1(utf16le($username).':'.utf16le($pass)))",
+    "exotic": false,
+    "extended": true
   }
 ]
