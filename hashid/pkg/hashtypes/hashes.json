@@ -32,6 +32,14 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{8}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Adler-32",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$aescrypt\\$1\\*[a-f0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
     "john": null,
     "hashcat": "22400",
@@ -96,10 +104,10 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{8}$",
+    "regex": "^\\$aws-sig-v4\\$[0-9]\\$[0-9tz]+\\$[^$]+\\$[a-z0-9]{2}\\$[a-f0-9]{64}\\$[a-f0-9]{64}$",
     "john": null,
-    "hashcat": null,
-    "name": "Adler-32",
+    "hashcat": "28700",
+    "name": "Amazon AWS4-HMAC-SHA256",
     "exotic": false,
     "extended": false
   },
@@ -128,6 +136,14 @@
     "extended": false
   },
   {
+    "regex": "^sha256:[a-f0-9]{64}:[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "30700",
+    "name": "Anope IRC Services (enc_sha256)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$ansible\\$[0-9]\\*[0-9]\\*[a-f0-9]{64}\\*[a-f0-9]{32}\\*[a-f0-9]{64}$",
     "john": null,
     "hashcat": "16900",
@@ -152,6 +168,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$iwork\\$[0-9]\\$[0-9]\\$[0-9]\\$[0-9]+\\$[a-f0-9]{16}\\$[a-f0-9]{32}\\$[a-f0-9]{128}$",
+    "john": null,
+    "hashcat": "23300",
+    "name": "Apple iWork",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$keychain\\$\\*[a-f0-9]{40}\\*[a-f0-9]{16}\\*[a-f0-9]{96}$",
     "john": null,
     "hashcat": "23100",
@@ -164,14 +188,6 @@
     "john": null,
     "hashcat": "16200",
     "name": "Apple Secure Notes",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$iwork\\$[0-9]\\$[0-9]\\$[0-9]\\$[0-9]+\\$[a-f0-9]{16}\\$[a-f0-9]{32}\\$[a-f0-9]{128}$",
-    "john": null,
-    "hashcat": "23300",
-    "name": "Apple iWork",
     "exotic": false,
     "extended": false
   },
@@ -232,6 +248,206 @@
     "extended": false
   },
   {
+    "regex": "^(\\$2[abxy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": null,
+    "name": "bcrypt",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": "bcrypt",
+    "hashcat": "3200",
+    "name": "bcrypt $2*$, Blowfish (Unix)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": "25600",
+    "name": "bcrypt(md5($pass)) / bcryptmd5",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^\\$bcrypt-sha256\\$(2[axy]|2)\\,[0-9]+\\$[a-z0-9/.]{22}\\$[a-z0-9/.]{31}$",
+    "john": null,
+    "hashcat": null,
+    "name": "bcrypt(SHA-256)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": "25800",
+    "name": "bcrypt(sha1($pass)) / bcryptsha1",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^(\\$2[abxy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": "30600",
+    "name": "bcrypt(sha256($pass)) / bcryptsha256",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": "28400",
+    "name": "bcrypt(sha512($pass)) / bcryptsha512",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^\\$bcve\\$3\\$[0-9]+\\$[a-f0-9]{16}\\$[a-f0-9]{192}$",
+    "john": null,
+    "hashcat": "23900",
+    "name": "BestCrypt v3 Volume Encryption",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$bisq\\$[0-9]\\*[0-9]+\\*[0-9]\\*[0-9]\\*[a-f0-9]{16}\\*[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "29800",
+    "name": "Bisq .wallet (scrypt)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "30901",
+    "name": "Bitcoin raw private key (P2PKH), compressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "30902",
+    "name": "Bitcoin raw private key (P2PKH), uncompressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "30905",
+    "name": "Bitcoin raw private key (P2SH(P2WPKH)), compressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "30906",
+    "name": "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "30903",
+    "name": "Bitcoin raw private key (P2WPKH, Bech32), compressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "30904",
+    "name": "Bitcoin raw private key (P2WPKH, Bech32), uncompressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28501",
+    "name": "Bitcoin WIF private key (P2PKH), compressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28502",
+    "name": "Bitcoin WIF private key (P2PKH), uncompressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28505",
+    "name": "Bitcoin WIF private key (P2SH(P2WPKH)), compressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28506",
+    "name": "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28503",
+    "name": "Bitcoin WIF private key (P2WPKH, Bech32), compressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28504",
+    "name": "Bitcoin WIF private key (P2WPKH, Bech32), uncompressed",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$bitcoin\\$[0-9]{2}\\$[a-f0-9]{96}\\$[0-9]{2}\\$[0-9]{16}\\$[0-9]{6}\\$[0-9]{2}\\$[0-9]{96}\\$[0-9]{2}\\$[0-9]{66}$",
+    "john": null,
+    "hashcat": "11300",
+    "name": "Bitcoin/Litecoin wallet.dat",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$bitlocker\\$[0-9]\\S[0-9]{2}\\$[a-f0-9]{32}\\$[a-f0-9]+\\$[0-9]{2}\\$[a-f0-9]{24}\\$[0-9]{2}\\$[a-f0-9]{120}$",
+    "john": "bitlocker",
+    "hashcat": "22100",
+    "name": "BitLocker",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{128}$",
+    "john": null,
+    "hashcat": "21000",
+    "name": "BitShares v0.x - sha512(sha512_bin(pass))",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$bitwarden\\$[0-9]\\*[0-9]+\\*[0-9]\\*[a-z0-9/+=]+\\*[a-z0-9/+=]+$",
+    "john": null,
+    "hashcat": "23400",
+    "name": "Bitwarden",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$blake2\\$[a-f0-9]{128}$",
     "john": null,
     "hashcat": "600",
@@ -256,50 +472,10 @@
     "extended": true
   },
   {
-    "regex": "^_[a-z0-9/.]{19}$",
-    "john": "bsdicrypt",
-    "hashcat": "12400",
-    "name": "BSDi Crypt, Extended DES",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$bcve\\$3\\$[0-9]+\\$[a-f0-9]{16}\\$[a-f0-9]{192}$",
+    "regex": "^\\$blake2\\$[a-f0-9]{64}$",
     "john": null,
-    "hashcat": "23900",
-    "name": "BestCrypt v3 Volume Encryption",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$bitlocker\\$[0-9]\\S[0-9]{2}\\$[a-f0-9]{32}\\$[a-f0-9]+\\$[0-9]{2}\\$[a-f0-9]{24}\\$[0-9]{2}\\$[a-f0-9]{120}$",
-    "john": "bitlocker",
-    "hashcat": "22100",
-    "name": "BitLocker",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{128}$",
-    "john": null,
-    "hashcat": "21000",
-    "name": "BitShares v0.x - sha512(sha512_bin(pass))",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$bitcoin\\$[0-9]{2}\\$[a-f0-9]{96}\\$[0-9]{2}\\$[0-9]{16}\\$[0-9]{6}\\$[0-9]{2}\\$[0-9]{96}\\$[0-9]{2}\\$[0-9]{66}$",
-    "john": null,
-    "hashcat": "11300",
-    "name": "Bitcoin/Litecoin wallet.dat",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$bitwarden\\$[0-9]\\*[0-9]+\\*[0-9]\\*[a-z0-9/+=]+\\*[a-z0-9/+=]+$",
-    "john": null,
-    "hashcat": "23400",
-    "name": "Bitwarden",
+    "hashcat": "31000",
+    "name": "BLAKE2s-256",
     "exotic": false,
     "extended": false
   },
@@ -320,82 +496,18 @@
     "extended": false
   },
   {
-    "regex": "^\\$cram_md5\\$[a-z0-9/+=-]+\\$[a-z0-9/+=-]{52}$",
+    "regex": "^[a-z0-9/+=]{80}$",
     "john": null,
-    "hashcat": "10200",
-    "name": "CRAM-MD5",
+    "hashcat": "18800",
+    "name": "Blockchain, My Wallet, Second Password (SHA256)",
     "exotic": false,
     "extended": false
   },
   {
-    "regex": "^{cram-md5}[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "16400",
-    "name": "CRAM-MD5 Dovecot",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{4}$",
-    "john": null,
-    "hashcat": null,
-    "name": "CRC16",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{4}$",
-    "john": null,
-    "hashcat": null,
-    "name": "CRC16-CCITT",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{6}$",
-    "john": null,
-    "hashcat": null,
-    "name": "CRC24",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$crc32\\$[a-f0-9]{8}.)?[a-f0-9]{8}(:.+)?$",
-    "john": "crc32",
-    "hashcat": "11500",
-    "name": "CRC32",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{8}$",
-    "john": null,
-    "hashcat": null,
-    "name": "CRC32B",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{8}(:.+)?$",
-    "john": null,
-    "hashcat": "27900",
-    "name": "CRC32C",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": null,
-    "name": "CRC64",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{16}(:.+)?$",
-    "john": null,
-    "hashcat": "28000",
-    "name": "CRC64Jones",
+    "regex": "^_[a-z0-9/.]{19}$",
+    "john": "bsdicrypt",
+    "hashcat": "12400",
+    "name": "BSDi Crypt, Extended DES",
     "exotic": false,
     "extended": false
   },
@@ -488,50 +600,90 @@
     "extended": false
   },
   {
+    "regex": "^\\$cram_md5\\$[a-z0-9/+=-]+\\$[a-z0-9/+=-]{52}$",
+    "john": null,
+    "hashcat": "10200",
+    "name": "CRAM-MD5",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{cram-md5}[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "16400",
+    "name": "CRAM-MD5 Dovecot",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{4}$",
+    "john": null,
+    "hashcat": null,
+    "name": "CRC16",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{4}$",
+    "john": null,
+    "hashcat": null,
+    "name": "CRC16-CCITT",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{6}$",
+    "john": null,
+    "hashcat": null,
+    "name": "CRC24",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$crc32\\$[a-f0-9]{8}.)?[a-f0-9]{8}(:.+)?$",
+    "john": "crc32",
+    "hashcat": "11500",
+    "name": "CRC32",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{8}$",
+    "john": null,
+    "hashcat": null,
+    "name": "CRC32B",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{8}(:.+)?$",
+    "john": null,
+    "hashcat": "27900",
+    "name": "CRC32C",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{16}$",
+    "john": null,
+    "hashcat": null,
+    "name": "CRC64",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{16}(:.+)?$",
+    "john": null,
+    "hashcat": "28000",
+    "name": "CRC64Jones",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-z0-9/.]{24}$",
     "john": null,
     "hashcat": null,
     "name": "Crypt16",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{16}:[0-9]{16}$",
-    "john": null,
-    "hashcat": "14000",
-    "name": "DES (PT = $salt, key = $pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-z0-9]{32}(:([a-z0-9-]+\\.)?[a-z0-9-.]+\\.[a-z]{2,7}:.+:[0-9]+)?$",
-    "john": null,
-    "hashcat": "8300",
-    "name": "DNSSEC (NSEC3)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$dpapimk\\$1\\*3\\*[a-z0-9-]+\\*des3\\*sha1\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]{208}$",
-    "john": null,
-    "hashcat": "15310",
-    "name": "DPAPI masterkey file v1 (context 3)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$dpapimk\\$1\\*1\\*.+\\*des3\\*sha1\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
-    "john": null,
-    "hashcat": "15300",
-    "name": "DPAPI masterkey file v1 + local context",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$dpapimk\\$2\\*2\\*.+\\*aes256\\*sha512\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
-    "john": null,
-    "hashcat": "15900",
-    "name": "DPAPI masterkey file v2 + Active Directory domain context",
     "exotic": false,
     "extended": false
   },
@@ -544,18 +696,58 @@
     "extended": false
   },
   {
-    "regex": "^crypt\\$[a-f0-9]{5}\\$[a-z0-9/.]{13}$",
+    "regex": "^[a-f0-9]{32}:[0-9]+:[0-9]+$",
     "john": null,
-    "hashcat": null,
-    "name": "Django (DES Crypt Wrapper)",
+    "hashcat": "3730",
+    "name": "Dahua NVR/DVR/HVR (md5($salt1.strtoupper(md5($salt2.$pass))))",
     "exotic": false,
     "extended": false
   },
   {
-    "regex": "^md5\\$[a-f0-9]+\\$[a-f0-9]{32}$",
+    "regex": "^[a-f0-9]{56}$",
     "john": null,
-    "hashcat": "30000",
-    "name": "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
+    "hashcat": "30420",
+    "name": "DANE RFC7929/RFC8162 SHA2-256",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{16}:[0-9]{16}$",
+    "john": null,
+    "hashcat": "14000",
+    "name": "DES (PT = $salt, key = $pass)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-z0-9/.]{13}$",
+    "john": "descrypt",
+    "hashcat": "1500",
+    "name": "descrypt, DES (Unix), Traditional DES",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^bcrypt(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Django (bcrypt)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^bcrypt_sha256\\$\\$(2[axy]|2)\\$[0-9]+\\$[a-z0-9/.]{53}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Django (bcrypt-SHA256)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^crypt\\$[a-f0-9]{5}\\$[a-z0-9/.]{13}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Django (DES Crypt Wrapper)",
     "exotic": false,
     "extended": false
   },
@@ -600,18 +792,10 @@
     "extended": false
   },
   {
-    "regex": "^bcrypt(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
+    "regex": "^[a-z0-9]{32}(:([a-z0-9-]+\\.)?[a-z0-9-.]+\\.[a-z]{2,7}:.+:[0-9]+)?$",
     "john": null,
-    "hashcat": null,
-    "name": "Django (bcrypt)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^bcrypt_sha256\\$\\$(2[axy]|2)\\$[0-9]+\\$[a-z0-9/.]{53}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Django (bcrypt-SHA256)",
+    "hashcat": "8300",
+    "name": "DNSSEC (NSEC3)",
     "exotic": false,
     "extended": false
   },
@@ -632,6 +816,38 @@
     "extended": false
   },
   {
+    "regex": "^\\$dpapimk\\$1\\*3\\*[a-z0-9-]+\\*des3\\*sha1\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]{208}$",
+    "john": null,
+    "hashcat": "15310",
+    "name": "DPAPI masterkey file v1 (context 3)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$dpapimk\\$1\\*1\\*.+\\*des3\\*sha1\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
+    "john": null,
+    "hashcat": "15300",
+    "name": "DPAPI masterkey file v1 + local context",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$dpapimk\\$2\\*3\\*.+\\*aes256\\*sha512\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
+    "john": null,
+    "hashcat": "15910",
+    "name": "DPAPI masterkey file v2 (context 3)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$dpapimk\\$2\\*2\\*.+\\*aes256\\*sha512\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
+    "john": null,
+    "hashcat": "15900",
+    "name": "DPAPI masterkey file v2 + Active Directory domain context",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$S\\$[a-z0-9/.]{52}$",
     "john": "drupal7",
     "hashcat": "7900",
@@ -640,19 +856,11 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{8}$",
+    "regex": "^\\$ecryptfs\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}$",
     "john": null,
-    "hashcat": null,
-    "name": "ELF-32",
+    "hashcat": "12200",
+    "name": "eCryptfs",
     "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^0x[a-f0-9]{60}\\s0x[a-f0-9]{40}$",
-    "john": null,
-    "hashcat": "123",
-    "name": "EPi",
-    "exotic": true,
     "extended": false
   },
   {
@@ -685,6 +893,54 @@
     "hashcat": "21800",
     "name": "Electrum Wallet (Salt-Type 5)",
     "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{8}$",
+    "john": null,
+    "hashcat": null,
+    "name": "ELF-32",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$encdv\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[a-f0-9]{256}$",
+    "john": null,
+    "hashcat": "29940",
+    "name": "ENCsecurity Datavault (MD5/keychain)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$encdv\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}$",
+    "john": null,
+    "hashcat": "29930",
+    "name": "ENCsecurity Datavault (MD5/no keychain)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$encdv-pbkdf2\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[0-9]{2}\\$[a-f0-9]{64}\\$[0-9]+\\$[a-f0-9]{256}$",
+    "john": null,
+    "hashcat": "29920",
+    "name": "ENCsecurity Datavault (PBKDF2/keychain)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$encdv-pbkdf2\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[0-9]{2}\\$[a-f0-9]{64}\\$[0-9]+$",
+    "john": null,
+    "hashcat": "29910",
+    "name": "ENCsecurity Datavault (PBKDF2/no keychain)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^0x[a-f0-9]{60}\\s0x[a-f0-9]{40}$",
+    "john": null,
+    "hashcat": "123",
+    "name": "EPi",
+    "exotic": true,
     "extended": false
   },
   {
@@ -728,6 +984,22 @@
     "extended": false
   },
   {
+    "regex": "^exodus:[0-9]+:[0-9]:[0-9]:[a-z0-9+=]+:[a-z0-9+=]+:[a-z0-9/+=]+:[a-z0-9+=]+$",
+    "john": null,
+    "hashcat": "28200",
+    "name": "Exodus Desktop Wallet (scrypt)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{FSHP[0123]\\|[0-9]+\\|[0-9]+}[a-z0-9/+=]+$",
+    "john": null,
+    "hashcat": null,
+    "name": "Fairly Secure Hashed Password",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{4}$",
     "john": null,
     "hashcat": null,
@@ -740,30 +1012,6 @@
     "john": null,
     "hashcat": null,
     "name": "FCS-32",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{8}$",
-    "john": null,
-    "hashcat": null,
-    "name": "FNV-132",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": null,
-    "name": "FNV-164",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^{FSHP[0123]\\|[0-9]+\\|[0-9]+}[a-z0-9/+=]+$",
-    "john": null,
-    "hashcat": null,
-    "name": "Fairly Secure Hashed Password",
     "exotic": false,
     "extended": false
   },
@@ -784,10 +1032,34 @@
     "extended": false
   },
   {
+    "regex": "^[a-z0-9-_]*\\.[a-z0-9-_]*\\.[a-z0-9-_]*$",
+    "john": null,
+    "hashcat": "29100",
+    "name": "Flask Session Cookie ($salt.$salt.$pass)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{8}$",
     "john": null,
     "hashcat": null,
     "name": "Fletcher-32",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{8}$",
+    "john": null,
+    "hashcat": null,
+    "name": "FNV-132",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{16}$",
+    "john": null,
+    "hashcat": null,
+    "name": "FNV-164",
     "exotic": false,
     "extended": false
   },
@@ -880,10 +1152,58 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{16}$",
+    "john": null,
+    "hashcat": "5100",
+    "name": "Half MD5",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{40}$",
     "john": null,
     "hashcat": null,
     "name": "HAS-160",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}$",
+    "john": "haval-128-4",
+    "hashcat": null,
+    "name": "Haval-128",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Haval-160",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{48}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Haval-192",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{56}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Haval-224",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{64}$",
+    "john": "haval-256-3",
+    "hashcat": null,
+    "name": "Haval-256",
     "exotic": true,
     "extended": false
   },
@@ -900,6 +1220,22 @@
     "john": "hmac-md5",
     "hashcat": "60",
     "name": "HMAC-MD5 (key = $salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "6050",
+    "name": "HMAC-RIPEMD160 (key = $pass)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "6060",
+    "name": "HMAC-RIPEMD160 (key = $salt)",
     "exotic": false,
     "extended": true
   },
@@ -984,51 +1320,11 @@
     "extended": true
   },
   {
-    "regex": "^[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": "5100",
-    "name": "Half MD5",
+    "regex": "^[a-f0-9]{70}$",
+    "john": "hmailserver",
+    "hashcat": "1421",
+    "name": "hMailServer",
     "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}$",
-    "john": "haval-128-4",
-    "hashcat": null,
-    "name": "Haval-128",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Haval-160",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{48}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Haval-192",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{56}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Haval-224",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{64}$",
-    "john": "haval-256-3",
-    "hashcat": null,
-    "name": "Haval-256",
-    "exotic": true,
     "extended": false
   },
   {
@@ -1056,6 +1352,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$uido\\$[a-f0-9]{32}\\$[a-f0-9]{40}\\$[0-9]+\\$[a-f0-9]{80}$",
+    "john": null,
+    "hashcat": "26500",
+    "name": "iPhone passcode (UID key + System Keybag)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{130}(:[a-f0-9]{40})?$",
     "john": null,
     "hashcat": "7300",
@@ -1064,18 +1368,26 @@
     "extended": false
   },
   {
-    "regex": "^\\$jksprivk\\$\\*[a-f0-9]{40}\\*[a-f0-9]{40}\\*[a-f0-9]{2}\\*[a-f0-9]{2}\\*[a-f0-9]{28}\\*[\\w\\d]+$",
-    "john": null,
-    "hashcat": "15500",
-    "name": "JKS Java Key Store Private Keys (SHA1)",
+    "regex": "^(\\$chap\\$0\\*)?[a-f0-9]{32}[\\*:][a-f0-9]{32}(:[0-9]{2})?$",
+    "john": "chap",
+    "hashcat": "4800",
+    "name": "iSCSI CHAP authentication, MD5(CHAP)",
     "exotic": false,
     "extended": false
   },
   {
-    "regex": "^[a-z0-9-_]*\\.[a-z0-9-_]*\\.[a-z0-9-_]*$",
+    "regex": "^\\$itunes_backup\\$\\*9\\*[a-f0-9]{80}\\*[0-9]+\\*[a-f0-9]{40}\\*\\*$",
     "john": null,
-    "hashcat": "16500",
-    "name": "JWT (JSON Web Token)",
+    "hashcat": "14700",
+    "name": "iTunes backup < 10.0",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$itunes_backup\\$\\*10\\*[a-f0-9]{80}\\*[0-9]+\\*[a-f0-9]{40}\\*[0-9]+\\*[a-f0-9]{40}$",
+    "john": null,
+    "hashcat": "14800",
+    "name": "iTunes backup >= 10.0",
     "exotic": false,
     "extended": false
   },
@@ -1084,6 +1396,14 @@
     "john": null,
     "hashcat": "18700",
     "name": "Java Object hashCode()",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$jksprivk\\$\\*[a-f0-9]{40}\\*[a-f0-9]{40}\\*[a-f0-9]{2}\\*[a-f0-9]{2}\\*[a-f0-9]{28}\\*[\\w\\d]+$",
+    "john": null,
+    "hashcat": "15500",
+    "name": "JKS Java Key Store Private Keys (SHA1)",
     "exotic": false,
     "extended": false
   },
@@ -1128,10 +1448,10 @@
     "extended": false
   },
   {
-    "regex": "^\\$knx-ip-secure-device-authentication-code\\$\\*[0-9]+\\*[a-f0-9]{64}\\*[a-f0-9]{32}$",
+    "regex": "^[a-z0-9-_]*\\.[a-z0-9-_]*\\.[a-z0-9-_]*$",
     "john": null,
-    "hashcat": "25900",
-    "name": "KNX IP Secure - Device Authentication Code",
+    "hashcat": "16500",
+    "name": "JWT (JSON Web Token)",
     "exotic": false,
     "extended": false
   },
@@ -1168,6 +1488,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$keepass\\$\\*[0-9]\\*[0-9]+\\*[0-9]\\*[a-f0-9]{64}\\*[a-f0-9]{64}\\*[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "29700",
+    "name": "KeePass 1 (AES/Twofish) and KeePass 2 (AES) - keyfile only mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$keepass\\$\\*1\\*\\d+\\*\\d\\*[0-9a-f]{32}\\*[0-9a-f]{64}\\*[0-9a-f]{32}\\*[0-9a-f]{64}\\*\\d\\*[^*]*(\\*[0-9a-f]+)?$",
     "john": "KeePass",
     "hashcat": "13400",
@@ -1184,6 +1512,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$keepass\\$\\*2\\*\\d+\\*\\d+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*\\d+\\*\\d+\\*[0-9a-f]+$",
+    "john": "KeePass",
+    "hashcat": "13400",
+    "name": "Keepass 2 AES / with keyfile",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$keepass\\$\\*2\\*\\d+\\*\\d+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+$",
     "john": "KeePass",
     "hashcat": "13400",
@@ -1192,10 +1528,10 @@
     "extended": false
   },
   {
-    "regex": "^\\$keepass\\$\\*2\\*\\d+\\*\\d+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*\\d+\\*\\d+\\*[0-9a-f]+$",
-    "john": "KeePass",
-    "hashcat": "13400",
-    "name": "Keepass 2 AES / with keyfile",
+    "regex": "^\\$krb5db\\$[0-9]{2}\\$\\w+\\$\\w+.\\w+\\$[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "28800",
+    "name": "Kerberos 5, etype 17, DB",
     "exotic": false,
     "extended": false
   },
@@ -1212,6 +1548,14 @@
     "john": null,
     "hashcat": "19600",
     "name": "Kerberos 5, etype 17, TGS-REP (AES128-CTS-HMAC-SHA1-96)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$krb5db\\$[0-9]{2}\\$\\w+\\$\\w+.\\w+\\$[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "28900",
+    "name": "Kerberos 5, etype 18, DB",
     "exotic": false,
     "extended": false
   },
@@ -1256,10 +1600,10 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{16}$",
-    "john": "lm",
-    "hashcat": "3000",
-    "name": "LM",
+    "regex": "^\\$knx-ip-secure-device-authentication-code\\$\\*[0-9]+\\*[a-f0-9]{64}\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "25900",
+    "name": "KNX IP Secure - Device Authentication Code",
     "exotic": false,
     "extended": false
   },
@@ -1296,6 +1640,14 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{16}$",
+    "john": "lm",
+    "hashcat": "3000",
+    "name": "LM",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{32}(:.+)?$",
     "john": "lotus5",
     "hashcat": "8600",
@@ -1320,6 +1672,38 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{48}$",
+    "john": "xsha",
+    "hashcat": "122",
+    "name": "macOS v10.4, macOS v10.5, macOS v10.6",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{136}$",
+    "john": "xsha512",
+    "hashcat": "1722",
+    "name": "macOS v10.7",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$ml\\$[0-9]+\\$[a-f0-9]{64}\\$[a-f0-9]{128}$",
+    "john": "pbkdf2-hmac-sha512",
+    "hashcat": "7100",
+    "name": "macOS v10.8+ (PBKDF2-SHA512)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": null,
+    "name": "MangosWeb Enhanced CMS",
+    "exotic": true,
+    "extended": false
+  },
+  {
     "regex": "^(\\$md2\\$)?[a-f0-9]{32}$",
     "john": "md2",
     "hashcat": null,
@@ -1340,6 +1724,246 @@
     "john": "raw-md5",
     "hashcat": "0",
     "name": "MD5",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "10",
+    "name": "md5($pass.$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "20",
+    "name": "md5($salt.$pass)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "3800",
+    "name": "md5($salt.$pass.$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "3710",
+    "name": "md5($salt.md5($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "4110",
+    "name": "md5($salt.md5($pass.$salt))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "4010",
+    "name": "md5($salt.md5($salt.$pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "21300",
+    "name": "md5($salt.sha1($salt.$pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "40",
+    "name": "md5($salt.utf16le($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "2600",
+    "name": "md5(md5($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "3910",
+    "name": "md5(md5($pass).md5($salt))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "30500",
+    "name": "md5(md5($salt).md5(md5($pass)))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "3500",
+    "name": "md5(md5(md5($pass)))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "4400",
+    "name": "md5(sha1($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?",
+    "john": null,
+    "hashcat": "4410",
+    "name": "md5(sha1($pass).$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "20900",
+    "name": "md5(sha1($pass).md5($pass).sha1($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "21200",
+    "name": "md5(sha1($salt).md5($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "4300",
+    "name": "md5(strtoupper(md5($pass)))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "70",
+    "name": "md5(utf16le($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "30",
+    "name": "md5(utf16le($pass).$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^\\$1\\$[a-z0-9/.]{0,8}\\$[a-z0-9/.]{22}(:.*)?$",
+    "john": "md5crypt",
+    "hashcat": "500",
+    "name": "md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[:$]A[:$]([a-f0-9]{1,8}[:$])?[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": null,
+    "name": "MediaWiki",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[:$]B[:$]([a-f0-9]{1,8}[:$])?[a-f0-9]{32}$",
+    "john": "mediawiki",
+    "hashcat": "3711",
+    "name": "MediaWiki B type",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$metamask\\$[a-z0-9=]+\\$[a-z0-9=]+\\$[a-z0-9/+=]+$",
+    "john": null,
+    "hashcat": "26600",
+    "name": "MetaMask Wallet",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$metamask-short\\$[a-z0-9+=]+\\$[a-z0-9+=]+\\$[a-z0-9+/=]+$",
+    "john": null,
+    "hashcat": "26610",
+    "name": "MetaMask Wallet (short hash, plaintext check)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$pst\\$)?[a-f0-9]{8}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Microsoft Outlook PST",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{140}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Minecraft(xAuth)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$mongodb-scram\\$\\*0\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
+    "john": null,
+    "hashcat": "24100",
+    "name": "MongoDB ServerKey SCRAM-SHA-1",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$mongodb-scram\\$\\*1\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
+    "john": null,
+    "hashcat": "24200",
+    "name": "MongoDB ServerKey SCRAM-SHA-256",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$mozilla\\$\\*3des\\*[a-f0-9]{40}\\*[a-f0-9]{40}\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "26000",
+    "name": "Mozilla key3.db",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$mozilla\\$\\*aes\\*[a-f0-9]{40}\\*[a-f0-9]{64}\\*[0-9]+\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "26100",
+    "name": "Mozilla key4.db",
     "exotic": false,
     "extended": false
   },
@@ -1424,6 +2048,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$sntp-ms\\$[a-f0-9]{32}\\$[a-f0-9]{96}$",
+    "john": null,
+    "hashcat": "31300",
+    "name": "MS SNTP",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^v1;pph1_md4,[0-9]+,[0-9]+,[a-f0-9]{64}$",
     "john": null,
     "hashcat": "12800",
@@ -1452,86 +2084,6 @@
     "john": "msql12",
     "hashcat": "1731",
     "name": "MSSQL (2012, 2014)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": null,
-    "name": "MangosWeb Enhanced CMS",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[:$]A[:$]([a-f0-9]{1,8}[:$])?[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": null,
-    "name": "MediaWiki",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[:$]B[:$]([a-f0-9]{1,8}[:$])?[a-f0-9]{32}$",
-    "john": "mediawiki",
-    "hashcat": "3711",
-    "name": "MediaWiki B type",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$metamask\\$[a-z0-9=]+\\$[a-z0-9=]+\\$[a-z0-9/+=]+$",
-    "john": null,
-    "hashcat": "26600",
-    "name": "MetaMask Wallet",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$pst\\$)?[a-f0-9]{8}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Microsoft Outlook PST",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{140}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Minecraft(xAuth)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$mongodb-scram\\$\\*0\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
-    "john": null,
-    "hashcat": "24100",
-    "name": "MongoDB ServerKey SCRAM-SHA-1",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$mongodb-scram\\$\\*1\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
-    "john": null,
-    "hashcat": "24200",
-    "name": "MongoDB ServerKey SCRAM-SHA-256",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$mozilla\\$\\*3des\\*[a-f0-9]{40}\\*[a-f0-9]{40}\\*[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": "26000",
-    "name": "Mozilla key3.db",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$mozilla\\$\\*aes\\*[a-f0-9]{40}\\*[a-f0-9]{64}\\*[0-9]+\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": "26100",
-    "name": "Mozilla key4.db",
     "exotic": false,
     "extended": false
   },
@@ -1616,22 +2168,6 @@
     "extended": false
   },
   {
-    "regex": "^\\$3\\$\\$[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": null,
-    "name": "NTHash(FreeBSD Variant)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$NT\\$)?[a-f0-9]{32}$",
-    "john": "nt",
-    "hashcat": "1000",
-    "name": "NTLM",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^[^\\\\/:*?\"<>|]{1,20}[:]{2,3}([^\\\\/:*?\"<>|]{1,20})?:[a-f0-9]{48}:[a-f0-9]{48}:[a-f0-9]{16}$",
     "john": "netntlm",
     "hashcat": "5500",
@@ -1660,6 +2196,38 @@
     "john": null,
     "hashcat": "27100",
     "name": "NetNTLMv2 (NT)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{SHA}[a-z0-9/+=]{28}$",
+    "john": "nsldap",
+    "hashcat": "101",
+    "name": "nsldap, SHA-1(Base64), Netscape LDAP SHA",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{SSHA}[a-z0-9/+=]{40}$",
+    "john": "nsldaps",
+    "hashcat": "111",
+    "name": "nsldaps, SSHA-1(Base64), Netscape LDAP SSHA",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$3\\$\\$[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": null,
+    "name": "NTHash(FreeBSD Variant)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$NT\\$)?[a-f0-9]{32}$",
+    "john": "nt",
+    "hashcat": "1000",
+    "name": "NTLM",
     "exotic": false,
     "extended": false
   },
@@ -1725,6 +2293,22 @@
     "hashcat": "20600",
     "name": "Oracle Transportation Management (SHA256)",
     "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}:[a-z0-9]{2}$",
+    "john": null,
+    "hashcat": "21",
+    "name": "osCommerce, xt:Commerce",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{51}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Palshop CMS",
+    "exotic": true,
     "extended": false
   },
   {
@@ -1848,10 +2432,18 @@
     "extended": false
   },
   {
-    "regex": "^\\$PHPS\\$.+\\$[a-f0-9]{32}$",
-    "john": "phps",
-    "hashcat": "2612",
-    "name": "PHPS",
+    "regex": "^[a-z0-9/+]{27}=$",
+    "john": null,
+    "hashcat": "133",
+    "name": "PeopleSoft",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}:[a-f0-9]{126}$",
+    "john": null,
+    "hashcat": "13500",
+    "name": "PeopleSoft PS_TOKEN",
     "exotic": false,
     "extended": false
   },
@@ -1860,6 +2452,30 @@
     "john": "phpass",
     "hashcat": "400",
     "name": "PHPass' Portable Hash",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$H\\$[a-z0-9/.]{31}$",
+    "john": "phpass",
+    "hashcat": "400",
+    "name": "phpass, phpBB3 (MD5)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$P\\$[a-z0-9/.]{31}$",
+    "john": "phpass",
+    "hashcat": "400",
+    "name": "phpass, WordPress (MD5), Joomla (MD5)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$PHPS\\$.+\\$[a-f0-9]{32}$",
+    "john": "phps",
+    "hashcat": "2612",
+    "name": "PHPS",
     "exotic": false,
     "extended": false
   },
@@ -1936,30 +2552,6 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{51}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Palshop CMS",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-z0-9/+]{27}=$",
-    "john": null,
-    "hashcat": "133",
-    "name": "PeopleSoft",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}:[a-f0-9]{126}$",
-    "john": null,
-    "hashcat": "13500",
-    "name": "PeopleSoft PS_TOKEN",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^[a-f0-9]{32}(:.+)?$",
     "john": null,
     "hashcat": "12",
@@ -1980,6 +2572,14 @@
     "john": null,
     "hashcat": null,
     "name": "PostgreSQL MD5",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^scram-sha-256\\$4096:[a-z0-9+=]+\\$[a-z0-9+=]+:[a-z0-9+=]+$",
+    "john": null,
+    "hashcat": "28600",
+    "name": "PostgreSQL SCRAM-SHA-256",
     "exotic": false,
     "extended": false
   },
@@ -2024,6 +2624,22 @@
     "extended": false
   },
   {
+    "regex": "^md5\\$[a-f0-9]+\\$[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "30000",
+    "name": "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^sha256\\$[a-f0-9]+\\$[a-f0-9]{24}$",
+    "john": null,
+    "hashcat": "30120",
+    "name": "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^@m@[a-f0-9]{32}@[0-9]{16}$",
     "john": null,
     "hashcat": "19000",
@@ -2052,6 +2668,22 @@
     "john": "racf",
     "hashcat": "8500",
     "name": "RACF",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$radmin2\\$)?[a-f0-9]{32}$",
+    "john": "radmin",
+    "hashcat": "9900",
+    "name": "Radmin2",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^(\\$radmin3\\$)?[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{512}$",
+    "john": null,
+    "hashcat": "29200",
+    "name": "Radmin3",
     "exotic": false,
     "extended": false
   },
@@ -2085,6 +2717,22 @@
     "hashcat": "13000",
     "name": "RAR5",
     "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{pbkdf2_sha256}[a-z0-9/+=]+$",
+    "john": null,
+    "hashcat": "10901",
+    "name": "RedHat 389-DS LDAP (PBKDF2-HMAC-SHA256)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}:[a-f0-9]{0,32}$",
+    "john": null,
+    "hashcat": "4521",
+    "name": "Redmine",
+    "exotic": true,
     "extended": false
   },
   {
@@ -2160,30 +2808,6 @@
     "extended": false
   },
   {
-    "regex": "^(\\$radmin2\\$)?[a-f0-9]{32}$",
-    "john": "radmin",
-    "hashcat": "9900",
-    "name": "Radmin2",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^{pbkdf2_sha256}[a-z0-9/+=]+$",
-    "john": null,
-    "hashcat": "10901",
-    "name": "RedHat 389-DS LDAP (PBKDF2-HMAC-SHA256)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}:[a-f0-9]{0,32}$",
-    "john": null,
-    "hashcat": "4521",
-    "name": "Redmine",
-    "exotic": true,
-    "extended": false
-  },
-  {
     "regex": "^[a-f0-9]{40}:[a-f0-9]{40}$",
     "john": null,
     "hashcat": "27200",
@@ -2200,10 +2824,34 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{128}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Salsa10",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{128}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Salsa20",
+    "exotic": true,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{32}:[a-f0-9]{32}$",
     "john": null,
     "hashcat": null,
     "name": "SAM(LM_Hash:NT_Hash)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}:[a-f0-9]{16}$",
+    "john": null,
+    "hashcat": "5800",
+    "name": "Samsung Android Password/PIN",
     "exotic": false,
     "extended": false
   },
@@ -2256,6 +2904,38 @@
     "extended": false
   },
   {
+    "regex": "^SCRYPT:[0-9]+:[0-9]:[0-9]:[a-z0-9:/+=]+$",
+    "john": null,
+    "hashcat": "8900",
+    "name": "scrypt",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*128\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
+    "john": null,
+    "hashcat": "23001",
+    "name": "SecureZIP AES-128",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*192\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
+    "john": null,
+    "hashcat": "23002",
+    "name": "SecureZIP AES-192",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*256\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
+    "john": null,
+    "hashcat": "23003",
+    "name": "SecureZIP AES-256",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$sha1\\$[0-9]+\\$[a-z0-9/.]{0,64}\\$[a-z0-9/.]{28}$",
     "john": "sha1crypt",
     "hashcat": null,
@@ -2278,6 +2958,150 @@
     "name": "SHA1",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "110",
+    "name": "sha1($pass.$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "120",
+    "name": "sha1($salt.$pass)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4900",
+    "name": "sha1($salt.$pass.$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4520",
+    "name": "sha1($salt.sha1($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "24300",
+    "name": "sha1($salt.sha1($pass.$salt))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:[a-f0-9]{64}:[a-f0-9]{16})?$",
+    "john": null,
+    "hashcat": "29000",
+    "name": "sha1($salt.sha1(utf16le($username).':'.utf16le($pass)))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "140",
+    "name": "sha1($salt.utf16le($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "19300",
+    "name": "sha1($salt1.$pass.$salt2)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "14400",
+    "name": "sha1(CX)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4700",
+    "name": "sha1(md5($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4710",
+    "name": "sha1(md5($pass).$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "21100",
+    "name": "sha1(md5($pass.$salt))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "18500",
+    "name": "sha1(md5(md5($pass)))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4500",
+    "name": "sha1(sha1($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "4510",
+    "name": "sha1(sha1($pass).$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "5000",
+    "name": "sha1(sha1($salt.$pass.$salt))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "170",
+    "name": "sha1(utf16le($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{40}(:.+)?$",
+    "john": null,
+    "hashcat": "130",
+    "name": "sha1(utf16le($pass).$salt)",
+    "exotic": false,
+    "extended": true
   },
   {
     "regex": "^[a-f0-9]{56}$",
@@ -2308,6 +3132,102 @@
     "john": "raw-sha512",
     "hashcat": "1700",
     "name": "SHA2-512",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "1410",
+    "name": "sha256($pass.$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "1420",
+    "name": "sha256($salt.$pass)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "22300",
+    "name": "sha256($salt.$pass.$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "20720",
+    "name": "sha256($salt.sha256($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:[a-f0-9]+)?$",
+    "john": null,
+    "hashcat": "21420",
+    "name": "sha256($salt.sha256_bin($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "1440",
+    "name": "sha256($salt.utf16le($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "20800",
+    "name": "sha256(md5($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "20710",
+    "name": "sha256(sha256($pass).$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "21400",
+    "name": "sha256(sha256_bin($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "1470",
+    "name": "sha256(utf16le($pass))",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "1430",
+    "name": "sha256(utf16le($pass).$salt)",
+    "exotic": false,
+    "extended": true
+  },
+  {
+    "regex": "^\\$5\\$(rounds=[0-9]+\\$)?[a-z0-9/.]{0,16}\\$[a-z0-9/.]{43}$",
+    "john": "sha256crypt",
+    "hashcat": "7400",
+    "name": "sha256crypt $5$, SHA256 (Unix)",
     "exotic": false,
     "extended": false
   },
@@ -2344,146 +3264,90 @@
     "extended": false
   },
   {
-    "regex": "^\\$sip\\$\\*[0-9.]+\\*[0-9.]+\\*[a-z0-9]+\\*asterisk\\*register\\*sip\\*[0-9.]+\\*\\*[a-f0-9]{8}[\\*]{4}md5\\*[a-f0-9]{32}$",
+    "regex": "^[a-f0-9]{96}(:.+)?$",
     "john": null,
-    "hashcat": "11400",
-    "name": "SIP digest authentication (MD5)",
+    "hashcat": "10810",
+    "name": "sha384($pass.$salt)",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^[a-f0-9]{40}:[^*]{1,25}$",
+    "regex": "^[a-f0-9]{96}(:.+)?$",
     "john": null,
-    "hashcat": "121",
-    "name": "SMF (Simple Machines Forum) > v1.1",
+    "hashcat": "10820",
+    "name": "sha384($salt.$pass)",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$1\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{96}(:.+)?$",
     "john": null,
-    "hashcat": "25100",
-    "name": "SNMPv3 HMAC-MD5-96",
+    "hashcat": "10840",
+    "name": "sha384($salt.utf16le($pass))",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$0\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{96}(:.+)?$",
     "john": null,
-    "hashcat": "25000",
-    "name": "SNMPv3 HMAC-MD5-96/HMAC-SHA1-96",
+    "hashcat": "10870",
+    "name": "sha384(utf16le($pass))",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$2\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{96}(:.+)?$",
     "john": null,
-    "hashcat": "25200",
-    "name": "SNMPv3 HMAC-SHA1-96",
+    "hashcat": "10830",
+    "name": "sha384(utf16le($pass).$salt)",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$3\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{128}(:.+)?$",
     "john": null,
-    "hashcat": "26700",
-    "name": "SNMPv3 HMAC-SHA224-128",
+    "hashcat": "1710",
+    "name": "sha512($pass.$salt)",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$4\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{128}(:.+)?$",
     "john": null,
-    "hashcat": "26800",
-    "name": "SNMPv3 HMAC-SHA256-192",
+    "hashcat": "1720",
+    "name": "sha512($salt.$pass)",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$5\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{128}(:.+)?$",
     "john": null,
-    "hashcat": "26900",
-    "name": "SNMPv3 HMAC-SHA384-256",
+    "hashcat": "1740",
+    "name": "sha512($salt.utf16le($pass))",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^\\$snmpv3\\$6\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "regex": "^[a-f0-9]{128}(:.+)?$",
     "john": null,
-    "hashcat": "27300",
-    "name": "SNMPv3 HMAC-SHA512-384",
+    "hashcat": "1770",
+    "name": "sha512(utf16le($pass))",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^sqlcipher\\*[0-9]\\*[0-9]+\\*[0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
+    "regex": "^[a-f0-9]{128}(:.+)?$",
     "john": null,
-    "hashcat": "24600",
-    "name": "SQLCipher",
+    "hashcat": "1730",
+    "name": "sha512(utf16le($pass).$salt)",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
-    "regex": "^{ssha256}[a-z0-9+]{48}$",
-    "john": null,
-    "hashcat": "1411",
-    "name": "SSHA-256(Base64), LDAP {SSHA256}",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^{SSHA512}[a-z0-9/+]{96}$",
-    "john": "ssha512",
-    "hashcat": "1711",
-    "name": "SSHA-512(Base64), LDAP {SSHA512}",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{128}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Salsa10",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{128}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Salsa20",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}:[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": "5800",
-    "name": "Samsung Android Password/PIN",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*128\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
-    "john": null,
-    "hashcat": "23001",
-    "name": "SecureZIP AES-128",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*192\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
-    "john": null,
-    "hashcat": "23002",
-    "name": "SecureZIP AES-192",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*256\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
-    "john": null,
-    "hashcat": "23003",
-    "name": "SecureZIP AES-256",
+    "regex": "^\\$6\\$(rounds=[0-9]+\\$)?[a-z0-9/.]{0,16}\\$[a-z0-9/.]{86}$",
+    "john": "sha512crypt",
+    "hashcat": "1800",
+    "name": "sha512crypt $6$, SHA512 (Unix)",
     "exotic": false,
     "extended": false
   },
@@ -2492,6 +3356,14 @@
     "john": "siemens-s7",
     "hashcat": null,
     "name": "Siemens-S7",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$sip\\$\\*[0-9.]+\\*[0-9.]+\\*[a-z0-9]+\\*asterisk\\*register\\*sip\\*[0-9.]+\\*\\*[a-f0-9]{8}[\\*]{4}md5\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "11400",
+    "name": "SIP digest authentication (MD5)",
     "exotic": false,
     "extended": false
   },
@@ -2624,6 +3496,22 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "31100",
+    "name": "SM3",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{40}:[^*]{1,25}$",
+    "john": null,
+    "hashcat": "121",
+    "name": "SMF (Simple Machines Forum) > v1.1",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^(\\$snefru\\$)?[a-f0-9]{32}$",
     "john": "snefru-128",
     "hashcat": null,
@@ -2637,6 +3525,62 @@
     "hashcat": null,
     "name": "Snefru-256",
     "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$1\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "25100",
+    "name": "SNMPv3 HMAC-MD5-96",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$0\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "25000",
+    "name": "SNMPv3 HMAC-MD5-96/HMAC-SHA1-96",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$2\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "25200",
+    "name": "SNMPv3 HMAC-SHA1-96",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$3\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "26700",
+    "name": "SNMPv3 HMAC-SHA224-128",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$4\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "26800",
+    "name": "SNMPv3 HMAC-SHA256-192",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$5\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "26900",
+    "name": "SNMPv3 HMAC-SHA384-256",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$snmpv3\\$6\\$[0-9]+\\$[a-f0-9]+\\$[a-f0-9]+\\$[a-f0-9]+$",
+    "john": null,
+    "hashcat": "27300",
+    "name": "SNMPv3 HMAC-SHA512-384",
+    "exotic": false,
     "extended": false
   },
   {
@@ -2661,6 +3605,30 @@
     "hashcat": "24",
     "name": "SolarWinds Serv-U",
     "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^sqlcipher\\*[0-9]\\*[0-9]+\\*[0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "24600",
+    "name": "SQLCipher",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{ssha256}[a-z0-9+]{48}$",
+    "john": null,
+    "hashcat": "1411",
+    "name": "SSHA-256(Base64), LDAP {SSHA256}",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^{SSHA512}[a-z0-9/+]{96}$",
+    "john": "ssha512",
+    "hashcat": "1711",
+    "name": "SSHA-512(Base64), LDAP {SSHA512}",
+    "exotic": false,
     "extended": false
   },
   {
@@ -2704,10 +3672,10 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{6}(:.+)?$",
+    "regex": "^\\$teamspeak\\$3\\$[a-z0-9+=]+\\$[a-z0-9+=]+$",
     "john": null,
-    "hashcat": "18100",
-    "name": "TOTP (HMAC-SHA1)",
+    "hashcat": "28300",
+    "name": "Teamspeak 3 (channel hash)",
     "exotic": false,
     "extended": false
   },
@@ -2760,6 +3728,14 @@
     "extended": false
   },
   {
+    "regex": "^[a-f0-9]{6}(:.+)?$",
+    "john": null,
+    "hashcat": "18100",
+    "name": "TOTP (HMAC-SHA1)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-z0-9]{10}$",
     "john": null,
     "hashcat": "16000",
@@ -2768,18 +3744,322 @@
     "extended": false
   },
   {
-    "regex": "^\\$vmx\\$[0-9]\\$[0-9]+\\$[a-f0-9]{32}\\$[a-f0-9]{64}$",
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
     "john": null,
-    "hashcat": "27400",
-    "name": "VMware VMX (PBKDF2-HMAC-SHA1 + AES-256-CBC)",
+    "hashcat": "29312",
+    "name": "TrueCrypt RIPEMD160 + XTS 1024 bit",
     "exotic": false,
     "extended": false
   },
   {
-    "regex": "^\\$vnc\\$\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
-    "john": "vnc",
-    "hashcat": null,
-    "name": "VNC",
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29342",
+    "name": "TrueCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29313",
+    "name": "TrueCrypt RIPEMD160 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29343",
+    "name": "TrueCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29311",
+    "name": "TrueCrypt RIPEMD160 + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29341",
+    "name": "TrueCrypt RIPEMD160 + XTS 512 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29322",
+    "name": "TrueCrypt SHA512 + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29323",
+    "name": "TrueCrypt SHA512 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29321",
+    "name": "TrueCrypt SHA512 + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29332",
+    "name": "TrueCrypt Whirlpool + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29333",
+    "name": "TrueCrypt Whirlpool + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29331",
+    "name": "TrueCrypt Whirlpool + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-z0-9/+=]{28}",
+    "john": null,
+    "hashcat": "24800",
+    "name": "Umbraco HMAC-SHA1",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}:.{3}$",
+    "john": null,
+    "hashcat": "2611",
+    "name": "vBulletin < v3.8.5",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}:.{30}$",
+    "john": null,
+    "hashcat": "2711",
+    "name": "vBulletin >= v3.8.5",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$vbk\\$\\*[a-f0-9]{128}\\*[0-9]+\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "31200",
+    "name": "Veeam VBK",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29412",
+    "name": "VeraCrypt RIPEMD160 + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29442",
+    "name": "VeraCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29413",
+    "name": "VeraCrypt RIPEMD160 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29443",
+    "name": "VeraCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29411",
+    "name": "VeraCrypt RIPEMD160 + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29441",
+    "name": "VeraCrypt RIPEMD160 + XTS 512 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29452",
+    "name": "VeraCrypt SHA256 + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29462",
+    "name": "VeraCrypt SHA256 + XTS 1024 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29453",
+    "name": "VeraCrypt SHA256 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29463",
+    "name": "VeraCrypt SHA256 + XTS 1536 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29451",
+    "name": "VeraCrypt SHA256 + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29461",
+    "name": "VeraCrypt SHA256 + XTS 512 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29422",
+    "name": "VeraCrypt SHA512 + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29423",
+    "name": "VeraCrypt SHA512 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29421",
+    "name": "VeraCrypt SHA512 + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29472",
+    "name": "VeraCrypt Streebog-512 + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29482",
+    "name": "VeraCrypt Streebog-512 + XTS 1024 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29473",
+    "name": "VeraCrypt Streebog-512 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29483",
+    "name": "VeraCrypt Streebog-512 + XTS 1536 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29471",
+    "name": "VeraCrypt Streebog-512 + XTS 512 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29481",
+    "name": "VeraCrypt Streebog-512 + XTS 512 bit + boot-mode",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29432",
+    "name": "VeraCrypt Whirlpool + XTS 1024 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29433",
+    "name": "VeraCrypt Whirlpool + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29431",
+    "name": "VeraCrypt Whirlpool + XTS 512 bit",
     "exotic": false,
     "extended": false
   },
@@ -2800,6 +4080,22 @@
     "extended": false
   },
   {
+    "regex": "^\\$vmx\\$[0-9]\\$[0-9]+\\$[a-f0-9]{32}\\$[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "27400",
+    "name": "VMware VMX (PBKDF2-HMAC-SHA1 + AES-256-CBC)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$vnc\\$\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
+    "john": "vnc",
+    "hashcat": null,
+    "name": "VNC",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^(\\$wbb3\\$\\*1\\*)?[a-f0-9]{40}[:*][a-f0-9]{40}$",
     "john": "wbb3",
     "hashcat": "8400",
@@ -2812,6 +4108,54 @@
     "john": null,
     "hashcat": null,
     "name": "WBB4 (Woltlab Burning Board)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^pbkdf2\\([0-9]+,[0-9]{1,3},sha512\\)\\$[0-9]+\\$[a-f0-9]{40}$",
+    "john": null,
+    "hashcat": "21600",
+    "name": "Web2py pbkdf2-sha512",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:[a-f0-9]+)?$",
+    "john": null,
+    "hashcat": "3721",
+    "name": "WebEdition CMS",
+    "exotic": true,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{128}$",
+    "john": "whirlpool",
+    "hashcat": "6100",
+    "name": "Whirlpool",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$winhello\\$\\*sha512\\*[0-9]+\\*[0-9]+\\*[a-f0-9]{128}\\*[a-f0-9]{128}\\*[a-f0-9]{64}\\*[a-f0-9]+\\*[a-f0-9]+$",
+    "john": null,
+    "hashcat": "28100",
+    "name": "Windows Hello PIN/Password",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:.+)?$",
+    "john": null,
+    "hashcat": "13800",
+    "name": "Windows Phone 8+ PIN/password",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$zip2\\$\\*[0-9]{1}\\*[0-9]{1}\\*[0-9]{1}\\*[a-f0-9]{16,32}\\*[a-f0-9]{1,6}\\*[a-f0-9]{1,6}\\*[a-f0-9]+\\*[a-f0-9]{20}\\*\\$/zip2\\$",
+    "john": "zip",
+    "hashcat": "13600",
+    "name": "WinZip",
     "exotic": false,
     "extended": false
   },
@@ -2848,54 +4192,6 @@
     "extended": false
   },
   {
-    "regex": "^pbkdf2\\([0-9]+,[0-9]{1,3},sha512\\)\\$[0-9]+\\$[a-f0-9]{40}$",
-    "john": null,
-    "hashcat": "21600",
-    "name": "Web2py pbkdf2-sha512",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:[a-f0-9]+)?$",
-    "john": null,
-    "hashcat": "3721",
-    "name": "WebEdition CMS",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{128}$",
-    "john": "whirlpool",
-    "hashcat": "6100",
-    "name": "Whirlpool",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$zip2\\$\\*[0-9]{1}\\*[0-9]{1}\\*[0-9]{1}\\*[a-f0-9]{16,32}\\*[a-f0-9]{1,6}\\*[a-f0-9]{1,6}\\*[a-f0-9]+\\*[a-f0-9]{20}\\*\\$/zip2\\$",
-    "john": "zip",
-    "hashcat": "13600",
-    "name": "WinZip",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$winhello\\$\\*sha512\\*[0-9]+\\*[0-9]+\\*[a-f0-9]{128}\\*[a-f0-9]{128}\\*[a-f0-9]{64}\\*[a-f0-9]+\\*[a-f0-9]+$",
-    "john": null,
-    "hashcat": "28100",
-    "name": "Windows Hello PIN/Password",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "13800",
-    "name": "Windows Phone 8+ PIN/password",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^\\$xmpp-scram\\$[0-9]\\$[0-9]+\\$[0-9]{2}\\$[a-f0-9]{64}\\$[a-f0-9]{40}$",
     "john": null,
     "hashcat": "23200",
@@ -2908,1302 +4204,6 @@
     "john": null,
     "hashcat": null,
     "name": "XOR-32",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$2[abxy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
-    "john": null,
-    "hashcat": null,
-    "name": "bcrypt",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
-    "john": "bcrypt",
-    "hashcat": "3200",
-    "name": "bcrypt $2*$, Blowfish (Unix)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$bcrypt-sha256\\$(2[axy]|2)\\,[0-9]+\\$[a-z0-9/.]{22}\\$[a-z0-9/.]{31}$",
-    "john": null,
-    "hashcat": null,
-    "name": "bcrypt(SHA-256)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
-    "john": null,
-    "hashcat": "25600",
-    "name": "bcrypt(md5($pass)) / bcryptmd5",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
-    "john": null,
-    "hashcat": "25800",
-    "name": "bcrypt(sha1($pass)) / bcryptsha1",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-z0-9/.]{13}$",
-    "john": "descrypt",
-    "hashcat": "1500",
-    "name": "descrypt, DES (Unix), Traditional DES",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$ecryptfs\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": "12200",
-    "name": "eCryptfs",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{70}$",
-    "john": "hmailserver",
-    "hashcat": "1421",
-    "name": "hMailServer",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$uido\\$[a-f0-9]{32}\\$[a-f0-9]{40}\\$[0-9]+\\$[a-f0-9]{80}$",
-    "john": null,
-    "hashcat": "26500",
-    "name": "iPhone passcode (UID key + System Keybag)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$chap\\$0\\*)?[a-f0-9]{32}[\\*:][a-f0-9]{32}(:[0-9]{2})?$",
-    "john": "chap",
-    "hashcat": "4800",
-    "name": "iSCSI CHAP authentication, MD5(CHAP)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$itunes_backup\\$\\*9\\*[a-f0-9]{80}\\*[0-9]+\\*[a-f0-9]{40}\\*\\*$",
-    "john": null,
-    "hashcat": "14700",
-    "name": "iTunes backup < 10.0",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$itunes_backup\\$\\*10\\*[a-f0-9]{80}\\*[0-9]+\\*[a-f0-9]{40}\\*[0-9]+\\*[a-f0-9]{40}$",
-    "john": null,
-    "hashcat": "14800",
-    "name": "iTunes backup >= 10.0",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{48}$",
-    "john": "xsha",
-    "hashcat": "122",
-    "name": "macOS v10.4, macOS v10.5, macOS v10.6",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{136}$",
-    "john": "xsha512",
-    "hashcat": "1722",
-    "name": "macOS v10.7",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$ml\\$[0-9]+\\$[a-f0-9]{64}\\$[a-f0-9]{128}$",
-    "john": "pbkdf2-hmac-sha512",
-    "hashcat": "7100",
-    "name": "macOS v10.8+ (PBKDF2-SHA512)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "10",
-    "name": "md5($pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "20",
-    "name": "md5($salt.$pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "3800",
-    "name": "md5($salt.$pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "3710",
-    "name": "md5($salt.md5($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "4110",
-    "name": "md5($salt.md5($pass.$salt))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "4010",
-    "name": "md5($salt.md5($salt.$pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "21300",
-    "name": "md5($salt.sha1($salt.$pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "40",
-    "name": "md5($salt.utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "2600",
-    "name": "md5(md5($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "3910",
-    "name": "md5(md5($pass).md5($salt))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "3500",
-    "name": "md5(md5(md5($pass)))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "4400",
-    "name": "md5(sha1($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "20900",
-    "name": "md5(sha1($pass).md5($pass).sha1($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "21200",
-    "name": "md5(sha1($salt).md5($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "4300",
-    "name": "md5(strtoupper(md5($pass)))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "70",
-    "name": "md5(utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "30",
-    "name": "md5(utf16le($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^\\$1\\$[a-z0-9/.]{0,8}\\$[a-z0-9/.]{22}(:.*)?$",
-    "john": "md5crypt",
-    "hashcat": "500",
-    "name": "md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^{SHA}[a-z0-9/+=]{28}$",
-    "john": "nsldap",
-    "hashcat": "101",
-    "name": "nsldap, SHA-1(Base64), Netscape LDAP SHA",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^{SSHA}[a-z0-9/+=]{40}$",
-    "john": "nsldaps",
-    "hashcat": "111",
-    "name": "nsldaps, SSHA-1(Base64), Netscape LDAP SSHA",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}:[a-z0-9]{2}$",
-    "john": null,
-    "hashcat": "21",
-    "name": "osCommerce, xt:Commerce",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$P\\$[a-z0-9/.]{31}$",
-    "john": "phpass",
-    "hashcat": "400",
-    "name": "phpass, WordPress (MD5), Joomla (MD5)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$H\\$[a-z0-9/.]{31}$",
-    "john": "phpass",
-    "hashcat": "400",
-    "name": "phpass, phpBB3 (MD5)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^SCRYPT:[0-9]+:[0-9]:[0-9]:[a-z0-9:/+=]+$",
-    "john": null,
-    "hashcat": "8900",
-    "name": "scrypt",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "110",
-    "name": "sha1($pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "120",
-    "name": "sha1($salt.$pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4900",
-    "name": "sha1($salt.$pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4520",
-    "name": "sha1($salt.sha1($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "24300",
-    "name": "sha1($salt.sha1($pass.$salt))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "140",
-    "name": "sha1($salt.utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "19300",
-    "name": "sha1($salt1.$pass.$salt2)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "14400",
-    "name": "sha1(CX)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4700",
-    "name": "sha1(md5($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4710",
-    "name": "sha1(md5($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "21100",
-    "name": "sha1(md5($pass.$salt))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "18500",
-    "name": "sha1(md5(md5($pass)))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4500",
-    "name": "sha1(sha1($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "4510",
-    "name": "sha1(sha1($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "5000",
-    "name": "sha1(sha1($salt.$pass.$salt))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "170",
-    "name": "sha1(utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "130",
-    "name": "sha1(utf16le($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "1410",
-    "name": "sha256($pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "1420",
-    "name": "sha256($salt.$pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "22300",
-    "name": "sha256($salt.$pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "20720",
-    "name": "sha256($salt.sha256($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "1440",
-    "name": "sha256($salt.utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "20800",
-    "name": "sha256(md5($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "20710",
-    "name": "sha256(sha256($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "21400",
-    "name": "sha256(sha256_bin($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "1470",
-    "name": "sha256(utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "1430",
-    "name": "sha256(utf16le($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^\\$5\\$(rounds=[0-9]+\\$)?[a-z0-9/.]{0,16}\\$[a-z0-9/.]{43}$",
-    "john": "sha256crypt",
-    "hashcat": "7400",
-    "name": "sha256crypt $5$, SHA256 (Unix)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{96}(:.+)?$",
-    "john": null,
-    "hashcat": "10810",
-    "name": "sha384($pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{96}(:.+)?$",
-    "john": null,
-    "hashcat": "10820",
-    "name": "sha384($salt.$pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{96}(:.+)?$",
-    "john": null,
-    "hashcat": "10840",
-    "name": "sha384($salt.utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{96}(:.+)?$",
-    "john": null,
-    "hashcat": "10870",
-    "name": "sha384(utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{96}(:.+)?$",
-    "john": null,
-    "hashcat": "10830",
-    "name": "sha384(utf16le($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{128}(:.+)?$",
-    "john": null,
-    "hashcat": "1710",
-    "name": "sha512($pass.$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{128}(:.+)?$",
-    "john": null,
-    "hashcat": "1720",
-    "name": "sha512($salt.$pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{128}(:.+)?$",
-    "john": null,
-    "hashcat": "1740",
-    "name": "sha512($salt.utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{128}(:.+)?$",
-    "john": null,
-    "hashcat": "1770",
-    "name": "sha512(utf16le($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{128}(:.+)?$",
-    "john": null,
-    "hashcat": "1730",
-    "name": "sha512(utf16le($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^\\$6\\$(rounds=[0-9]+\\$)?[a-z0-9/.]{0,16}\\$[a-z0-9/.]{86}$",
-    "john": "sha512crypt",
-    "hashcat": "1800",
-    "name": "sha512crypt $6$, SHA512 (Unix)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}:.{3}$",
-    "john": null,
-    "hashcat": "2611",
-    "name": "vBulletin < v3.8.5",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}:.{30}$",
-    "john": null,
-    "hashcat": "2711",
-    "name": "vBulletin >= v3.8.5",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}:[0-9]+:[0-9]+$",
-    "john": null,
-    "hashcat": "3730",
-    "name": "Dahua NVR/DVR/HVR (md5($salt1.strtoupper(md5($salt2.$pass))))",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?",
-    "john": null,
-    "hashcat": "4410",
-    "name": "md5(sha1($pass).$salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "6050",
-    "name": "HMAC-RIPEMD160 (key = $pass)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:.+)?$",
-    "john": null,
-    "hashcat": "6060",
-    "name": "HMAC-RIPEMD160 (key = $salt)",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^\\$dpapimk\\$2\\*3\\*.+\\*aes256\\*sha512\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
-    "john": null,
-    "hashcat": "15910",
-    "name": "DPAPI masterkey file v2 (context 3)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-z0-9/+=]{80}$",
-    "john": null,
-    "hashcat": "18800",
-    "name": "Blockchain, My Wallet, Second Password (SHA256)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:[a-f0-9]+)?$",
-    "john": null,
-    "hashcat": "21420",
-    "name": "sha256($salt.sha256_bin($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-z0-9/+=]{28}",
-    "john": null,
-    "hashcat": "24800",
-    "name": "Umbraco HMAC-SHA1",
-    "exotic": true,
-    "extended": false
-  },
-  {
-    "regex": "^\\$metamask-short\\$[a-z0-9+=]+\\$[a-z0-9+=]+\\$[a-z0-9+/=]+$",
-    "john": null,
-    "hashcat": "26610",
-    "name": "MetaMask Wallet (short hash, plaintext check)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^exodus:[0-9]+:[0-9]:[0-9]:[a-z0-9+=]+:[a-z0-9+=]+:[a-z0-9/+=]+:[a-z0-9+=]+$",
-    "john": null,
-    "hashcat": "28200",
-    "name": "Exodus Desktop Wallet (scrypt)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$teamspeak\\$3\\$[a-z0-9+=]+\\$[a-z0-9+=]+$",
-    "john": null,
-    "hashcat": "28300",
-    "name": "Teamspeak 3 (channel hash)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
-    "john": null,
-    "hashcat": "28400",
-    "name": "bcrypt(sha512($pass)) / bcryptsha512",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "28501",
-    "name": "Bitcoin WIF private key (P2PKH), compressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "28502",
-    "name": "Bitcoin WIF private key (P2PKH), uncompressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "28503",
-    "name": "Bitcoin WIF private key (P2WPKH, Bech32), compressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "28504",
-    "name": "Bitcoin WIF private key (P2WPKH, Bech32), uncompressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "28505",
-    "name": "Bitcoin WIF private key (P2SH(P2WPKH)), compressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "28506",
-    "name": "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^scram-sha-256\\$4096:[a-z0-9+=]+\\$[a-z0-9+=]+:[a-z0-9+=]+$",
-    "john": null,
-    "hashcat": "28600",
-    "name": "PostgreSQL SCRAM-SHA-256",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$aws-sig-v4\\$[0-9]\\$[0-9tz]+\\$[^$]+\\$[a-z0-9]{2}\\$[a-f0-9]{64}\\$[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "28700",
-    "name": "Amazon AWS4-HMAC-SHA256",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$krb5db\\$[0-9]{2}\\$\\w+\\$\\w+.\\w+\\$[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": "28800",
-    "name": "Kerberos 5, etype 17, DB",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$krb5db\\$[0-9]{2}\\$\\w+\\$\\w+.\\w+\\$[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "28900",
-    "name": "Kerberos 5, etype 18, DB",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{40}(:[a-f0-9]{64}:[a-f0-9]{16})?$",
-    "john": null,
-    "hashcat": "29000",
-    "name": "sha1($salt.sha1(utf16le($username).':'.utf16le($pass)))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-z0-9-_]*\\.[a-z0-9-_]*\\.[a-z0-9-_]*$",
-    "john": null,
-    "hashcat": "29100",
-    "name": "Flask Session Cookie ($salt.$salt.$pass)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(\\$radmin3\\$)?[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{512}$",
-    "john": null,
-    "hashcat": "29200",
-    "name": "Radmin3",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29311",
-    "name": "TrueCrypt RIPEMD160 + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29312",
-    "name": "TrueCrypt RIPEMD160 + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29313",
-    "name": "TrueCrypt RIPEMD160 + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29321",
-    "name": "TrueCrypt SHA512 + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29322",
-    "name": "TrueCrypt SHA512 + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29323",
-    "name": "TrueCrypt SHA512 + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29331",
-    "name": "TrueCrypt Whirlpool + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29332",
-    "name": "TrueCrypt Whirlpool + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29333",
-    "name": "TrueCrypt Whirlpool + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29341",
-    "name": "TrueCrypt RIPEMD160 + XTS 512 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29342",
-    "name": "TrueCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29343",
-    "name": "TrueCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29411",
-    "name": "VeraCrypt RIPEMD160 + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29412",
-    "name": "VeraCrypt RIPEMD160 + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29413",
-    "name": "VeraCrypt RIPEMD160 + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29421",
-    "name": "VeraCrypt SHA512 + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29422",
-    "name": "VeraCrypt SHA512 + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29423",
-    "name": "VeraCrypt SHA512 + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29431",
-    "name": "VeraCrypt Whirlpool + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29432",
-    "name": "VeraCrypt Whirlpool + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29433",
-    "name": "VeraCrypt Whirlpool + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29441",
-    "name": "VeraCrypt RIPEMD160 + XTS 512 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29442",
-    "name": "VeraCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29443",
-    "name": "VeraCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29451",
-    "name": "VeraCrypt SHA256 + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29452",
-    "name": "VeraCrypt SHA256 + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29453",
-    "name": "VeraCrypt SHA256 + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29461",
-    "name": "VeraCrypt SHA256 + XTS 512 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29462",
-    "name": "VeraCrypt SHA256 + XTS 1024 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29463",
-    "name": "VeraCrypt SHA256 + XTS 1536 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29471",
-    "name": "VeraCrypt Streebog-512 + XTS 512 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29472",
-    "name": "VeraCrypt Streebog-512 + XTS 1024 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29473",
-    "name": "VeraCrypt Streebog-512 + XTS 1536 bit",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29481",
-    "name": "VeraCrypt Streebog-512 + XTS 512 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29482",
-    "name": "VeraCrypt Streebog-512 + XTS 1024 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
-    "john": null,
-    "hashcat": "29483",
-    "name": "VeraCrypt Streebog-512 + XTS 1536 bit + boot-mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$keepass\\$\\*[0-9]\\*[0-9]+\\*[0-9]\\*[a-f0-9]{64}\\*[a-f0-9]{64}\\*[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "29700",
-    "name": "KeePass 1 (AES/Twofish) and KeePass 2 (AES) - keyfile only mode",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$bisq\\$[0-9]\\*[0-9]+\\*[0-9]\\*[0-9]\\*[a-f0-9]{16}\\*[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "29800",
-    "name": "Bisq .wallet (scrypt)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$encdv-pbkdf2\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[0-9]{2}\\$[a-f0-9]{64}\\$[0-9]+$",
-    "john": null,
-    "hashcat": "29910",
-    "name": "ENCsecurity Datavault (PBKDF2/no keychain)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$encdv-pbkdf2\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[0-9]{2}\\$[a-f0-9]{64}\\$[0-9]+\\$[a-f0-9]{256}$",
-    "john": null,
-    "hashcat": "29920",
-    "name": "ENCsecurity Datavault (PBKDF2/keychain)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$encdv\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}$",
-    "john": null,
-    "hashcat": "29930",
-    "name": "ENCsecurity Datavault (MD5/no keychain)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$encdv\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[a-f0-9]{256}$",
-    "john": null,
-    "hashcat": "29940",
-    "name": "ENCsecurity Datavault (MD5/keychain)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^sha256\\$[a-f0-9]+\\$[a-f0-9]{24}$",
-    "john": null,
-    "hashcat": "30120",
-    "name": "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{56}$",
-    "john": null,
-    "hashcat": "30420",
-    "name": "DANE RFC7929/RFC8162 SHA2-256",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{32}(:.+)?$",
-    "john": null,
-    "hashcat": "30500",
-    "name": "md5(md5($salt).md5(md5($pass)))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^(\\$2[abxy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
-    "john": null,
-    "hashcat": "30600",
-    "name": "bcrypt(sha256($pass)) / bcryptsha256",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^sha256:[a-f0-9]{64}:[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "30700",
-    "name": "Anope IRC Services (enc_sha256)",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "30901",
-    "name": "Bitcoin raw private key (P2PKH), compressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "30902",
-    "name": "Bitcoin raw private key (P2PKH), uncompressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "30903",
-    "name": "Bitcoin raw private key (P2WPKH, Bech32), compressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "30904",
-    "name": "Bitcoin raw private key (P2WPKH, Bech32), uncompressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "30905",
-    "name": "Bitcoin raw private key (P2SH(P2WPKH)), compressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
-    "hashcat": "30906",
-    "name": "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$blake2\\$[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "31000",
-    "name": "BLAKE2s-256",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{64}$",
-    "john": null,
-    "hashcat": "31100",
-    "name": "SM3",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$vbk\\$\\*[a-f0-9]{128}\\*[0-9]+\\*[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": "31200",
-    "name": "Veeam VBK",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$sntp-ms\\$[a-f0-9]{32}\\$[a-f0-9]{96}$",
-    "john": null,
-    "hashcat": "31300",
-    "name": "MS SNTP",
     "exotic": false,
     "extended": false
   }
