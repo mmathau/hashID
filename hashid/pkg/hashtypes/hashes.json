@@ -3834,8 +3834,16 @@
   {
     "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
     "john": null,
-    "hashcat": "29332",
+    "hashcat": "29333",
     "name": "TrueCrypt Whirlpool + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29341",
+    "name": "TrueCrypt RIPEMD160 + XTS 512 bit + boot-mode",
     "exotic": false,
     "extended": false
   }
