@@ -2164,7 +2164,7 @@
     "john": "radmin",
     "hashcat": "9900",
     "name": "Radmin2",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
