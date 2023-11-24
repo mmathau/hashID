@@ -3608,7 +3608,7 @@
     "extended": false
   },
   {
-    "regex": "^[a-z0-9]+(=|==)?$",
+    "regex": "^[a-z0-9/+=]{80}$",
     "john": null,
     "hashcat": "18800",
     "name": "Blockchain, My Wallet, Second Password (SHA256)",
