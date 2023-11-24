@@ -3651,6 +3651,13 @@ var tests = []testCases{
 		},
 		want: "Bitcoin raw private key (P2PKH), uncompressed",
 	},
+	{
+		name: "BitcoinRawPrivateKeyP2WPKHBech32Compressed",
+		hashes: []string{
+			"bc1q926ca6n7wz7gm2gfd8xc5p0vu687ngvnknpx74",
+		},
+		want: "Bitcoin raw private key (P2WPKH, Bech32), compressed",
+	},
 }
 
 func TestMain(m *testing.M) {
