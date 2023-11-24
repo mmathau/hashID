@@ -3279,6 +3279,13 @@ var tests = []testCases{
 		},
 		want: "Kerberos 5, etype 17, DB",
 	},
+	{
+		name: "Kerberos5etype18DB",
+		hashes: []string{
+			"$krb5db$18$test$TEST.LOCAL$266b5a53a6d663c3f69174f3309acada8e467c097c7973699f86286a6cf1a6c7",
+		},
+		want: "Kerberos 5, etype 18, DB",
+	},
 }
 
 func TestMain(m *testing.M) {
