@@ -2383,6 +2383,475 @@ var tests = []testCases{
 		},
 		want: "Sybase ASE",
 	},
+	{
+		name: "TACACS+",
+		hashes: []string{
+			"$tacacs-plus$0$5fde8e68$4e13e8fb33df$c006",
+		},
+		want: "TACACS+",
+	},
+	{
+		name: "TOTPHMACSHA1",
+		hashes: []string{
+			"597056:3600",
+		},
+		want: "TOTP (HMAC-SHA1)",
+	},
+	{
+		name: "TelegramDesktop<v2114PBKDF2HMACSHA1",
+		hashes: []string{
+			"$telegram$1*4000*913a7e42143b4eed0fb532dacfa04e3a0eae036ae66dd02de76323046c575531*cde5f7a3bda3812b4a3cd4df1269c6be18ca7536981522c251cab531c274776804634cdca5313dc8beb9895f903a40d874cd50dbb82e5e4d8f264820f3f2e2111a5831e1a2f16b1a75b2264c4b4485dfe0f789071130160af205f9f96aef378ee05602de2562f8c3b136a75ea01f54f4598af93f9e7f98eb66a5fd3dabaa864708fe0e84b59b77686974060f1533e3acc5367bc493915b5614603cf5601cfa0a6b8eae4c4bd24948176dd7ff470bc0863f35fdfce31a667c70e37743f662bc9c5ec86baff3ebb6bf7de96bcdfaca18baf9617a979424f792ef6e65e346ea2cbc1d53377f47c3fc681d7eda8169e6e20cd6a22dd94bf24933b8ffc4878216fa9edc7c72a073446a14b63e12b223f840217a7eac51b6afcc15bfa12afd3e85d3bd",
+		},
+		want: "Telegram Desktop < v2.1.14 (PBKDF2-HMAC-SHA1)",
+	},
+	{
+		name: "TelegramDesktop>=v2114PBKDF2HMACSHA512",
+		hashes: []string{
+			"$telegram$2*100000*77461dcb457ce9539f8e4235d33bd12455b4a38446e63b52ecdf2e7b65af4476*f705dda3247df6d690dfc7f44d8c666979737cae9505d961130071bcc18eeadaef0320ac6985e4a116834c0761e55314464aae56dadb8f80ab8886c16f72f8b95adca08b56a60c4303d84210f75cfd78a3e1a197c84a747988ce2e1b247397b61041823bdb33932714ba16ca7279e6c36b75d3f994479a469b50a7b2c7299a4d7aadb775fb030d3bb55ca77b7ce8ac2f5cf5eb7bdbcc10821b8953a4734b448060246e5bb93f130d6d3f2e28b9e04f2a064820be562274c040cd849f1473d45141559fc45da4c54abeaf5ca40d2d57f8f8e33bdb232c7279872f758b3fb452713b5d91c855383f7cec8376649a53b83951cf8edd519a99e91b8a6cb90153088e35d9fed332c7253771740f49f9dc40c7da50352656395bbfeae63e10f754d24a",
+		},
+		want: "Telegram Desktop >= v2.1.14 (PBKDF2-HMAC-SHA512)",
+	},
+	{
+		name: "TelegramMobileAppPasscodeSHA256",
+		hashes: []string{
+			"$telegram$0*518c001aeb3b4ae96c6173be4cebe60a85f67b1e087b045935849e2f815b5e41*25184098058621950709328221838128",
+		},
+		want: "Telegram Mobile App Passcode (SHA256)",
+	},
+	{
+		name: "Tiger128",
+		hashes: []string{
+			"9123dc36b0b67ce3e79d0142820f3dc7",
+		},
+		want: "Tiger-128",
+	},
+	{
+		name: "Tiger160",
+		hashes: []string{
+			"9123dc36b0b67ce3e79d0142820f3dc7b3945967",
+		},
+		want: "Tiger-160",
+	},
+	{
+		name: "Tiger192",
+		hashes: []string{
+			"9123dc36b0b67ce3e79d0142820f3dc7b3945967b4e7196c",
+		},
+		want: "Tiger-192",
+	},
+	{
+		name: "Tripcode",
+		hashes: []string{
+			"pfaRCwDe0U",
+		},
+		want: "Tripcode",
+	},
+	{
+		name: "VMwareVMXPBKDF2HMACSHA1AES256CBC",
+		hashes: []string{
+			"$vmx$0$10000$264bbab02fdf7c1a793651120bec3723$cbb368564d8dfb99f509d4922f4693413f3816af713f0e76bc2409ff9336935d",
+		},
+		want: "VMware VMX (PBKDF2-HMAC-SHA1 + AES-256-CBC)",
+	},
+	{
+		name: "VNC",
+		hashes: []string{
+			"$vnc$*84076F040550EEA9341967633B5F3855*DD96D21781A70DA49443279975404DD0",
+		},
+		want: "VNC",
+	},
+	{
+		name: "Ventrilo",
+		hashes: []string{
+			"1621a36cbd1ce49c5810c9b69468cc9c8eb16089cd7ed3493143f92c2d8064fe",
+		},
+		want: "Ventrilo",
+	},
+	{
+		name: "VirtualBoxPBKDF2HMACSHA256AES128XTS",
+		hashes: []string{
+			"$vbox$0$260000$fcc37189521686699a43e49514b91f159306be108b98895666583cd15c3e206b$8$288c3957db47e7c3dff2f7932121eb3395d21ab76b9cf3de2dc660310a25e7ad$20000$8847cd90f8acef74bae41155392908780eebb1d16452aa09b2f7b6cd7d8a4096$9f4d615b484f95c73944a98f392a3ce04f93403e8bb6257e6b6c854273d3a08a",
+		},
+		want: "VirtualBox (PBKDF2-HMAC-SHA256 & AES-128-XTS)",
+	},
+	{
+		name: "VirtualBoxPBKDF2HMACSHA256AES256XTS",
+		hashes: []string{
+			"$vbox$0$160000$54aff69fca91c20b3b15618c6732c4a2f953dd88690cd4cc731569b6b80b5572$16$cfb003087e0c618afa9ad7e44adcd97517f039e0424dedb46db8affbb73cd064019abae19ee5e4f5b05b626e6bc5d7da65c61a5f94d7bcac521c388276e5358b$20000$2e5729055136168eea79cb3f1765450a35ab7540125f2ca2a46924a99fd0524d$b28d1db1cabe99ca989a405c33a27beeb9c0683b8b4b54b0e0d85f712f64d89c",
+		},
+		want: "VirtualBox (PBKDF2-HMAC-SHA256 & AES-256-XTS)",
+	},
+	{
+		name: "WBB3WoltlabBurningBoard",
+		hashes: []string{
+			"8084df19a6dc81e2597d051c3d8b400787e2d5a9:6755045315424852185115352765375338838643",
+		},
+		want: "WBB3 (Woltlab Burning Board)",
+	},
+	{
+		name: "WBB4WoltlabBurningBoard",
+		hashes: []string{
+			"$2a$08$VPzNKPAY60FsAbnq.c.h5.XTCZtC1z.j3hnlDFGImN9FcpfR1QnLq",
+		},
+		want: "WBB4 (Woltlab Burning Board)",
+	},
+	{
+		name: "WPAPBKDF2PMKIDEAPOL",
+		hashes: []string{
+			"WPA*01*4d4fe7aac3a2cecab195321ceb99a7d0*fc690c158264*f4747f87f9f4*686173686361742d6573736964***",
+		},
+		want: "WPA-PBKDF2-PMKID+EAPOL",
+	},
+	{
+		name: "WPAPMKPMKIDEAPOL",
+		hashes: []string{
+			"WPA*01*5ce7ebe97a1bbfeb2822ae627b726d5b*27462da350ac*accd10fb464e*686173686361742d6573736964***",
+		},
+		want: "WPA-PMK-PMKID+EAPOL",
+	},
+	{
+		name: "WPAPMKIDPBKDF2",
+		hashes: []string{
+			"2582a8281bf9d4308d6f5731d0e61c61*4604ba734d4e*89acf0e761f4*ed487162465a774bfba60eb603a39f3a",
+		},
+		want: "WPA-PMKID-PBKDF2",
+	},
+	{
+		name: "WPAPMKIDPMK",
+		hashes: []string{
+			"2582a8281bf9d4308d6f5731d0e61c61*4604ba734d4e*89acf0e761f4",
+		},
+		want: "WPA-PMKID-PMK",
+	},
+	{
+		name: "Web2pyPBKDF2SHA512",
+		hashes: []string{
+			"pbkdf2(1000,20,sha512)$744943$c5f8cdef76e3327c908d8d96d4abdb3d8caba14c",
+		},
+		want: "Web2py pbkdf2-sha512",
+	},
+	{
+		name: "WebEditionCMS",
+		hashes: []string{
+			"fa01af9f0de5f377ae8befb03865178e:5678",
+		},
+		want: "WebEdition CMS",
+	},
+	{
+		name: "Whirlpool",
+		hashes: []string{
+			"7ca8eaaaa15eaa4c038b4c47b9313e92da827c06940e69947f85bc0fbef3eb8fd254da220ad9e208b6b28f6bb9be31dd760f1fdb26112d83f87d96b416a4d258",
+		},
+		want: "Whirlpool",
+	},
+	{
+		name: "WinZip",
+		hashes: []string{
+			"$zip2$*0*3*0*e3222d3b65b5a2785b192d31e39ff9de*1320*e*19648c3e063c82a9ad3ef08ed833*3135c79ecb86cd6f48fc*$/zip2$",
+		},
+		want: "WinZip",
+	},
+	{
+		name: "WindowsHelloPINPassword",
+		hashes: []string{
+			"$WINHELLO$*SHA512*10000*00761655*3b3d3197efb2839a6072e922cc03be910be55d1e60389689c05b520d2d57c06258dc5a48798ba65424004cbe2e003d0509036f3394bcae108eb6b77c7eb306d7*c0772a3aca949db60f274f315b3a5f63fea552fc0d1f2032db5293ca9690735217d918d4cf697aa45b2fe598168804040e18fe00758be94aac971985ea7a5521*bff47e398df761733b5aeda7035cdf289547db3afb94b70cbad2aaea21a5cd58*8a4d5b88832e10bad57303324e6c9021733733df4acbf91366f51cebdc755e00fe1d01b3202469ee6ad5e667975b4f50e3110b00ef60414cd2cf96cc47df532e36b997727ffec2924d979d3fb6e677cb5827f4313131a46be8712926c42158339b55183e2fd7f2f0761980b1413897825c3759c566ff8a438189a6c8fb2d630dc33c6330de45c784d11957c686b40b6fe31fd8f2b1b664f542392326af5d334fdf92155343335e1b964955ac0b0e6f7254a599f0f0dc99becc2216515ba9e9472a54e60a14507fc353ebc47b9f0a8249a2a1bfa5d2cf526bd15ee68bd52e944ece9de6bbda913bc5083e26229673340fcc5285df0d38cbc7bb14584ced2fe9e9b3c283fa3c5ad4dd2034b7a67c8e7a1632fae8979a0abdd19be91c6bc371966121e04d433923e44df0b60c156bd90bc61c9fed01a7a76353f79dd4da3e07e12810ec3765128ec44b44b0789d6aa9e9702211a22ab8055ea32e9513fb1bd9d24ca04b33282632f63ab1b213e9644f97bc31dc4d2e7050c1fa23c0000facbf7c76fd7be4b112586f73f0c27abcf7cbe8c9d9fb83af70f60c490936fef84ed5301f73917b4e4170674a5d5e4bfbebdfeda9584221a0f190545efea7245dd2517ade393bedc255c4e016d9919e6e3f3711bca677fc099bf4e1730a752ea2a90a20ff3d09c909771849d3b009ba8d95d2b84fff889e38b079f1325aa42daa067a52abb5c064de3a5040e4a64e76b397b5c9ee6d045f3b5150cf428a92c141735908bb278077d52beefdc87efa156b8ebda071cb425fad0372a8a7cb6eb29926e8f6411ff1b818750c5b6888302fee9b1591b1c23db131538db2aa3de61dcd76fb7067be7ab71ee372bac18be0f446c974e92e79e27e7e3b2aa5ffc3f5f923f2df8ac2edcbb9392d1ac35e4cd52037d9dceedec6391e713e78770307bfde6a31b4e115904d285ac35db055ae8253b9968b7ed7b948da5f*785435725a573571565662727670754100",
+		},
+		want: "Windows Hello PIN/Password",
+	},
+	{
+		name: "WindowsPhone8+PINPassword",
+		hashes: []string{
+			"95fc4680bcd2a5f25de3c580cbebadbbf256c1f0ff2e9329c58e36f8b914c11f:4471347156480581513210137061422464818088437334031753080747625028271635402815635172140161077854162657165115624364524648202480341513407048222056541500234214433548175101668212658151115765112202168288664210443352443335235337677853484573107775345675846323265745",
+		},
+		want: "Windows Phone 8+ PIN/password",
+	},
+	{
+		name: "XMPPSCRAMPBKDF2SHA1",
+		hashes: []string{
+			"$xmpp-scram$0$4096$32$bbc1467455fd9886f6c5d15200601735e159e807d53a1c80853b570321aaeceb$8301c6e0245e4a986ed64a9b1803afb1854d9712",
+		},
+		want: "XMPP SCRAM PBKDF2-SHA1",
+	},
+	{
+		name: "XOR32",
+		hashes: []string{
+			"00000004",
+		},
+		want: "XOR-32",
+	},
+	{
+		name: "ZipMonster",
+		hashes: []string{
+			"dfcbda4dad0d7600e2096ce4bf09c117",
+		},
+		want: "ZipMonster",
+	},
+	{
+		name: "bcrypt",
+		hashes: []string{
+			"$2a$12$djEXehnXL2xWQRq5w.LbFOaNDNlebYzDbAfwWwzY7oKrbdMe4OYwO",
+		},
+		want: "bcrypt",
+	},
+	{
+		name: "bcrypt$2$BlowfishUnix",
+		hashes: []string{
+			"$2a$05$LhayLxezLhK1LhWvKxCyLOj0j1u.Kj0jZ0pEmm134uzrQlFvQJLF6",
+		},
+		want: "bcrypt $2*$, Blowfish (Unix)",
+	},
+	{
+		name: "bcryptSHA256",
+		hashes: []string{
+			"$bcrypt-sha256$2a,12$etprdT4l6EppsPWYBCjUP.$V0zQ4JShuLJLpQXWmc8zLa9XH7MzQwe",
+		},
+		want: "bcrypt(SHA-256)",
+	},
+	{
+		name: "bcryptMD5$PassbcryptMD5",
+		hashes: []string{
+			"$2a$05$/VT2Xs2dMd8GJKfrXhjYP.DkTjOVrY12yDN7/6I8ZV0q/1lEohLru",
+		},
+		want: "bcrypt(md5($pass)) / bcryptmd5",
+	},
+	{
+		name: "bcryptSHA1$PassbcryptSHA1",
+		hashes: []string{
+			"$2a$05$Uo385Fa0g86uUXHwZxB90.qMMdRFExaXePGka4WGFv.86I45AEjmO",
+		},
+		want: "bcrypt(sha1($pass)) / bcryptsha1",
+	},
+	{
+		name: "descryptDESUnixTraditionalDES",
+		hashes: []string{
+			"48c/R8JAv757A",
+		},
+		want: "descrypt, DES (Unix), Traditional DES",
+	},
+	{
+		name: "eCryptfs",
+		hashes: []string{
+			"$ecryptfs$0$1$7c95c46e82f364b3$60bba503f0a42d0c",
+		},
+		want: "eCryptfs",
+	},
+	{
+		name: "hMailServer",
+		hashes: []string{
+			"8fe7ca27a17adc337cd892b1d959b4e487b8f0ef09e32214f44fb1b07e461c532e9ec3",
+		},
+		want: "hMailServer",
+	},
+	{
+		name: "iPhonePasscodeUIDKeySystemKeybag",
+		hashes: []string{
+			"$uido$77889b1bca161ce876d976a102c7bf82$3090545724551425617156367874312887832777$50000$2d4c86b71c0c04129a47c6468e2437d1fecd88e232a7b15112d5364682dc391dbbbb921cf6e02664",
+		},
+		want: "iPhone passcode (UID key + System Keybag)",
+	},
+	{
+		name: "iSCSICHAPAuthenticationMD5CHAP",
+		hashes: []string{
+			"afd09efdd6f8ca9f18ec77c5869788c3:01020304050607080910111213141516:01",
+		},
+		want: "iSCSI CHAP authentication, MD5(CHAP)",
+	},
+	{
+		name: "iTunesBackup<100",
+		hashes: []string{
+			"$itunes_backup$*9*b8e3f3a970239b22ac199b622293fe4237b9d16e74bad2c3c3568cd1bd3c471615a6c4f867265642*10000*4542263740587424862267232255853830404566**",
+		},
+		want: "iTunes backup < 10.0",
+	},
+	{
+		name: "iTunesBackup>=100",
+		hashes: []string{
+			"$itunes_backup$*10*8b715f516ff8e64442c478c2d9abb046fc6979ab079007d3dbcef3ddd84217f4c3db01362d88fa68*10000*2353363784073608264337337723324886300850*10000000*425b4bb4e200b5fd4c66979c9caca31716052063",
+		},
+		want: "iTunes backup >= 10.0",
+	},
+	{
+		name: "macOSv104macOSv105macOSv106",
+		hashes: []string{
+			"1430823483d07626ef8be3fda2ff056d0dfd818dbfe47683",
+		},
+		want: "macOS v10.4, macOS v10.5, macOS v10.6",
+	},
+	{
+		name: "macOSv107",
+		hashes: []string{
+			"648742485c9b0acd786a233b2330197223118111b481abfa0ab8b3e8ede5f014fc7c523991c007db6882680b09962d16fd9c45568260531bdb34804a5e31c22b4cfeb32d",
+		},
+		want: "macOS v10.7",
+	},
+	{
+		name: "macOSv108+PBKDF2SHA512",
+		hashes: []string{
+			"$ml$35460$93a94bd24b5de64d79a5e49fa372827e739f4d7b6975c752c9a0ff1e5cf72e05$752351df64dd2ce9dc9c64a72ad91de6581a15c19176266b44d98919dfa81f0f96cbcb20a1ffb400718c20382030f637892f776627d34e021bad4f81b7de8222",
+		},
+		want: "macOS v10.8+ (PBKDF2-SHA512)",
+	},
+	{
+		name: "md5$Salt$Pass",
+		hashes: []string{
+			"f0fda58630310a6dd91a7d8f0a4ceda2:4225637426",
+		},
+		want: "md5($salt.$pass)",
+	},
+	{
+		name: "md5$Salt$Pass$Salt",
+		hashes: []string{
+			"2e45c4b99396c6cb2db8bda0d3df669f:1234",
+		},
+		want: "md5($salt.$pass.$salt)",
+	},
+	{
+		name: "md5$Saltmd5$Pass",
+		hashes: []string{
+			"95248989ec91f6d0439dbde2bd0140be:1234",
+		},
+		want: "md5($salt.md5($pass))",
+	},
+	{
+		name: "md5$Saltmd5$Pass$Salt",
+		hashes: []string{
+			"b4cb5c551a30f6c25d648560408df68a:1234",
+		},
+		want: "md5($salt.md5($pass.$salt))",
+	},
+	{
+		name: "md5$Saltmd5$Salt$Pass",
+		hashes: []string{
+			"30d0cf4a5d7ed831084c5b8b0ba75b46:1234",
+		},
+		want: "md5($salt.md5($salt.$pass))",
+	},
+	{
+		name: "md5$Saltsha1$Salt$Pass",
+		hashes: []string{
+			"799dc7d9aa4d3f404cc21a4936dbdcde:68617368636174",
+		},
+		want: "md5($salt.sha1($salt.$pass))",
+	},
+	{
+		name: "md5$Saltutf16le$Pass",
+		hashes: []string{
+			"d63d0e21fdc05f618d55ef306c54af82:13288442151473",
+		},
+		want: "md5($salt.utf16le($pass))",
+	},
+	{
+		name: "md5md5$Pass",
+		hashes: []string{
+			"a936af92b0ae20b1ff6c3347a72e5fbe",
+		},
+		want: "md5(md5($pass))",
+	},
+	{
+		name: "md5md5$Passmd5$Salt",
+		hashes: []string{
+			"250920b3a5e31318806a032a4674df7e:1234",
+		},
+		want: "md5(md5($pass).md5($salt))",
+	},
+	{
+		name: "md5md5md5$Pass",
+		hashes: []string{
+			"9882d0778518b095917eb589f6998441",
+		},
+		want: "md5(md5(md5($pass)))",
+	},
+	{
+		name: "md5sha1$Pass",
+		hashes: []string{
+			"288496df99b33f8f75a7ce4837d1b480",
+		},
+		want: "md5(sha1($pass))",
+	},
+	{
+		name: "md5sha1$Passmd5$Passsha1$Pass",
+		hashes: []string{
+			"100b3a4fc1dc8d60d9bf40688d8b740a",
+		},
+		want: "md5(sha1($pass).md5($pass).sha1($pass))",
+	},
+	{
+		name: "md5sha1$Saltmd5$Pass",
+		hashes: []string{
+			"e69b7a7fe1bf2ad9ef116f79551ee919:baa038987e582431a6d",
+		},
+		want: "md5(sha1($salt).md5($pass))",
+	},
+	{
+		name: "md5strtouppermd5$Pass",
+		hashes: []string{
+			"b8c385461bb9f9d733d3af832cf60b27",
+		},
+		want: "md5(strtoupper(md5($pass)))",
+	},
+	{
+		name: "md5utf16le$Pass",
+		hashes: []string{
+			"2303b15bfa48c74a74758135a0df1201",
+		},
+		want: "md5(utf16le($pass))",
+	},
+	{
+		name: "md5utf16le$Pass$Salt",
+		hashes: []string{
+			"b31d032cfdcf47a399990a71e43c5d2a:144816",
+		},
+		want: "md5(utf16le($pass).$salt)",
+	},
+	{
+		name: "md5cryptMD5UnixCiscoIOS$1$MD5",
+		hashes: []string{
+			"$1$28772684$iEwNOgGugqO9.bIz5sk8k/",
+		},
+		want: "md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)",
+	},
+	{
+		name: "nsldapSHA1Base64NetscapeLDAPSHA",
+		hashes: []string{
+			"{SHA}uJ6qx+YUFzQbcQtyd2gpTQ5qJ3s=",
+		},
+		want: "nsldap, SHA-1(Base64), Netscape LDAP SHA",
+	},
+	{
+		name: "nsldapsSSHA1Base64NetscapeLDAPSSHA",
+		hashes: []string{
+			"{SSHA}AZKja92fbuuB9SpRlHqaoXxbTc43Mzc2MDM1Ng==",
+		},
+		want: "nsldaps, SSHA-1(Base64), Netscape LDAP SSHA",
+	},
+	{
+		name: "osCommercextCommerce",
+		hashes: []string{
+			"374996a5e8a5e57fd97d893f7df79824:36",
+		},
+		want: "osCommerce, xt:Commerce",
+	},
+	{
+		name: "phpassWordPressMD5JoomlaMD5",
+		hashes: []string{
+			"$P$984478476IagS59wHZvyQMArzfx58u.",
+		},
+		want: "phpass, WordPress (MD5), Joomla (MD5)",
+	},
+	{
+		name: "phpassphpBB3MD5",
+		hashes: []string{
+			"$H$984478476IagS59wHZvyQMArzfx58u.",
+		},
+		want: "phpass, phpBB3 (MD5)",
+	},
+	{
+		name: "scrypt",
+		hashes: []string{
+			"SCRYPT:1024:1:1:MDIwMzMwNTQwNDQyNQ==:5FW+zWivLxgCWj7qLiQbeC8zaNQ+qdO0NUinvqyFcfo=",
+		},
+		want: "scrypt",
+	},
 }
 
 func TestMain(m *testing.M) {
