@@ -3616,6 +3616,13 @@ var tests = []testCases{
 		},
 		want: "DANE RFC7929/RFC8162 SHA2-256",
 	},
+	{
+		name: "md5md5$Saltmd5md5$Pass",
+		hashes: []string{
+			"e13bb4b8e5a98db7277df344aa3363cf:28945624531",
+		},
+		want: "md5(md5($salt).md5(md5($pass)))",
+	},
 }
 
 func TestMain(m *testing.M) {

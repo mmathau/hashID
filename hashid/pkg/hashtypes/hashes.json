@@ -4118,5 +4118,13 @@
     "name": "DANE RFC7929/RFC8162 SHA2-256",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{32}(:.+)?$",
+    "john": null,
+    "hashcat": "30500",
+    "name": "md5(md5($salt).md5(md5($pass)))",
+    "exotic": false,
+    "extended": true
   }
 ]
