@@ -3419,14 +3419,6 @@
     "regex": "^[a-f0-9]{64}(:.+)?$",
     "john": null,
     "hashcat": "1440",
-    "name": "sha256($salt.unicode($pass))",
-    "exotic": false,
-    "extended": true
-  },
-  {
-    "regex": "^[a-f0-9]{64}(:.+)?$",
-    "john": null,
-    "hashcat": "1440",
     "name": "sha256($salt.utf16le($pass))",
     "exotic": false,
     "extended": true
