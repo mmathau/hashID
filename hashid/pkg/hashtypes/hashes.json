@@ -3624,7 +3624,7 @@
     "extended": true
   },
   {
-    "regex": "^[a-z0-9]+(=|==)?$",
+    "regex": "^[a-z0-9/+=]{28}",
     "john": null,
     "hashcat": "24800",
     "name": "Umbraco HMAC-SHA1",

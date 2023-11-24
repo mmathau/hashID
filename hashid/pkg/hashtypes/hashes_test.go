@@ -3178,6 +3178,7 @@ var tests = []testCases{
 		name: "UmbracoHMACSHA1",
 		hashes: []string{
 			"8uigXlGMNI7BzwLCJlDbcKR2FP4=",
+			"zzRggqANxhb+CbD/VabEt8cIde8=",
 		},
 		want: "Umbraco HMAC-SHA1",
 	},
