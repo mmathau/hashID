@@ -3750,5 +3750,13 @@
     "name": "sha1($salt.sha1(utf16le($username).':'.utf16le($pass)))",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^[a-z0-9-_]*\\.[a-z0-9-_]*\\.[a-z0-9-_]*$",
+    "john": null,
+    "hashcat": "29100",
+    "name": "Flask Session Cookie ($salt.$salt.$pass)",
+    "exotic": false,
+    "extended": false
   }
 ]

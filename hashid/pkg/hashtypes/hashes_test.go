@@ -3293,6 +3293,13 @@ var tests = []testCases{
 		},
 		want: "sha1($salt.sha1(utf16le($username).':'.utf16le($pass)))",
 	},
+	{
+		name: "FlaskSessionCookie$Salt$Salt$Pass",
+		hashes: []string{
+			"eyJ1c2VybmFtZSI6ImFkbWluIn0.YjdgRQ.1OTlf1PD0H9wXsu_qS0aywAJVD8",
+		},
+		want: "Flask Session Cookie ($salt.$salt.$pass)",
+	},
 }
 
 func TestMain(m *testing.M) {
