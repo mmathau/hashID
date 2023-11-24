@@ -3566,6 +3566,13 @@ var tests = []testCases{
 		},
 		want: "KeePass 1 (AES/Twofish) and KeePass 2 (AES) - keyfile only mode",
 	},
+	{
+		name: "BisqWalletScrypt",
+		hashes: []string{
+			"$bisq$3*32768*8*6*31d838af87f99cb8*5cfb7bf3228d9e865881156e17b1866589ffa6b757011e25d1319083595236d2",
+		},
+		want: "Bisq .wallet (scrypt)",
+	},
 }
 
 func TestMain(m *testing.M) {

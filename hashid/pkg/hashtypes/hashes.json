@@ -4062,5 +4062,13 @@
     "name": "KeePass 1 (AES/Twofish) and KeePass 2 (AES) - keyfile only mode",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$bisq\\$[0-9]\\*[0-9]+\\*[0-9]\\*[0-9]\\*[a-f0-9]{16}\\*[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "29800",
+    "name": "Bisq .wallet (scrypt)",
+    "exotic": false,
+    "extended": false
   }
 ]
