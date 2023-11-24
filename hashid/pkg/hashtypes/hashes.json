@@ -1264,14 +1264,6 @@
     "extended": false
   },
   {
-    "regex": "^{SSHA512}[a-z0-9/+]{96}$",
-    "john": "ssha512",
-    "hashcat": "1711",
-    "name": "LDAP(SSHA-512)",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^[a-f0-9]{32}(:.+)?$",
     "john": "lm",
     "hashcat": "3000",
