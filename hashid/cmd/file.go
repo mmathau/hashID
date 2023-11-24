@@ -57,7 +57,7 @@ var fileCmd = &cobra.Command{
 			}
 
 			for _, match := range matches {
-				if (!exotic && match.Exotic()) || (!extended && match.Extended()) {
+				if (!exotic && match.Exotic) || (!extended && match.Extended) {
 					continue
 				}
 				output := fmt.Sprintf("[+] %s", match.Name)

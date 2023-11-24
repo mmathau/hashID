@@ -45,11 +45,11 @@ var rootCmd = &cobra.Command{
 
 		for _, match := range matches {
 			// skip exotic hash types if not requested
-			if !exotic && match.Exotic() {
+			if !exotic && match.Exotic {
 				continue
 			}
 			// skip extended hash types if not requested
-			if !extended && match.Extended() {
+			if !extended && match.Extended {
 				continue
 			}
 
