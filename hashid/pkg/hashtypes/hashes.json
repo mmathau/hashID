@@ -4094,5 +4094,13 @@
     "name": "ENCsecurity Datavault (MD5/no keychain)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$encdv\\$[0-9]\\$[0-9]\\$[a-f0-9]{16}\\$[a-f0-9]{16}\\$[a-f0-9]{256}$",
+    "john": null,
+    "hashcat": "29940",
+    "name": "ENCsecurity Datavault (MD5/keychain)",
+    "exotic": false,
+    "extended": false
   }
 ]
