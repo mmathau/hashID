@@ -74,3 +74,66 @@ func (h *Hashes) FindHashType(hash string) []hashType {
 
 	return found
 }
+
+func (h *Hashes) GetAllHashTypes() []string {
+	var all []string
+	for _, ht := range h.types {
+		all = append(all, ht.Name)
+	}
+
+	return all
+}
+
+func (h *Hashes) GetExoticHashTypes() []string {
+	var exotic []string
+	for _, ht := range h.types {
+		if ht.Exotic {
+			exotic = append(exotic, ht.Name)
+		}
+	}
+
+	return exotic
+}
+
+func (h *Hashes) GetExtendedHashTypes() []string {
+	var extended []string
+	for _, ht := range h.types {
+		if ht.Extended {
+			extended = append(extended, ht.Name)
+		}
+	}
+
+	return extended
+}
+
+func (h *Hashes) GetHashcatModes() []string {
+	modes := make(map[string]struct{})
+	for _, ht := range h.types {
+		if ht.Hashcat != "" {
+			modes[ht.Hashcat] = struct{}{}
+		}
+	}
+
+	var uniqueModes []string
+	for mode := range modes {
+		uniqueModes = append(uniqueModes, mode)
+	}
+
+	return uniqueModes
+}
+
+func (h *Hashes) GetJohnFormats() []string {
+	formats := make(map[string]struct{})
+	for _, ht := range h.types {
+		if ht.JohnTheRipper != "" {
+			formats[ht.JohnTheRipper] = struct{}{}
+		}
+	}
+
+	var uniqueFormats []string
+	for format := range formats {
+		uniqueFormats = append(uniqueFormats, format)
+	}
+
+	return uniqueFormats
+}
