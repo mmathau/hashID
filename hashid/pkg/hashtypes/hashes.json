@@ -4206,5 +4206,13 @@
     "name": "SM3",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$vbk\\$\\*[a-f0-9]{128}\\*[0-9]+\\*[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "31200",
+    "name": "Veeam VBK",
+    "exotic": false,
+    "extended": false
   }
 ]
