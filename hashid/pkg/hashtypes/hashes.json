@@ -3950,5 +3950,13 @@
     "name": "VeraCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29443",
+    "name": "VeraCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
+    "exotic": false,
+    "extended": false
   }
 ]
