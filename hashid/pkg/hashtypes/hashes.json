@@ -3614,5 +3614,13 @@
     "name": "Blockchain, My Wallet, Second Password (SHA256)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{64}(:[a-f0-9]+)?$",
+    "john": null,
+    "hashcat": "21420",
+    "name": "sha256($salt.sha256_bin($pass))",
+    "exotic": false,
+    "extended": true
   }
 ]

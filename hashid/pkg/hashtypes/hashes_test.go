@@ -3174,6 +3174,13 @@ var tests = []testCases{
 		},
 		want: "Blockchain, My Wallet, Second Password (SHA256)",
 	},
+	{
+		name: "sha256$Saltsha256bin$Pass",
+		hashes: []string{
+			"5934ea4d670c13a71155faba42056b2525f71bdc9215d31108990c11bf3d98e3:9269771356270099311432765354522635185291064175409115041569",
+		},
+		want: "sha256($salt.sha256_bin($pass))",
+	},
 }
 
 func TestMain(m *testing.M) {
