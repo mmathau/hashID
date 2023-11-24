@@ -3630,6 +3630,13 @@ var tests = []testCases{
 		},
 		want: "bcrypt(sha256($pass)) / bcryptsha256",
 	},
+	{
+		name: "AnopeIRCServicesencsha256",
+		hashes: []string{
+			"sha256:ab67666e1f91cd38c0ab5bee9c8d2132eca7460354477109a739d4e735b14131:47bcfd0d573653943231df07445da774e5d06465c897ce40578b120bde187e26",
+		},
+		want: "Anope IRC Services (enc_sha256)",
+	},
 }
 
 func TestMain(m *testing.M) {

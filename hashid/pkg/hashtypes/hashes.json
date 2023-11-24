@@ -4134,5 +4134,13 @@
     "name": "bcrypt(sha256($pass)) / bcryptsha256",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^sha256:[a-f0-9]{64}:[a-f0-9]{64}$",
+    "john": null,
+    "hashcat": "30700",
+    "name": "Anope IRC Services (enc_sha256)",
+    "exotic": false,
+    "extended": false
   }
 ]
