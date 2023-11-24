@@ -1122,6 +1122,321 @@ var tests = []testCases{
 		},
 		want: "Kerberos 5, etype 23, TGS-REP",
 	},
+	{
+		name: "LM",
+		hashes: []string{
+			"299bd128c1101fd6",
+		},
+		want: "LM",
+	},
+	{
+		name: "LastPassLastPassSniffed",
+		hashes: []string{
+			"a2d1f7b7a1862d0d4a52644e72d59df5:500:lp@trash-mail.com",
+		},
+		want: "LastPass + LastPass sniffed",
+	},
+	{
+		name: "LineageIIC4",
+		hashes: []string{
+			"0x35a28484c552747441d8fefe33a98f8f",
+		},
+		want: "Lineage II C4",
+	},
+	{
+		name: "LinkedIn",
+		hashes: []string{
+			"b89eaac7e61417341b710b727768294d0e6a277b",
+		},
+		want: "LinkedIn",
+	},
+	{
+		name: "LinuxKernelCryptoAPI24",
+		hashes: []string{
+			"$cryptoapi$9$2$03000000000000000000000000000000$00000000000000000000000000000000$d1d20e91a8f2e18881dc79369d8af761",
+		},
+		want: "Linux Kernel Crypto API (2.4)",
+	},
+	{
+		name: "LotusNotesDomino5",
+		hashes: []string{
+			"3dd2e1e5ac03e230243d58b8c5ada076",
+		},
+		want: "Lotus Notes/Domino 5",
+	},
+	{
+		name: "LotusNotesDomino6",
+		hashes: []string{
+			"(GDpOtD35gGlyDksQRxEU)",
+		},
+		want: "Lotus Notes/Domino 6",
+	},
+	{
+		name: "LotusNotesDomino8",
+		hashes: []string{
+			"(HsjFebq0Kh9kH7aAZYc7kY30mC30mC3KmC30mCluagXrvWKj1)",
+		},
+		want: "Lotus Notes/Domino 8",
+	},
+	{
+		name: "MD2",
+		hashes: []string{
+			"fcdcaaa9794d753db7da35230ef5dd7a",
+		},
+		want: "MD2",
+	},
+	{
+		name: "MD4",
+		hashes: []string{
+			"afe04867ec7a3845145579a95f72eca7",
+		},
+		want: "MD4",
+	},
+	{
+		name: "MD5",
+		hashes: []string{
+			"8743b52063cd84097a65d1633f5c74f5",
+		},
+		want: "MD5",
+	},
+	{
+		name: "MSOffice2007",
+		hashes: []string{
+			"$office$*2007*20*128*16*411a51284e0d0200b131a8949aaaa5cc*117d532441c63968bee7647d9b7df7d6*df1d601ccf905b375575108f42ef838fb88e1cde",
+		},
+		want: "MS Office 2007",
+	},
+	{
+		name: "MSOffice2010",
+		hashes: []string{
+			"$office$*2010*100000*128*16*77233201017277788267221014757262*b2d0ca4854ba19cf95a2647d5eee906c*e30cbbb189575cafb6f142a90c2622fa9e78d293c5b0c001517b3f5b82993557",
+		},
+		want: "MS Office 2010",
+	},
+	{
+		name: "MSOffice2013",
+		hashes: []string{
+			"$office$*2013*100000*256*16*7dd611d7eb4c899f74816d1dec817b3b*948dc0b2c2c6c32f14b5995a543ad037*0b7ee0e48e935f937192a59de48a7d561ef2691d5c8a3ba87ec2d04402a94895",
+		},
+		want: "MS Office 2013",
+	},
+	{
+		name: "MSOffice2016SheetProtection",
+		hashes: []string{
+			"$office$2016$0$100000$876MLoKTq42+/DLp415iZQ==$TNDvpvYyvlSUy97UOLKNhXynhUDDA7H8kLql0ISH5SxcP6hbthdjaTo4Z3/MU0dcR2SAd+AduYb3TB5CLZ8+ow==",
+		},
+		want: "MS Office 2016 - SheetProtection",
+	},
+	{
+		name: "MSOffice<=2003$0$1MD5RC4Collider#1",
+		hashes: []string{
+			"$oldoffice$0*55045061647456688860411218030058*e7e24d163fbd743992d4b8892bf3f2f7*493410dbc832557d3fe1870ace8397e2",
+		},
+		want: "MS Office <= 2003 $0/$1, MD5 + RC4, collider #1",
+	},
+	{
+		name: "MSOffice<=2003$0$1MD5RC4Collider#2",
+		hashes: []string{
+			"$oldoffice$0*55045061647456688860411218030058*e7e24d163fbd743992d4b8892bf3f2f7*493410dbc832557d3fe1870ace8397e2:91b2e062b9",
+		},
+		want: "MS Office <= 2003 $0/$1, MD5 + RC4, collider #2",
+	},
+	{
+		name: "MSOffice<=2003$3SHA1RC4Collider#1",
+		hashes: []string{
+			"$oldoffice$3*83328705222323020515404251156288*2855956a165ff6511bc7f4cd77b9e101*941861655e73a09c40f7b1e9dfd0c256ed285acd",
+		},
+		want: "MS Office <= 2003 $3, SHA1 + RC4, collider #1",
+	},
+	{
+		name: "MSOffice<=2003$3SHA1RC4Collider#2",
+		hashes: []string{
+			"$oldoffice$3*83328705222323020515404251156288*2855956a165ff6511bc7f4cd77b9e101*941861655e73a09c40f7b1e9dfd0c256ed285acd:b8f63619ca",
+		},
+		want: "MS Office <= 2003 $3, SHA1 + RC4, collider #2",
+	},
+	{
+		name: "MSOffice<=2003MD5RC4Oldoffice$0Oldoffice$1",
+		hashes: []string{
+			"$oldoffice$1*04477077758555626246182730342136*b1b72ff351e41a7c68f6b45c4e938bd6*0d95331895e99f73ef8b6fbc4a78ac1a",
+		},
+		want: "MS Office <= 2003 MD5 + RC4, oldoffice$0, oldoffice$1",
+	},
+	{
+		name: "MSOffice<=2003SHA1RC4Oldoffice$3Oldoffice$4",
+		hashes: []string{
+			"$oldoffice$3*83328705222323020515404251156288*2855956a165ff6511bc7f4cd77b9e101*941861655e73a09c40f7b1e9dfd0c256ed285acd",
+		},
+		want: "MS Office <= 2003 SHA1 + RC4, oldoffice$3, oldoffice$4",
+	},
+	{
+		name: "MSAzureSyncPBKDF2HMACSHA256",
+		hashes: []string{
+			"v1;PPH1_MD4,84840328224366186645,100,005a491d8bf3715085d69f934eef7fb19a15ffc233b5382d9827910bc32f3506",
+		},
+		want: "MS-AzureSync PBKDF2-HMAC-SHA256",
+	},
+	{
+		name: "MSSQL2000",
+		hashes: []string{
+			"0x01002702560500000000000000000000000000000000000000008db43dd9b1972a636ad0c7d4b8c515cb8ce46578",
+		},
+		want: "MSSQL (2000)",
+	},
+	{
+		name: "MSSQL2005",
+		hashes: []string{
+			"0x010018102152f8f28c8499d8ef263c53f8be369d799f931b2fbe",
+		},
+		want: "MSSQL (2005)",
+	},
+	{
+		name: "MSSQL20122014",
+		hashes: []string{
+			"0x02000102030434ea1b17802fd95ea6316bd61d2c94622ca3812793e8fb1672487b5c904a45a31b2ab4a78890d563d2fcf5663e46fe797d71550494be50cf4915d3f4d55ec375",
+		},
+		want: "MSSQL (2012, 2014)",
+	},
+	{
+		name: "MangosWebEnhancedCMS",
+		hashes: []string{
+			"cd3b0e89c86962d1240361a3e7474cd2dc029f87",
+		},
+		want: "MangosWeb Enhanced CMS",
+	},
+	{
+		name: "MediaWiki",
+		hashes: []string{
+			"$A$5f4dcc3b5aa765d61d8327deb882cf99",
+		},
+		want: "MediaWiki",
+	},
+	{
+		name: "MediaWikiBType",
+		hashes: []string{
+			"$B$56668501$0ce106caa70af57fd525aeaf80ef2898",
+		},
+		want: "MediaWiki B type",
+	},
+	{
+		name: "MetaMaskWallet",
+		hashes: []string{
+			"$metamask$h0c2mQBGgnhlJ4EWMhdAAZhHlFeZNVlAEwOHQHaEBhY=$q9de9oljOBLWBQRtk9Ugog==$FyaooZR89c3APBYH290LhPdyCsiqrkmRqd6QsJF5io5yqFZa2SWoNsaz12QncB8kTjko02XWdMcg8GmaEagAENRcP0pfov24LNbAbwT/6x5TdcU1C3CKjWnEBTa+AxBxGh8XfYUfN2Edoje6Gt9Gs2A5YYDizdQGzkxpjZTL30QD9NPz1P/k1nfgTcitFUpCsYlcOCUTVPILO5mjzO6eiKmojY3ylhp2vv1HLpls1RfC8UFebJzByRePGuOGX2DzXQztijLOn2tcABlKy9IsOOfbi3rDJtXXESQYZLYJQTXBpGl6S0vgIb4g4WXnX17QW+5Wkm6XXei/GDM4kc/sBTyBJukYr3DayquKR7y07fj3h5M1X1+95qN+RU59n3WKRAl6N8NX7AIOdWTKYBL5DbTOWsW/XDyxnCqBxf/v4bmxWxEMq0jvIs0QyFwL9k6f7jN6OynAOHlrooMrFO8rothyflgW6Q0diwtaBncoQqm/S8Bcbvnijxm0MJy1eST/7jOetv8Okkl5+88Pko3CrqqIIC4TDybak9z8fc3HTl6r6PYa12SsO0X94Fcm50Yf1ejMhqBFLaSzvUq652Yd0JEv4LQ0XYyJWIvJ7/17sl3YZBIGWSdq8oIYm4SlBHENk5xA5VHT3tp8KlolsSgHsHT9vk2aSsCIEJLezq0j+Qogptonn3sDC4jz6KVSyIZW2D4v1I4958dZcWou/OMQD1qGPR7GWOpQW2JrsS+mT05yy5s4LSEV3/w7SzIvpAOfbHrebbw44FI1CrwAyTMc8o/irdJql4jDwaVbRjlLD+Ps4GuzkRhZilN627/+w81uVlX3seM6nUuvHILP/hIXjlPof86ucSqZli5Gnunxivj8qtMRZ4A5gIW9VuOzCbC1qNonW+MD+L2IKxgTEp6svK6y3z59SFMrIjDKszF2fh3BmaoRzbwIxntQq5fzo7YQa9oPmPHHME+VRACC86vpZL2/IDU5TWGYLvw8NA5NcOpw4QKhn7SaXb0iOCmPNCbNh3HlQNNA5nA4KZvIB7kDZa7GUtZqDO5iAmrrOw1ZfE5SzKQshlc5QfVNNpuwJCp7m2UKFePU7bws13tV2arhtIRBjMDz1ncmpyDtiXqaoRHtxoo/ldqutwbZIRuou5G/ydTZLBWMVyorlHyx/Bd3to1ne9WCm6nmUAUJoPcsBb20I3Mm3rYlNrV6iHbHtKirwJjl944SY9WNJqvCMORA3AijLWLteeyKQhsp1o7O30w/Rz+kI3vtcyUiUtudjH5ryjL/I6P6+HVokuiG7dZZiiMJRC0/537AvFt9925MZvC3hPucxKjOyDx0niA2i3Z/cpvTXC1GgIfHfCMwdnX/phjiHR5wASaI6eHTKYq3opSwqKvTDeomIlRViu12LoX0vThRxl9kKu9uCC2NB4fflOYYu5Okp48xVVMt3Fv2B58pT4jRn5VddPBx9qgV0NlBe1Fo8PWhe+HFIjXCFaLkr1OTy6G71ECv3yjQGTTPbrdqHUE8ZpPTFz3iPutCS3GvJmdMDVkWi0q8ASWH7yR/NmHYv9wNIDEh034tiv769rk82xKP+qJ0xCPr6mFVypIf9dmpmN26G4C9Hw6PD36VrVTSEoXFvXj7+LPfUwvRYQ0vZoqQRPvnIkpIqy71fkrbBlFmBdzZMP9lM79ZF2m9PnddDvqGLSL5M0EzrwRCnon6Wq1i5nsE1ruJCL2leg2EcVYQoUg3ADHpGInx7BTrOnOOVxxnbRUqMki1SegqV2CBARcXbRXXH8yaPSzrrHS4QQvCI8eQ8Yu8RObvAxez2N5cFaupudbGk5v/SWPsSHO2HxerZfD+yeW6PUrZjE8v5tgmA3w8iZzfHiEzQX8cx+Qvd1UnlxIrJTXWoNSYz9OjS+oCkvZc/G9Zmy4oKl0agTA8dVs1XETMlCEPHuxubxzLt8ldr37EiWJZcAfPg+KY9B9DtDjcPu0hsa9Zpf5GyL39IoeOgL3Kom/RgY9eIBEUcdlSPGkvFLGKcquALER3014sI9m4KmzDdyUmcK5mgdsYYBKdl7+YrLnMPi3aB2/9YK3roUpABE5TpjEd61tPXi3Qgqu8t01tUGxelX9CPucDJVfaP6YMWN18p2AMgqhbcDZo20mNrf/+NFE1v80LWuXllbMmBhqGszElb7RmZXC3P1NwEp42hTRGYDlK904omxxKj/ICNqwhOwEddO3ktwFegAeBq2BqS4/88MOMUfpZgLGK9Jx/+U9/WCn0EAO3H/fdK2ulB/eoBK4fGQnup9aAl7m05nnYBFCLXhAZzzcDVC0+6GRRshjbTdqfMUgEM7b+lTK7A7Wf+fpAU/42M7FB6f1qExKmLaXCbi2Ss0r6bfiZblwiizy7huRnyuWk3KKcIp6HK+8opPY4uNnXG9tm44cjLQvhWZA3DhP0HyNYYyPazAciH/4NTha9NsWXDZOdKym8iXIQ+F46a0B2bq7SJa6XbmJaM3ej3HNQ0NYz2jx2R5Y9nYMywUtxPzVKCCspQdqFnM810V9cMHV9wCD4lmE3DFrZ+2ulcOJ41KLOW0e/WMP4z7Tt6VJXxpp6mz0omwt3j15KtCGUoviaA5oDbBWc+uMd6L4i9g/0L041EncR8dm19Tws7sQW3LrbNikJ3EPJEk7Gs3szxT/IoJd3n1MVCjT5KBmutusSjUIdjKjci7S3WYWjAsQayR7unPUaDCzl3eUOEReMs4DL37kh0lEQHIsV1L01CqFVh1rqhyQ+Dazxh1ZOA9vB+TH67sOkc0dpn0T+TqNlJPZVrQhyknECDJlY8z46D63TYekfpockhf2FFW9QMyHWnIWBNkFu/fdz9usCD3o6fkooSc/nzJlKXgMulyceEo5FerIxyrPvB8X5scVaad+Cnd3ILBbEed7avxY/CT+8n+ZeEcUN9I9PD3/gsdnPxU0z27hVdiid/JVqjQstKK73U9bqPpc8RSunga7vU6tU0y8IKf2P2xcLxwp+l9iabz4nNB+ployIZUFggOVpQNvLrgMegwnPf7adONRoZQIC2Xcqgc+k/FdYbwrpqdjKIm78PDqg67b5b3m0FeHTq9YWPSa3YBwRbhSvfDChfAu6u9FQSTndfN9RVJPiHJHFgUryB2QnaSArKxT7lUlSXPpHcA7+wMl1oWzmft20EeHM2tm6/nzB1yuqI5tid+DI6tt2ivtvdFyhwSWAsdcnp7tgSL7gX4kvAC/oUY8zLBjSOFY=",
+		},
+		want: "MetaMask Wallet",
+	},
+	{
+		name: "MicrosoftOutlookPST",
+		hashes: []string{
+			"$pst$815b338f",
+		},
+		want: "Microsoft Outlook PST",
+	},
+	{
+		name: "MinecraftXAuth",
+		hashes: []string{
+			"cb5ef15b400cef07addb37e00e2cdd6d1b508a2a26f0befcb0f9d8fd03c1d67be1690eba2287c4f76a590f2feae654ce5aee9943a23babb8e56381fe3214a48ad8754a1fd9eb",
+		},
+		want: "Minecraft(xAuth)",
+	},
+	{
+		name: "MongoDBServerKeySCRAMSHA1",
+		hashes: []string{
+			"$mongodb-scram$*0*dXNlcg==*10000*4p+f1tKpK18hQqrVr0UGOw==*Jv9lrpUQ2bVg2ZkXvRm2rppsqNw=",
+		},
+		want: "MongoDB ServerKey SCRAM-SHA-1",
+	},
+	{
+		name: "MongoDBServerKeySCRAMSHA256",
+		hashes: []string{
+			"$mongodb-scram$*1*dXNlcg==*15000*qYaA1K1ZZSSpWfY+yqShlcTn0XVcrNipxiYCLQ==*QWVry9aTS/JW+y5CWCBr8lcEH9Kr/D4je60ncooPer8=",
+		},
+		want: "MongoDB ServerKey SCRAM-SHA-256",
+	},
+	{
+		name: "MozillaKey3DB",
+		hashes: []string{
+			"$mozilla$*3DES*b735d19e6cadb5136376a98c2369f22819d08c79*2b36961682200a877f7d5550975b614acc9fefe3*f03f3575fd5bdbc9e32232316eab7623",
+		},
+		want: "Mozilla key3.db",
+	},
+	{
+		name: "MozillaKey4DB",
+		hashes: []string{
+			"$mozilla$*AES*5add91733b9b13310ea79a4b38de5c3f797c3bf1*54c17e2a8a066cbdc55f2080c5e9f02ea3954d712cb34b4547f5186548f46512*10000*040e4b5a00f993e63f67a34f6cfc5704*eae9c6c003e6d1b2aa8aa21630838808",
+		},
+		want: "Mozilla key4.db",
+	},
+	{
+		name: "MultiBitClassicKeyMD5",
+		hashes: []string{
+			"$multibit$1*e5912fe5c84af3d5*5f0391c219e8ef62c06505b1f6232858f5bcaa739c2b471d45dd0bd8345334de",
+		},
+		want: "MultiBit Classic .key (MD5)",
+	},
+	{
+		name: "MultiBitClassicWalletScrypt",
+		hashes: []string{
+			"$multibit$3*16384*8*1*7523cb5482e81b81*91780fd49b81a782ab840157a69ba7996d81270eaf456c850f314fc1787d9b0b",
+		},
+		want: "MultiBit Classic .wallet (scrypt)",
+	},
+	{
+		name: "MultiBitHDScrypt",
+		hashes: []string{
+			"$multibit$2*2e311aa2cc5ec99f7073cacc8a2d1938*e3ad782e7f92d66a3cdfaec43a46be29*5d1cabd4f4a50ba125f88c47027fff9b",
+		},
+		want: "MultiBit HD (scrypt)",
+	},
+	{
+		name: "MurmurHash",
+		hashes: []string{
+			"b69e7687:05094309",
+		},
+		want: "MurmurHash",
+	},
+	{
+		name: "MurmurHash3",
+		hashes: []string{
+			"23e93f65:00000000",
+		},
+		want: "MurmurHash3",
+	},
+	{
+		name: "MyBB12IPB2InvisionPowerBoard",
+		hashes: []string{
+			"8d2129083ef35f4b365d5d87487e1207:47204",
+		},
+		want: "MyBB 1.2+, IPB2+ (Invision Power Board)",
+	},
+	{
+		name: "MySQL$A$SHA256Crypt",
+		hashes: []string{
+			"$mysql$A$005*F9CC98CE08892924F50A213B6BC571A2C11778C5*625479393559393965414D45316477456B484F41316E64484742577A2E3162785353526B7554584647562F",
+		},
+		want: "MySQL $A$ (sha256crypt)",
+	},
+	{
+		name: "MySQLCRAMSHA1",
+		hashes: []string{
+			"$mysqlna$1c24ab8d0ee94d70ab1f2e814d8f0948a14d10b9*437e93572f18ae44d9e779160c2505271f85821d",
+		},
+		want: "MySQL CRAM (SHA1)",
+	},
+	{
+		name: "MySQL323",
+		hashes: []string{
+			"7196759210defdc0",
+		},
+		want: "MySQL323",
+	},
+	{
+		name: "MySQL41MySQL5",
+		hashes: []string{
+			"fcf7c1b8749cf99d88e5f34271d636178fb5d130",
+		},
+		want: "MySQL4.1/MySQL5",
+	},
 }
 
 func TestMain(m *testing.M) {
