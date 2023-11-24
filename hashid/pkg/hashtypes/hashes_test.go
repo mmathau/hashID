@@ -3272,6 +3272,13 @@ var tests = []testCases{
 		},
 		want: "Amazon AWS4-HMAC-SHA256",
 	},
+	{
+		name: "Kerberos5etype17DB",
+		hashes: []string{
+			"$krb5db$17$test$TEST.LOCAL$1c41586d6c060071e08186ee214e725e",
+		},
+		want: "Kerberos 5, etype 17, DB",
+	},
 }
 
 func TestMain(m *testing.M) {

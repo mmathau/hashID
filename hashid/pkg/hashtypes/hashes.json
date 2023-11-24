@@ -3726,5 +3726,13 @@
     "name": "Amazon AWS4-HMAC-SHA256",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$krb5db\\$[0-9]{2}\\$\\w+\\$\\w+.\\w+\\$[a-f0-9]{32}$",
+    "john": null,
+    "hashcat": "28800",
+    "name": "Kerberos 5, etype 17, DB",
+    "exotic": false,
+    "extended": false
   }
 ]
