@@ -3700,6 +3700,13 @@ var tests = []testCases{
 		},
 		want: "Veeam VBK",
 	},
+	{
+		name: "MSSNTP",
+		hashes: []string{
+			"$sntp-ms$cfc7023381cf6bb474cdcbeb0a67bdb3$907733697536811342962140955567108526489624716566696971338784438986103976327367763739445744705380",
+		},
+		want: "MS SNTP",
+	},
 }
 
 func TestMain(m *testing.M) {

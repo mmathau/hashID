@@ -4214,5 +4214,13 @@
     "name": "Veeam VBK",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$sntp-ms\\$[a-f0-9]{32}\\$[a-f0-9]{96}$",
+    "john": null,
+    "hashcat": "31300",
+    "name": "MS SNTP",
+    "exotic": false,
+    "extended": false
   }
 ]
