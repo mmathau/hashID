@@ -2957,7 +2957,7 @@
     "hashcat": "25600",
     "name": "bcrypt(md5($pass)) / bcryptmd5",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
     "regex": "^(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
