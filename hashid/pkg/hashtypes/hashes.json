@@ -3926,5 +3926,13 @@
     "name": "VeraCrypt Whirlpool + XTS 1024 bit",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$veracrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29433",
+    "name": "VeraCrypt Whirlpool + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
   }
 ]
