@@ -3623,6 +3623,13 @@ var tests = []testCases{
 		},
 		want: "md5(md5($salt).md5(md5($pass)))",
 	},
+	{
+		name: "bcryptsha256$Passbcryptsha256",
+		hashes: []string{
+			"$2b$10$FxDtpTNaL303lLcWtd6LFO2U6Gc63VJ07qycHcfqbQQ71GhO/qSzu",
+		},
+		want: "bcrypt(sha256($pass)) / bcryptsha256",
+	},
 }
 
 func TestMain(m *testing.M) {
