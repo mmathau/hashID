@@ -3251,6 +3251,13 @@ var tests = []testCases{
 		},
 		want: "Bitcoin WIF private key (P2SH(P2WPKH)), compressed",
 	},
+	{
+		name: "BitcoinWIFPrivateKeyP2SHP2WPKHUncompressed",
+		hashes: []string{
+			"3H1YvmSdrjEfj9LvtiKJ8XiYq5htJRuejA",
+		},
+		want: "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
+	},
 }
 
 func TestMain(m *testing.M) {
