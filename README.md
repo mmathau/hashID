@@ -1,7 +1,7 @@
 # hashID | hash-identifier
 
 Identify the different types of hashes used to encrypt data and especially passwords.  
-hashID is a tool written in Go which supports the identification of over 220 unique hash types using regular expressions.  
+hashID is a tool written in Go which supports the identification of over 440 unique hash types using regular expressions.  
 It is able to identify a single hash or parse a file and identify the hashes within them.  
 hashID is also capable of including the corresponding [hashcat](https://hashcat.net/hashcat/) mode and/or [JohnTheRipper](https://www.openwall.com/john/) format in its output.  
 **Note:** When identifying a hash on *nix operating systems use single quotes to prevent interpolation.
