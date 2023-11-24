@@ -3637,6 +3637,13 @@ var tests = []testCases{
 		},
 		want: "Anope IRC Services (enc_sha256)",
 	},
+	{
+		name: "BitcoinRawPrivateKeyP2PKHCompressed",
+		hashes: []string{
+			"14Fqy5AGRehazZ4NLzxFWy2E4BiNFdH9Ut",
+		},
+		want: "Bitcoin raw private key (P2PKH), compressed",
+	},
 }
 
 func TestMain(m *testing.M) {
