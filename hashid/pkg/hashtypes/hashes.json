@@ -844,7 +844,7 @@
     "john": "gost",
     "hashcat": "6900",
     "name": "GOST R 34.11-94",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
