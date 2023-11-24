@@ -3662,5 +3662,13 @@
     "name": "bcrypt(sha512($pass)) / bcryptsha512",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28501",
+    "name": "Bitcoin WIF private key (P2PKH), compressed",
+    "exotic": false,
+    "extended": false
   }
 ]
