@@ -3181,6 +3181,13 @@ var tests = []testCases{
 		},
 		want: "sha256($salt.sha256_bin($pass))",
 	},
+	{
+		name: "UmbracoHMACSHA1",
+		hashes: []string{
+			"8uigXlGMNI7BzwLCJlDbcKR2FP4=",
+		},
+		want: "Umbraco HMAC-SHA1",
+	},
 }
 
 func TestMain(m *testing.M) {

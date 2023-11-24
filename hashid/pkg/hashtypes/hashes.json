@@ -3622,5 +3622,13 @@
     "name": "sha256($salt.sha256_bin($pass))",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^[a-z0-9]+(=|==)?$",
+    "john": null,
+    "hashcat": "24800",
+    "name": "Umbraco HMAC-SHA1",
+    "exotic": false,
+    "extended": true
   }
 ]
