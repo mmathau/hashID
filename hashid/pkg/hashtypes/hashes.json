@@ -3686,5 +3686,13 @@
     "name": "Bitcoin WIF private key (P2WPKH, Bech32), compressed",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "john": null,
+    "hashcat": "28504",
+    "name": "Bitcoin WIF private key (P2WPKH, Bech32), uncompressed",
+    "exotic": false,
+    "extended": false
   }
 ]
