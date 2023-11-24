@@ -2965,7 +2965,7 @@
     "hashcat": "25800",
     "name": "bcrypt(sha1($pass)) / bcryptsha1",
     "exotic": false,
-    "extended": false
+    "extended": true
   },
   {
     "regex": "^[a-z0-9/.]{13}$",
