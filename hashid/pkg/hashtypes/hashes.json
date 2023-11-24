@@ -3782,5 +3782,13 @@
     "name": "TrueCrypt RIPEMD160 + XTS 1024 bit",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^\\$truecrypt\\$[a-f0-9]{128}\\$[a-f0-9]{896}$",
+    "john": null,
+    "hashcat": "29313",
+    "name": "TrueCrypt RIPEMD160 + XTS 1536 bit",
+    "exotic": false,
+    "extended": false
   }
 ]
