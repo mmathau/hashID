@@ -1537,7 +1537,7 @@
   },
   {
     "regex": "^\\$multibit\\$1\\*[a-f0-9]{16}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "multibit",
     "hashcat": "22500",
     "name": "MultiBit Classic .key (MD5)",
     "exotic": false,
@@ -1545,7 +1545,7 @@
   },
   {
     "regex": "^\\$multibit\\$3\\*[0-9]+\\*[0-9]\\*[0-9]\\*[a-f0-9]{16}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "multibit",
     "hashcat": "27700",
     "name": "MultiBit Classic .wallet (scrypt)",
     "exotic": false,
@@ -1553,7 +1553,7 @@
   },
   {
     "regex": "^\\$multibit\\$2\\*[a-f0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
-    "john": null,
+    "john": "multibit",
     "hashcat": "22700",
     "name": "MultiBit HD (scrypt)",
     "exotic": false,
@@ -2641,7 +2641,7 @@
   },
   {
     "regex": "^\\$solarwinds\\$0\\$[a-z0-9]+\\$[a-z0-9/+=]+$",
-    "john": null,
+    "john": "solarwinds",
     "hashcat": "21500",
     "name": "SolarWinds Orion",
     "exotic": false,
