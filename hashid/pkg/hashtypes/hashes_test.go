@@ -3188,6 +3188,13 @@ var tests = []testCases{
 		},
 		want: "Umbraco HMAC-SHA1",
 	},
+	{
+		name: "MetaMaskWalletShortHashPlaintextCheck",
+		hashes: []string{
+			"$metamask-short$jfGI3TXguhb8GPnKSXFrMzRk2NCEc131Gt5G3kZr5+s=$h+BoIf2CQ5BEjaIOShFE7g==$R95fzGt4UQ0uwrcrVYnIi4UcSlWn9wlmer+//526ZDwYAp50K82F1u1oacYcdjjhuEvbZnWk/uBG00UkgLLlOw==",
+		},
+		want: "MetaMask Wallet (short hash, plaintext check)",
+	},
 }
 
 func TestMain(m *testing.M) {

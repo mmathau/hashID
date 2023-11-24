@@ -3630,5 +3630,13 @@
     "name": "Umbraco HMAC-SHA1",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^\\$metamask-short\\$[a-z0-9+=]+\\$[a-z0-9+=]+\\$[a-z0-9+/=]+$",
+    "john": null,
+    "hashcat": "26610",
+    "name": "MetaMask Wallet (short hash, plaintext check)",
+    "exotic": false,
+    "extended": false
   }
 ]
