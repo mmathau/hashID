@@ -1864,15 +1864,7 @@
     "extended": false
   },
   {
-    "regex": "^\\$H\\$[a-z0-9/.]{31}$",
-    "john": "phpass",
-    "hashcat": "400",
-    "name": "PHPass' Portable Hash",
-    "exotic": false,
-    "extended": false
-  },
-  {
-    "regex": "^\\$P\\$[a-z0-9/.]{31}$",
+    "regex": "^\\$[HP]\\$[a-z0-9/.]{31}$",
     "john": "phpass",
     "hashcat": "400",
     "name": "PHPass' Portable Hash",
