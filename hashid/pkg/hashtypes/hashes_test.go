@@ -3195,6 +3195,13 @@ var tests = []testCases{
 		},
 		want: "MetaMask Wallet (short hash, plaintext check)",
 	},
+	{
+		name: "ExodusDesktopWalletScrypt",
+		hashes: []string{
+			"EXODUS:16384:8:1:IYkXZgFETRmFp4wQXyP8XMe3LtuOw8wMdLcBVQ+9YWE=:lq0W9ekN5sC0O7Xw:UD4a6mUUhkTbQtGWitXHZUg0pQ4RHI6W/KUyYE95m3k=:ZuNQckXOtr4r21x+DT1zpQ==",
+		},
+		want: "Exodus Desktop Wallet (scrypt)",
+	},
 }
 
 func TestMain(m *testing.M) {

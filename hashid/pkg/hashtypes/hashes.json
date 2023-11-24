@@ -3638,5 +3638,13 @@
     "name": "MetaMask Wallet (short hash, plaintext check)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^exodus:[0-9]+:[0-9]:[0-9]:[a-z0-9+=]+:[a-z0-9+=]+:[a-z0-9/+=]+:[a-z0-9+=]+$",
+    "john": null,
+    "hashcat": "28200",
+    "name": "Exodus Desktop Wallet (scrypt)",
+    "exotic": false,
+    "extended": false
   }
 ]
