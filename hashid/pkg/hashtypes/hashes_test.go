@@ -3645,7 +3645,7 @@ var tests = []testCases{
 		want: "Bitcoin raw private key (P2PKH), compressed",
 	},
 	{
-		name: "BitcoinRawPrivateKeyP2PKHUnompressed",
+		name: "BitcoinRawPrivateKeyP2PKHUncompressed",
 		hashes: []string{
 			"12sLRz1TKPZurKCwVqeT5FkW3Y7usipPbZ",
 		},
@@ -3659,7 +3659,7 @@ var tests = []testCases{
 		want: "Bitcoin raw private key (P2WPKH, Bech32), compressed",
 	},
 	{
-		name: "BitcoinRawPrivateKeyP2WPKHBech32Unompressed",
+		name: "BitcoinRawPrivateKeyP2WPKHBech32Uncompressed",
 		hashes: []string{
 			"bc1qq6samcuksd2f6rsc48eu3lkq87zp33vfud0p0t",
 		},
@@ -3671,6 +3671,13 @@ var tests = []testCases{
 			"3JqAMRQN3Gd6i8yV3Kw7v55RmFxW7iW2Aq",
 		},
 		want: "Bitcoin raw private key (P2SH(P2WPKH)), compressed",
+	},
+	{
+		name: "BitcoinRawPrivateKeyP2SHP2WPKHUncompressed",
+		hashes: []string{
+			"3PmD8zdrFD8KVgLrguVDCP2RJB4Rh35G9Z",
+		},
+		want: "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
 	},
 }
 
