@@ -555,7 +555,7 @@
     "regex": "^md5\\$[a-f0-9]+\\$[a-f0-9]{32}$",
     "john": null,
     "hashcat": "30000",
-    "name": "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
+    "name": "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
     "exotic": false,
     "extended": false
   },
@@ -4100,6 +4100,14 @@
     "john": null,
     "hashcat": "29940",
     "name": "ENCsecurity Datavault (MD5/keychain)",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^sha256\\$[a-f0-9]+\\$[a-f0-9]{24}$",
+    "john": null,
+    "hashcat": "30120",
+    "name": "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
     "exotic": false,
     "extended": false
   }

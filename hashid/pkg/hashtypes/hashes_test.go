@@ -3600,6 +3600,13 @@ var tests = []testCases{
 			"md5$84143$7f51edecfa6fb401a0b5e63d33fc8c0e",
 			"md5$be7b1$4e9c5b51bd070727b0ed21956cb68de7",
 		},
+		want: "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
+	},
+	{
+		name: "PythonWerkzeugSHA256HMACSHA256Key$Salt",
+		hashes: []string{
+			"sha256$70108387805$8b9472281c36c3a693703de0",
+		},
 		want: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 	},
 }
