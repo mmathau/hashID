@@ -1140,7 +1140,7 @@
     "john": null,
     "hashcat": "17700",
     "name": "Keccak-224",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -1148,7 +1148,7 @@
     "john": "raw-keccak-256",
     "hashcat": "17800",
     "name": "Keccak-256",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -1156,7 +1156,7 @@
     "john": null,
     "hashcat": "17900",
     "name": "Keccak-384",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -1164,7 +1164,7 @@
     "john": "raw-keccak",
     "hashcat": "18000",
     "name": "Keccak-512",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -2092,7 +2092,7 @@
     "john": "ripemd-128",
     "hashcat": null,
     "name": "RIPEMD-128",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -2100,7 +2100,7 @@
     "john": "ripemd-160",
     "hashcat": "6000",
     "name": "RIPEMD-160",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -2108,7 +2108,7 @@
     "john": null,
     "hashcat": null,
     "name": "RIPEMD-256",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -2116,7 +2116,7 @@
     "john": null,
     "hashcat": null,
     "name": "RIPEMD-320",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
@@ -2620,7 +2620,7 @@
     "john": null,
     "hashcat": "23",
     "name": "Skype",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
