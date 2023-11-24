@@ -3598,5 +3598,13 @@
     "name": "HMAC-RIPEMD160 (key = $salt)",
     "exotic": false,
     "extended": true
+  },
+  {
+    "regex": "^\\$dpapimk\\$2\\*3\\*.+\\*aes256\\*sha512\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
+    "john": null,
+    "hashcat": "15910",
+    "name": "DPAPI masterkey file v2 (context 3)",
+    "exotic": false,
+    "extended": false
   }
 ]
