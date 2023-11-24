@@ -3758,5 +3758,13 @@
     "name": "Flask Session Cookie ($salt.$salt.$pass)",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^(\\$radmin3\\$)?[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{512}$",
+    "john": null,
+    "hashcat": "29200",
+    "name": "Radmin3",
+    "exotic": false,
+    "extended": false
   }
 ]
