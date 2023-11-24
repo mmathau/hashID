@@ -4110,5 +4110,13 @@
     "name": "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^[a-f0-9]{56}$",
+    "john": null,
+    "hashcat": "30420",
+    "name": "DANE RFC7929/RFC8162 SHA2-256",
+    "exotic": false,
+    "extended": false
   }
 ]

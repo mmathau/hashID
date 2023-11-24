@@ -3609,6 +3609,13 @@ var tests = []testCases{
 		},
 		want: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 	},
+	{
+		name: "DANERFC7929RFC8162SHA2256",
+		hashes: []string{
+			"127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df",
+		},
+		want: "DANE RFC7929/RFC8162 SHA2-256",
+	},
 }
 
 func TestMain(m *testing.M) {
