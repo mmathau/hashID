@@ -892,7 +892,7 @@
     "john": null,
     "hashcat": null,
     "name": "HAS-160",
-    "exotic": false,
+    "exotic": true,
     "extended": false
   },
   {
