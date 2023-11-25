@@ -60,7 +60,7 @@ func identifyHashesInFile(c *cli.Context) error {
 		// trim possible whitespace
 		s = strings.TrimSpace(contents.Text())
 
-		fmt.Fprintf(c.App.Writer, "Analyzing: %s\n", s)
+		fmt.Fprintf(c.App.Writer, "Analyzing: '%s'\n", s)
 		matches := hashid.FindHashType(s)
 		if len(matches) == 0 {
 			// no match was found
