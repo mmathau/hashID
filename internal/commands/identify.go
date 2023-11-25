@@ -41,7 +41,7 @@ func IdentifySingleHash(c *cli.Context) error {
 	}
 
 	inputHash := c.Args().Get(0)
-	fmt.Fprintf(c.App.Writer, "Analyzing: %s\n", inputHash)
+	fmt.Fprintf(c.App.Writer, "Analyzing: '%s'\n", inputHash)
 
 	// trim possible whitespace
 	s := strings.TrimSpace(inputHash)
