@@ -1,5 +1,9 @@
 import json
 
+# This script reads the JSON file containing the hash types,
+# sorts it by the name field in a case-insensitive manner,
+# and writes the sorted list back to a new JSON file.
+
 # open the JSON file and load the data
 with open('../hashid/pkg/hashtypes/hashes.json', 'r') as f:
     data = json.load(f)
