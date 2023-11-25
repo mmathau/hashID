@@ -1,8 +1,8 @@
 # ignore compiled files
-**/bin/*
+bin/*
 
 # ignore vendor directory
-**/vendor/*
+vendor/*
 
 # ignore scripts output
 scripts/output/*

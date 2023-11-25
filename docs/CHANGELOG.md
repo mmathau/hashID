@@ -1,7 +1,5 @@
 # Changelog
 
-## v4.0.0-dev
+## v0.0.1
 
 - Rewritten in Go
-- Cleaned up various regexes
-- Added all missing hashes from recent hashcat version

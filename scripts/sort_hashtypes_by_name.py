@@ -5,7 +5,7 @@ import json
 # and writes the sorted list back to a new JSON file.
 
 # open the JSON file and load the data
-with open('../hashid/pkg/hashtypes/hashes.json', 'r') as f:
+with open('../pkg/hashtypes/hashes.json', 'r') as f:
     data = json.load(f)
 
 # ensure data is a list

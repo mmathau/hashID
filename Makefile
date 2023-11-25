@@ -17,7 +17,7 @@ test:
 	go test -v ./...
 
 build:
-	go build -o bin/${BINARY_NAME} main.go
+	go build -o bin/${BINARY_NAME} cmd/hashid/main.go
 
 run:
 	bin/${BINARY_NAME} -h
