@@ -16,5 +16,5 @@ if not isinstance(data, list):
 sorted_data = sorted(data, key=lambda item: item.get('name', '').lower())
 
 # write the sorted list back to a new file
-with open('../hashid/pkg/hashtypes/hashes_sorted.json', 'w') as f:
+with open('output/hashes_sorted.json', 'w') as f:
     json.dump(sorted_data, f, indent=2)
