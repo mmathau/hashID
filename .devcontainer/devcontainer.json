@@ -3,6 +3,12 @@
   "dockerComposeFile": "./docker-compose.yml",
   "service": "hashID-dev",
   "workspaceFolder": "/workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "version": "latest"
+    }
+  },
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
   ],
@@ -19,6 +25,7 @@
       },
       "extensions": [
         "golang.go",
+        "ms-python.python",
         "EditorConfig.EditorConfig",
         "ms-azuretools.vscode-docker",
         "ms-vscode.makefile-tools",
