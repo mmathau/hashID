@@ -4198,13 +4198,5 @@
     "name": "XMPP SCRAM PBKDF2-SHA1",
     "exotic": false,
     "extended": false
-  },
-  {
-    "regex": "^[a-f0-9]{8}$",
-    "john": null,
-    "hashcat": null,
-    "name": "XOR-32",
-    "exotic": false,
-    "extended": false
   }
 ]

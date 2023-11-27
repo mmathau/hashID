@@ -2552,13 +2552,6 @@ var tests = []testCases{
 		want: "XMPP SCRAM PBKDF2-SHA1",
 	},
 	{
-		name: "XOR-32",
-		hashes: []string{
-			"00000004",
-		},
-		want: "XOR-32",
-	},
-	{
 		name: "bcrypt",
 		hashes: []string{
 			"$2a$12$djEXehnXL2xWQRq5w.LbFOaNDNlebYzDbAfwWwzY7oKrbdMe4OYwO",
