@@ -55,6 +55,11 @@ func main() {
 					return nil
 				},
 			},
+			&cli.BoolFlag{
+				Name:    "quiet",
+				Aliases: []string{"q"},
+				Usage:   "suppress unknown hash output",
+			},
 		},
 		Action: commands.IdentifyHashesFromString,
 		Commands: []*cli.Command{

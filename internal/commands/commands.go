@@ -58,6 +58,13 @@ func formatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte
 		Match: make([]match, 0, len(matches)),
 	}
 
+	// skip unknown hashes if quiet flag is set
+	if c.IsSet("quiet") {
+		if len(matches) == 0 {
+			return []byte(""), nil
+		}
+	}
+
 	for _, m := range matches {
 		// skip exotic or extended hash types if not requested
 		if (!c.IsSet("exotic") && m.Exotic()) || (!c.IsSet("extended") && m.Extended()) {
