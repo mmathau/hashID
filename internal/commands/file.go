@@ -17,12 +17,12 @@ func FileCommand() *cli.Command {
 		Name:      "file",
 		Usage:     "Identify hashes from input file",
 		ArgsUsage: "FILE",
-		Action:    identifyHashesInFile,
+		Action:    IdentifyHashesFromFile,
 	}
 }
 
-func identifyHashesInFile(c *cli.Context) error {
-	if c.NArg() == 0 {
+func IdentifyHashesFromFile(c *cli.Context) error {
+	if !c.Args().Present() {
 		return cli.ShowAppHelp(c)
 	}
 
@@ -32,10 +32,11 @@ func identifyHashesInFile(c *cli.Context) error {
 	}
 
 	inputFile := c.Args().Get(0)
-	path, err := filepath.Abs(filepath.Clean(inputFile))
+	path, err := filepath.Abs(inputFile)
 	if err != nil {
 		return cli.Exit(fmt.Errorf("error getting absolute path: %w", err), 1)
 	}
+
 	file, err := os.Open(path)
 	if err != nil {
 		return cli.Exit(fmt.Errorf("error opening file: %w", err), 1)
@@ -48,7 +49,7 @@ func identifyHashesInFile(c *cli.Context) error {
 		// trim possible whitespace
 		s = strings.TrimSpace(contents.Text())
 		matches := hashid.FindHashType(s)
-		out, err := FormatOutput(c, s, matches)
+		out, err := formatOutput(c, s, matches)
 		if err != nil {
 			return err
 		}

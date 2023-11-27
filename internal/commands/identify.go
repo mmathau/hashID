@@ -15,12 +15,12 @@ func IdentifyCommand() *cli.Command {
 		Usage:     "Identify hash from input string",
 		ArgsUsage: "HASH",
 		Aliases:   []string{"id"},
-		Action:    IdentifySingleHash,
+		Action:    IdentifyHashesFromString,
 	}
 }
 
-func IdentifySingleHash(c *cli.Context) error {
-	if c.NArg() == 0 {
+func IdentifyHashesFromString(c *cli.Context) error {
+	if !c.Args().Present() {
 		return cli.ShowAppHelp(c)
 	}
 
@@ -29,17 +29,17 @@ func IdentifySingleHash(c *cli.Context) error {
 		return cli.Exit(fmt.Errorf("error initializing hashtypes: %w", err), 1)
 	}
 
-	inputHash := c.Args().Get(0)
+	for _, arg := range c.Args().Slice() {
+		// trim possible whitespace
+		s := strings.TrimSpace(arg)
+		matches := hashid.FindHashType(s)
+		out, err := formatOutput(c, s, matches)
+		if err != nil {
+			return err
+		}
+		fmt.Fprintf(c.App.Writer, "%s\n", out)
 
-	// trim possible whitespace
-	s := strings.TrimSpace(inputHash)
-
-	matches := hashid.FindHashType(s)
-	out, err := FormatOutput(c, s, matches)
-	if err != nil {
-		return err
 	}
-	fmt.Fprintf(c.App.Writer, "%s\n", out)
 
 	return nil
 }

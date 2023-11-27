@@ -56,7 +56,7 @@ func main() {
 				},
 			},
 		},
-		Action: commands.IdentifySingleHash,
+		Action: commands.IdentifyHashesFromString,
 		Commands: []*cli.Command{
 			commands.IdentifyCommand(),
 			commands.FileCommand(),

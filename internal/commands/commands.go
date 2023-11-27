@@ -52,7 +52,7 @@ func (o output) XML() ([]byte, error) {
 	return xml.Marshal(o)
 }
 
-func FormatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte, error) {
+func formatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte, error) {
 	o := output{
 		Hash:  hash,
 		Match: make([]match, 0, len(matches)),
