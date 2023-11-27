@@ -3709,7 +3709,7 @@ func TestMain(m *testing.M) {
 func testHashType(t *testing.T, hash string, want string) {
 	results := hashid.FindHashType(hash)
 	for _, result := range results {
-		if result.Name == want {
+		if result.Name() == want {
 			return
 		}
 	}

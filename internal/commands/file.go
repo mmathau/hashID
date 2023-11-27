@@ -69,21 +69,17 @@ func identifyHashesInFile(c *cli.Context) error {
 		}
 
 		for _, match := range matches {
-			// skip exotic hash types if not requested
-			if !c.IsSet("exotic") && match.Exotic {
-				continue
-			}
-			// skip extended hash types if not requested
-			if !c.IsSet("extended") && match.Extended {
+			// skip exotic or extended hash types if not requested
+			if (!c.IsSet("exotic") && match.Exotic()) || (!c.IsSet("extended") && match.Extended()) {
 				continue
 			}
 
-			output := match.Name
-			if c.IsSet("mode") && match.Hashcat != "" {
-				output = fmt.Sprintf("%s [Hashcat: %s]", output, match.Hashcat)
+			output := match.Name()
+			if c.IsSet("mode") && match.Hashcat() != "" {
+				output = fmt.Sprintf("%s [Hashcat: %s]", output, match.Hashcat())
 			}
-			if c.IsSet("format") && match.JohnTheRipper != "" {
-				output = fmt.Sprintf("%s [John: %s]", output, match.JohnTheRipper)
+			if c.IsSet("format") && match.John() != "" {
+				output = fmt.Sprintf("%s [John: %s]", output, match.John())
 			}
 
 			fmt.Fprintf(c.App.Writer, "[+] %s\n", output)

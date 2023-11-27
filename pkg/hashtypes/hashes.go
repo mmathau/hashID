@@ -1,71 +1,83 @@
 package hashtypes
 
-import (
-	"embed"
-	"encoding/json"
-	"fmt"
-	"regexp"
-)
+import "regexp"
 
-//go:embed hashes.json
-var embeddedFile embed.FS
+type Hash struct {
+	name     string
+	regex    *regexp.Regexp
+	exotic   bool
+	extended bool
+	hashcat  string
+	john     string
+}
 
-type hashType struct {
-	Name          string `json:"name"`
-	Regex         string `json:"regex"`
-	Hashcat       string `json:"hashcat"`
-	JohnTheRipper string `json:"john"`
-	Exotic        bool   `json:"exotic"`
-	Extended      bool   `json:"extended"`
-	regex         *regexp.Regexp
+func (h *Hash) Name() string {
+	return h.name
+}
+
+func (h *Hash) Regex() string {
+	return h.regex.String()
+}
+
+func (h *Hash) Exotic() bool {
+	return h.exotic
+}
+
+func (h *Hash) Extended() bool {
+	return h.extended
+}
+
+func (h *Hash) Hashcat() string {
+	return h.hashcat
+}
+
+func (h *Hash) John() string {
+	return h.john
 }
 
 type Hashes struct {
-	types []hashType
+	types []Hash
 }
 
 func New() (*Hashes, error) {
-	hashTypes, err := loadFromEmbedded()
+	hashes, err := load()
 	if err != nil {
 		return nil, err
 	}
 
 	return &Hashes{
-		types: hashTypes,
+		types: hashes,
 	}, nil
 }
 
-func loadFromEmbedded() ([]hashType, error) {
-	var hashTypes []hashType
-
-	file, err := embeddedFile.Open("hashes.json")
-	if err != nil {
-		return nil, fmt.Errorf("error opening embedded file: %w", err)
-	}
-	defer file.Close()
-
-	decoder := json.NewDecoder(file)
-	var h []hashType
-	err = decoder.Decode(&h)
-	if err != nil {
-		return nil, fmt.Errorf("error decoding json: %w", err)
-	}
-
-	for i := range h {
-		regex, err := regexp.Compile(fmt.Sprintf("(?i)%s", h[i].Regex))
-		if err != nil {
-			return nil, fmt.Errorf("error compiling regex: %w", err)
-		}
-		h[i].regex = regex
-	}
-
-	hashTypes = append(hashTypes, h...)
-
-	return hashTypes, nil
+func (h *Hashes) AllTypes() []Hash {
+	return h.types
 }
 
-func (h *Hashes) FindHashType(hash string) []hashType {
-	var found []hashType
+func (h *Hashes) ExoticTypes() []Hash {
+	var exotic []Hash
+	for _, ht := range h.types {
+		if ht.Exotic() {
+			exotic = append(exotic, ht)
+		}
+	}
+
+	return exotic
+}
+
+func (h *Hashes) ExtendedTypes() []Hash {
+	var extended []Hash
+	for _, ht := range h.types {
+		if ht.Extended() {
+			extended = append(extended, ht)
+		}
+	}
+
+	return extended
+}
+
+func (h *Hashes) FindHashType(hash string) []Hash {
+	var found []Hash
 	for _, ht := range h.types {
 		if ht.regex.MatchString(hash) {
 			found = append(found, ht)
@@ -73,67 +85,4 @@ func (h *Hashes) FindHashType(hash string) []hashType {
 	}
 
 	return found
-}
-
-func (h *Hashes) GetAllHashTypes() []string {
-	var all []string
-	for _, ht := range h.types {
-		all = append(all, ht.Name)
-	}
-
-	return all
-}
-
-func (h *Hashes) GetExoticHashTypes() []string {
-	var exotic []string
-	for _, ht := range h.types {
-		if ht.Exotic {
-			exotic = append(exotic, ht.Name)
-		}
-	}
-
-	return exotic
-}
-
-func (h *Hashes) GetExtendedHashTypes() []string {
-	var extended []string
-	for _, ht := range h.types {
-		if ht.Extended {
-			extended = append(extended, ht.Name)
-		}
-	}
-
-	return extended
-}
-
-func (h *Hashes) GetHashcatModes() []string {
-	modes := make(map[string]struct{})
-	for _, ht := range h.types {
-		if ht.Hashcat != "" {
-			modes[ht.Hashcat] = struct{}{}
-		}
-	}
-
-	var uniqueModes []string
-	for mode := range modes {
-		uniqueModes = append(uniqueModes, mode)
-	}
-
-	return uniqueModes
-}
-
-func (h *Hashes) GetJohnFormats() []string {
-	formats := make(map[string]struct{})
-	for _, ht := range h.types {
-		if ht.JohnTheRipper != "" {
-			formats[ht.JohnTheRipper] = struct{}{}
-		}
-	}
-
-	var uniqueFormats []string
-	for format := range formats {
-		uniqueFormats = append(uniqueFormats, format)
-	}
-
-	return uniqueFormats
 }
