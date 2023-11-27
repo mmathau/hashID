@@ -9,32 +9,35 @@ hashID is also capable of including the corresponding [hashcat](https://hashcat.
 ## Usage
 
 ```shell
-hashid [options] <hash|file>
+hashID [global options] command [command options] [arguments...]
 ```
 
 ### Example
 
-```cmd
-$ hashid '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
+```shell
+$ hashID '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 Analyzing '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 [+] PHPass' Portable Hash
 [+] phpass, WordPress (MD5), Joomla (MD5)
 
-$ hashid -mj '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
-Analyzing '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
-[+] RACF [Hashcat Mode: 8500][JtR Format: racf]
+$ hashID -mj '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
+Analyzing: '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
+[+] RACF [Hashcat: 8500][John: racf]
 
-$ hashid file hashes.txt
---File 'hashes.txt'--
-Analyzing '*85ADE5DDF71E348162894C71D73324C043838751'
-[+] MySQL4.1/MySQL5
-Analyzing '$2a$08$VPzNKPAY60FsAbnq.c.h5.XTCZtC1z.j3hnlDFGImN9FcpfR1QnLq'
-[+] WBB4 (Woltlab Burning Board)
-[+] bcrypt
-[+] bcrypt $2*$, Blowfish (Unix)
-[+] bcrypt(md5($pass)) / bcryptmd5
-[+] bcrypt(sha1($pass)) / bcryptsha1
---End of file 'hashes.txt'--
+$ hashID -mj -o json '$2a$12$djEXehnXL2xWQRq5w.LbFOaNDNlebYzDbAfwWwzY7oKrbdMe4OYwO'
+{"hash":"$2a$12$djEXehnXL2xWQRq5w.LbFOaNDNlebYzDbAfwWwzY7oKrbdMe4OYwO","match":[{"name":"bcrypt"},{"name":"bcrypt $2*$, Blowfish (Unix)","hashcat":"3200","john":"bcrypt"},{"name":"WBB4 (Woltlab Burning Board)"}]}
+
+$ hashID file hashes.txt
+Analyzing: '*85ADE5DDF71E348162894C71D73324C043838751'
+[+] MySQL4.1/MySQL5 
+
+Analyzing: '8743b52063cd84097a65d1633f5c74f5'
+[+] DNSSEC (NSEC3) 
+[+] Domain Cached Credentials (DCC), MS Cache 
+[+] Domain Cached Credentials 2 (DCC2), MS Cache 2 
+[+] MD5 
+[+] NTLM 
+[+] PostgreSQL
 ```
 
 ## Resources
