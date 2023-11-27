@@ -12,7 +12,7 @@ import (
 func IdentifyCommand() *cli.Command {
 	return &cli.Command{
 		Name:      "identify",
-		Usage:     "Identify hash from input",
+		Usage:     "Identify hash from input string",
 		ArgsUsage: "HASH",
 		Aliases:   []string{"id"},
 		Action:    IdentifySingleHash,

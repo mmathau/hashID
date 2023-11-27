@@ -12,31 +12,37 @@ import (
 
 func main() {
 	app := &cli.App{
-		Name:        "hashID",
-		Usage:       "hash identifier",
-		Description: "Identify the different types of hashes used to encrypt data and especially passwords.",
-		Version:     "0.0.1",
-		UsageText:   "hashID [global options] command [command options] [arguments...]",
+		Name:                   "hashID",
+		Usage:                  "hash identifier",
+		Description:            "Identify the different types of hashes used to encrypt data and especially passwords.",
+		Version:                "0.0.1",
+		UsageText:              "hashID [global options] command [command options] [arguments...]",
+		DefaultCommand:         "identify",
+		UseShortOptionHandling: true,
 		Flags: []cli.Flag{
 			&cli.BoolFlag{
-				Name:    "exotic",
-				Aliases: []string{"x"},
-				Usage:   "show exotic hash types",
+				Category: "Hash Options:",
+				Name:     "exotic",
+				Aliases:  []string{"x"},
+				Usage:    "show exotic hash types",
 			},
 			&cli.BoolFlag{
-				Name:    "extended",
-				Aliases: []string{"e"},
-				Usage:   "show extended hash types",
+				Category: "Hash Options:",
+				Name:     "extended",
+				Aliases:  []string{"e"},
+				Usage:    "show extended hash types",
 			},
 			&cli.BoolFlag{
-				Name:    "hashcat",
-				Aliases: []string{"m"},
-				Usage:   "show hashcat mode",
+				Category: "Hash Options:",
+				Name:     "hashcat",
+				Aliases:  []string{"m"},
+				Usage:    "show hashcat mode",
 			},
 			&cli.BoolFlag{
-				Name:    "john",
-				Aliases: []string{"j"},
-				Usage:   "show JohntheRipper format",
+				Category: "Hash Options:",
+				Name:     "john",
+				Aliases:  []string{"j"},
+				Usage:    "show JohntheRipper format",
 			},
 			&cli.StringFlag{
 				Name:    "output",
@@ -50,8 +56,7 @@ func main() {
 				},
 			},
 		},
-		DefaultCommand: "identify",
-		Action:         commands.IdentifySingleHash,
+		Action: commands.IdentifySingleHash,
 		Commands: []*cli.Command{
 			commands.IdentifyCommand(),
 			commands.FileCommand(),
@@ -61,7 +66,6 @@ func main() {
 			cli.ShowAppHelp(c)
 			return nil
 		},
-		UseShortOptionHandling: true,
 	}
 
 	err := app.Run(os.Args)
