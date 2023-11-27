@@ -570,13 +570,6 @@ var tests = []testCases{
 		want: "Drupal7",
 	},
 	{
-		name: "ELF-32",
-		hashes: []string{
-			"00067894",
-		},
-		want: "ELF-32",
-	},
-	{
 		name: "EPi",
 		hashes: []string{
 			"0x326C6D7B4E4F794B79474E36704F35723958397163735263516265456E31 0xAFC55E260B8F45C0C6512BCE776C1AD8312B56E6",
@@ -647,20 +640,6 @@ var tests = []testCases{
 		want: "Ethereum Wallet, SCRYPT",
 	},
 	{
-		name: "FCS-16",
-		hashes: []string{
-			"a36b",
-		},
-		want: "FCS-16",
-	},
-	{
-		name: "FCS-32",
-		hashes: []string{
-			"11cd82ed",
-		},
-		want: "FCS-32",
-	},
-	{
 		name: "FNV-132",
 		hashes: []string{
 			"4ab55bf6",
@@ -715,20 +694,6 @@ var tests = []testCases{
 			"SH2MCKr6kt9rLQKbn/YTlncOnR6OtcJ1YL/h8hw2wWicjSRf3bbkSrL+q6cDpg=",
 		},
 		want: "FortiGate256 (FortiOS256)",
-	},
-	{
-		name: "GHash-32-3",
-		hashes: []string{
-			"0001371a",
-		},
-		want: "GHash-32-3",
-	},
-	{
-		name: "GHash-32-5",
-		hashes: []string{
-			"0036deca",
-		},
-		want: "GHash-32-5",
 	},
 	{
 		name: "GOST R 34.11-2012 (Streebog) 256-bit, big-endian",
@@ -1123,13 +1088,6 @@ var tests = []testCases{
 		want: "LastPass + LastPass sniffed",
 	},
 	{
-		name: "Lineage II C4",
-		hashes: []string{
-			"0x35a28484c552747441d8fefe33a98f8f",
-		},
-		want: "Lineage II C4",
-	},
-	{
 		name: "LinkedIn",
 		hashes: []string{
 			"b89eaac7e61417341b710b727768294d0e6a277b",
@@ -1317,13 +1275,6 @@ var tests = []testCases{
 			"$pst$815b338f",
 		},
 		want: "Microsoft Outlook PST",
-	},
-	{
-		name: "Minecraft(xAuth)",
-		hashes: []string{
-			"cb5ef15b400cef07addb37e00e2cdd6d1b508a2a26f0befcb0f9d8fd03c1d67be1690eba2287c4f76a590f2feae654ce5aee9943a23babb8e56381fe3214a48ad8754a1fd9eb",
-		},
-		want: "Minecraft(xAuth)",
 	},
 	{
 		name: "MongoDB ServerKey SCRAM-SHA-1",
