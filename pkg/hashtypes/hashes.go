@@ -2,6 +2,7 @@ package hashtypes
 
 import "regexp"
 
+// Hash represents a hash type.
 type Hash struct {
 	name     string
 	regex    *regexp.Regexp
@@ -11,34 +12,42 @@ type Hash struct {
 	john     string
 }
 
+// Name returns the name of the hash.
 func (h *Hash) Name() string {
 	return h.name
 }
 
+// Regex returns the regex used to match the hash.
 func (h *Hash) Regex() string {
 	return h.regex.String()
 }
 
+// Exotic returns whether the hash is considered exotic.
 func (h *Hash) Exotic() bool {
 	return h.exotic
 }
 
+// Extended returns whether the hash is marked as extended.
 func (h *Hash) Extended() bool {
 	return h.extended
 }
 
+// Hashcat returns the hashcat mode of the hash.
 func (h *Hash) Hashcat() string {
 	return h.hashcat
 }
 
+// John returns the JohnTheRipper format of the hash.
 func (h *Hash) John() string {
 	return h.john
 }
 
+// Hashes represents a collection of hash types.
 type Hashes struct {
 	types []Hash
 }
 
+// New creates a new Hashes instance.
 func New() (*Hashes, error) {
 	hashes, err := load()
 	if err != nil {
@@ -50,10 +59,12 @@ func New() (*Hashes, error) {
 	}, nil
 }
 
+// AllTypes returns all hash types.
 func (h *Hashes) AllTypes() []Hash {
 	return h.types
 }
 
+// ExoticTypes returns all exotic hash types.
 func (h *Hashes) ExoticTypes() []Hash {
 	var exotic []Hash
 	for _, ht := range h.types {
@@ -65,6 +76,7 @@ func (h *Hashes) ExoticTypes() []Hash {
 	return exotic
 }
 
+// ExtendedTypes returns all extended hash types.
 func (h *Hashes) ExtendedTypes() []Hash {
 	var extended []Hash
 	for _, ht := range h.types {
@@ -76,6 +88,7 @@ func (h *Hashes) ExtendedTypes() []Hash {
 	return extended
 }
 
+// FindHashType finds and returns hash types that match the given hash string.
 func (h *Hashes) FindHashType(hash string) []Hash {
 	var found []Hash
 	for _, ht := range h.types {

@@ -10,6 +10,7 @@ import (
 	"ntwrk.space/mmaths/hashid/internal/commands"
 )
 
+// main is the entry point of the application.
 func main() {
 	categoryHashOptions := "Hash Options:"
 	app := &cli.App{

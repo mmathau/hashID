@@ -12,6 +12,7 @@ import (
 	"ntwrk.space/mmaths/hashid/pkg/hashtypes"
 )
 
+// FileCommand returns the file command.
 func FileCommand() *cli.Command {
 	return &cli.Command{
 		Name:      "file",
@@ -31,6 +32,7 @@ func FileCommand() *cli.Command {
 	}
 }
 
+// IdentifyHashesFromFile identifies hashes from a file.
 func IdentifyHashesFromFile(c *cli.Context) error {
 	if !c.Args().Present() {
 		return cli.ShowAppHelp(c)

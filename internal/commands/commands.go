@@ -22,6 +22,7 @@ type match struct {
 	John    string `json:"john,omitempty" xml:"john,omitempty"`
 }
 
+// Console method formats the output for console display.
 func (o output) Console() []byte {
 	var builder strings.Builder
 	builder.WriteString(fmt.Sprintf("Analyzing: '%s'\n", o.Hash))
@@ -44,10 +45,12 @@ func (o output) Console() []byte {
 	return []byte(builder.String())
 }
 
+// JSON returns the marshaled output as JSON.
 func (o output) JSON() ([]byte, error) {
 	return json.Marshal(o)
 }
 
+// XML returns the marshaled output as XML.
 func (o output) XML() ([]byte, error) {
 	return xml.Marshal(o)
 }

@@ -8,6 +8,7 @@ import (
 	"ntwrk.space/mmaths/hashid/pkg/hashtypes"
 )
 
+// HashCommand returns the hash command.
 func HashCommand() *cli.Command {
 	return &cli.Command{
 		Name:      "hash",
@@ -18,6 +19,7 @@ func HashCommand() *cli.Command {
 	}
 }
 
+// IdentifyHashesFromString identifies hashes from a string.
 func IdentifyHashesFromString(c *cli.Context) error {
 	if !c.Args().Present() {
 		return cli.ShowAppHelp(c)
