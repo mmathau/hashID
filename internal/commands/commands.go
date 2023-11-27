@@ -52,6 +52,32 @@ func (o output) XML() ([]byte, error) {
 	return xml.Marshal(o)
 }
 
+func process(c *cli.Context, id *hashtypes.Hashes, hash string) ([]hashtypes.Hash, error) {
+	s := strings.TrimSpace(hash)
+	matches := id.FindHashType(s)
+	matches = filter(c, matches)
+	out, err := formatOutput(c, s, matches)
+	if err != nil {
+		return matches, err
+	}
+	fmt.Fprintf(c.App.Writer, "%s\n", out)
+
+	return matches, nil
+}
+
+func filter(c *cli.Context, matches []hashtypes.Hash) []hashtypes.Hash {
+	var filtered []hashtypes.Hash
+	for _, m := range matches {
+		// skip exotic or extended hash types if not requested
+		if (!c.IsSet("exotic") && m.Exotic()) || (!c.IsSet("extended") && m.Extended()) {
+			continue
+		}
+		filtered = append(filtered, m)
+	}
+
+	return filtered
+}
+
 func formatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte, error) {
 	o := output{
 		Hash:  hash,
@@ -86,17 +112,4 @@ func formatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte
 	}
 
 	return o.Console(), nil
-}
-
-func filterMatches(c *cli.Context, matches []hashtypes.Hash) []hashtypes.Hash {
-	var filtered []hashtypes.Hash
-	for _, m := range matches {
-		// skip exotic or extended hash types if not requested
-		if (!c.IsSet("exotic") && m.Exotic()) || (!c.IsSet("extended") && m.Extended()) {
-			continue
-		}
-		filtered = append(filtered, m)
-	}
-
-	return filtered
 }

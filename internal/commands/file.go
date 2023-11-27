@@ -53,31 +53,26 @@ func IdentifyHashesFromFile(c *cli.Context) error {
 	}
 	defer file.Close()
 
-	var s string
+	var line string
 	withJohn := make(map[string][]string)
 	withHashcat := make(map[string][]string)
 	contents := bufio.NewScanner(file)
 	for contents.Scan() {
-		// trim possible whitespace
-		s = strings.TrimSpace(contents.Text())
-		matches := hashid.FindHashType(s)
-		matches = filterMatches(c, matches)
-		out, err := formatOutput(c, s, matches)
+		line = strings.TrimSpace(contents.Text())
+		matches, err := process(c, hashid, line)
 		if err != nil {
 			return err
 		}
 		for _, m := range matches {
 			hc := m.Hashcat()
 			if hc != "" {
-				withHashcat[hc] = append(withHashcat[hc], s)
+				withHashcat[hc] = append(withHashcat[hc], line)
 			}
 			jtr := m.John()
 			if jtr != "" {
-				withJohn[jtr] = append(withJohn[jtr], s)
+				withJohn[jtr] = append(withJohn[jtr], line)
 			}
 		}
-
-		fmt.Fprintf(c.App.Writer, "%s\n", out)
 	}
 	if err := contents.Err(); err != nil {
 		return cli.Exit(fmt.Errorf("error reading file: %w", err), 1)

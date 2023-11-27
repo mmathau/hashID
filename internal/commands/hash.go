@@ -2,7 +2,6 @@ package commands
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/urfave/cli/v2"
 
@@ -30,16 +29,10 @@ func IdentifyHashesFromString(c *cli.Context) error {
 	}
 
 	for _, arg := range c.Args().Slice() {
-		// trim possible whitespace
-		s := strings.TrimSpace(arg)
-		matches := hashid.FindHashType(s)
-		matches = filterMatches(c, matches)
-		out, err := formatOutput(c, s, matches)
+		_, err := process(c, hashid, arg)
 		if err != nil {
 			return err
 		}
-		fmt.Fprintf(c.App.Writer, "%s\n", out)
-
 	}
 
 	return nil
