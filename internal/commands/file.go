@@ -26,16 +26,6 @@ func identifyHashesInFile(c *cli.Context) error {
 		return cli.ShowAppHelp(c)
 	}
 
-	if c.IsSet("output") {
-		output := c.String("output")
-		file, err := os.Create(output)
-		if err != nil {
-			return cli.Exit(fmt.Errorf("error creating output file: %w", err), 1)
-		}
-		defer file.Close()
-		c.App.Writer = file
-	}
-
 	hashid, err := hashtypes.New()
 	if err != nil {
 		return cli.Exit(fmt.Errorf("error initializing hashtypes: %w", err), 1)

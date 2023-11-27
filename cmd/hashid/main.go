@@ -29,20 +29,14 @@ func main() {
 				Usage:   "show extended hash types",
 			},
 			&cli.BoolFlag{
-				Name:    "mode",
+				Name:    "hashcat",
 				Aliases: []string{"m"},
 				Usage:   "show hashcat mode",
 			},
 			&cli.BoolFlag{
-				Name:    "format",
-				Aliases: []string{"f"},
+				Name:    "john",
+				Aliases: []string{"j"},
 				Usage:   "show JohntheRipper format",
-			},
-			&cli.StringFlag{
-				Name:      "output",
-				Aliases:   []string{"o"},
-				Usage:     "output destination `FILE` (default: stdout)",
-				TakesFile: true,
 			},
 		},
 		DefaultCommand: "identify",

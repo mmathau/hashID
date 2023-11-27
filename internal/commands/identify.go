@@ -2,7 +2,6 @@ package commands
 
 import (
 	"fmt"
-	"os"
 	"strings"
 
 	"github.com/urfave/cli/v2"
@@ -23,16 +22,6 @@ func IdentifyCommand() *cli.Command {
 func IdentifySingleHash(c *cli.Context) error {
 	if c.NArg() == 0 {
 		return cli.ShowAppHelp(c)
-	}
-
-	if c.IsSet("output") {
-		output := c.String("output")
-		file, err := os.Create(output)
-		if err != nil {
-			return cli.Exit(fmt.Errorf("error creating output file: %v", err), 1)
-		}
-		defer file.Close()
-		c.App.Writer = file
 	}
 
 	hashid, err := hashtypes.New()
