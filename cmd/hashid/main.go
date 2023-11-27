@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	categoryHashOptions := "Hash Options:"
 	app := &cli.App{
 		Name:                   "hashID",
 		Usage:                  "hash identifier",
@@ -21,25 +22,25 @@ func main() {
 		UseShortOptionHandling: true,
 		Flags: []cli.Flag{
 			&cli.BoolFlag{
-				Category: "Hash Options:",
+				Category: categoryHashOptions,
 				Name:     "exotic",
 				Aliases:  []string{"x"},
 				Usage:    "show exotic hash types",
 			},
 			&cli.BoolFlag{
-				Category: "Hash Options:",
+				Category: categoryHashOptions,
 				Name:     "extended",
 				Aliases:  []string{"e"},
 				Usage:    "show extended hash types",
 			},
 			&cli.BoolFlag{
-				Category: "Hash Options:",
+				Category: categoryHashOptions,
 				Name:     "hashcat",
 				Aliases:  []string{"m"},
 				Usage:    "show hashcat mode",
 			},
 			&cli.BoolFlag{
-				Category: "Hash Options:",
+				Category: categoryHashOptions,
 				Name:     "john",
 				Aliases:  []string{"j"},
 				Usage:    "show JohntheRipper format",
