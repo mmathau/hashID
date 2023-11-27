@@ -1880,14 +1880,6 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{140}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Minecraft(xAuth)",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^\\$mongodb-scram\\$\\*0\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
     "john": null,
     "hashcat": "24100",
