@@ -1576,14 +1576,6 @@
     "extended": false
   },
   {
-    "regex": "^0x[a-f0-9]{32}$",
-    "john": null,
-    "hashcat": null,
-    "name": "Lineage II C4",
-    "exotic": false,
-    "extended": false
-  },
-  {
     "regex": "^[a-f0-9]{40}(:.+)?$",
     "john": "raw-sha1-linkedin",
     "hashcat": "190",
