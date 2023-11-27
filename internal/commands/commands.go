@@ -66,10 +66,6 @@ func formatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte
 	}
 
 	for _, m := range matches {
-		// skip exotic or extended hash types if not requested
-		if (!c.IsSet("exotic") && m.Exotic()) || (!c.IsSet("extended") && m.Extended()) {
-			continue
-		}
 		mt := match{Name: m.Name()}
 		if c.IsSet("hashcat") && m.Hashcat() != "" {
 			mt.Hashcat = m.Hashcat()
@@ -90,4 +86,17 @@ func formatOutput(c *cli.Context, hash string, matches []hashtypes.Hash) ([]byte
 	}
 
 	return o.Console(), nil
+}
+
+func filterMatches(c *cli.Context, matches []hashtypes.Hash) []hashtypes.Hash {
+	var filtered []hashtypes.Hash
+	for _, m := range matches {
+		// skip exotic or extended hash types if not requested
+		if (!c.IsSet("exotic") && m.Exotic()) || (!c.IsSet("extended") && m.Extended()) {
+			continue
+		}
+		filtered = append(filtered, m)
+	}
+
+	return filtered
 }

@@ -33,6 +33,7 @@ func IdentifyHashesFromString(c *cli.Context) error {
 		// trim possible whitespace
 		s := strings.TrimSpace(arg)
 		matches := hashid.FindHashType(s)
+		matches = filterMatches(c, matches)
 		out, err := formatOutput(c, s, matches)
 		if err != nil {
 			return err
