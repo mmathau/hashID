@@ -38,6 +38,17 @@ func main() {
 				Aliases: []string{"j"},
 				Usage:   "show JohntheRipper format",
 			},
+			&cli.StringFlag{
+				Name:    "output",
+				Aliases: []string{"o"},
+				Usage:   "set output format `[json|xml]`",
+				Action: func(c *cli.Context, s string) error {
+					if s != "json" && s != "xml" {
+						return fmt.Errorf("invalid output format: %s", s)
+					}
+					return nil
+				},
+			},
 		},
 		DefaultCommand: "identify",
 		Action:         commands.IdentifySingleHash,
@@ -56,5 +67,6 @@ func main() {
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
+		//cli.Exit(err, 1)
 	}
 }

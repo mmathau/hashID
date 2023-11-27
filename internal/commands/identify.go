@@ -30,34 +30,16 @@ func IdentifySingleHash(c *cli.Context) error {
 	}
 
 	inputHash := c.Args().Get(0)
-	fmt.Fprintf(c.App.Writer, "Analyzing: '%s'\n", inputHash)
 
 	// trim possible whitespace
 	s := strings.TrimSpace(inputHash)
 
 	matches := hashid.FindHashType(s)
-	if len(matches) == 0 {
-		// no match was found
-		fmt.Fprintf(c.App.Writer, "[-] Unknown Hash\n")
-		return nil
+	out, err := FormatOutput(c, s, matches)
+	if err != nil {
+		return err
 	}
-
-	for _, match := range matches {
-		// skip exotic or extended hash types if not requested
-		if (!c.IsSet("exotic") && match.Exotic()) || (!c.IsSet("extended") && match.Extended()) {
-			continue
-		}
-
-		output := match.Name()
-		if c.IsSet("mode") && match.Hashcat() != "" {
-			output = fmt.Sprintf("%s [Hashcat: %s]", output, match.Hashcat())
-		}
-		if c.IsSet("format") && match.John() != "" {
-			output = fmt.Sprintf("%s [John: %s]", output, match.John())
-		}
-
-		fmt.Fprintf(c.App.Writer, "[+] %s\n", output)
-	}
+	fmt.Fprintf(c.App.Writer, "%s\n", out)
 
 	return nil
 }
