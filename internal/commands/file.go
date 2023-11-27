@@ -42,44 +42,22 @@ func identifyHashesInFile(c *cli.Context) error {
 	}
 	defer file.Close()
 
-	fmt.Fprintf(c.App.Writer, "--File '%s'--\n", file.Name())
-	contents := bufio.NewScanner(file)
-
 	var s string
+	contents := bufio.NewScanner(file)
 	for contents.Scan() {
 		// trim possible whitespace
 		s = strings.TrimSpace(contents.Text())
-
-		fmt.Fprintf(c.App.Writer, "Analyzing: '%s'\n", s)
 		matches := hashid.FindHashType(s)
-		if len(matches) == 0 {
-			// no match was found
-			fmt.Fprintf(c.App.Writer, "[-] Unknown Hash\n")
-			continue
+		out, err := FormatOutput(c, s, matches)
+		if err != nil {
+			return err
 		}
-
-		for _, match := range matches {
-			// skip exotic or extended hash types if not requested
-			if (!c.IsSet("exotic") && match.Exotic()) || (!c.IsSet("extended") && match.Extended()) {
-				continue
-			}
-
-			output := match.Name()
-			if c.IsSet("mode") && match.Hashcat() != "" {
-				output = fmt.Sprintf("%s [Hashcat: %s]", output, match.Hashcat())
-			}
-			if c.IsSet("format") && match.John() != "" {
-				output = fmt.Sprintf("%s [John: %s]", output, match.John())
-			}
-
-			fmt.Fprintf(c.App.Writer, "[+] %s\n", output)
-		}
+		fmt.Fprintf(c.App.Writer, "%s\n", out)
 	}
 	if err := contents.Err(); err != nil {
 		return cli.Exit(fmt.Errorf("error reading file: %w", err), 1)
 
 	}
-	fmt.Fprintf(c.App.Writer, "--End of file '%s'--\n", file.Name())
 
 	return nil
 }
