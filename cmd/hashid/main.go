@@ -63,7 +63,7 @@ func main() {
 		},
 		Action: commands.IdentifyHashesFromString,
 		Commands: []*cli.Command{
-			commands.IdentifyCommand(),
+			commands.HashCommand(),
 			commands.FileCommand(),
 		},
 		OnUsageError: func(c *cli.Context, err error, isSubcommand bool) error {

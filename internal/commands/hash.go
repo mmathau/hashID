@@ -8,7 +8,7 @@ import (
 	"ntwrk.space/mmaths/hashid/pkg/hashtypes"
 )
 
-func IdentifyCommand() *cli.Command {
+func HashCommand() *cli.Command {
 	return &cli.Command{
 		Name:      "hash",
 		Usage:     "Identify hash from input string",
