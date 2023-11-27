@@ -14,7 +14,7 @@ hashID [global options] command [command options] [arguments...]
 
 ### Example
 
-```shell
+```console
 $ hashID '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 Analyzing '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 [+] PHPass' Portable Hash
