@@ -17,7 +17,7 @@ func main() {
 		Description:            "Identify the different types of hashes used to encrypt data and especially passwords.",
 		Version:                "0.0.1",
 		UsageText:              "hashID [global options] command [command options] [arguments...]",
-		DefaultCommand:         "identify",
+		DefaultCommand:         "hash",
 		UseShortOptionHandling: true,
 		Flags: []cli.Flag{
 			&cli.BoolFlag{

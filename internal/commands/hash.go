@@ -11,7 +11,7 @@ import (
 
 func IdentifyCommand() *cli.Command {
 	return &cli.Command{
-		Name:      "identify",
+		Name:      "hash",
 		Usage:     "Identify hash from input string",
 		ArgsUsage: "HASH",
 		Aliases:   []string{"id"},
