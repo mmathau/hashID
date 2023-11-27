@@ -25,7 +25,7 @@
   },
   {
     "regex": "^\\$7z\\$[0-9]\\$[0-9]{2}\\$[0-9]\\$[\\w\\d]+\\$[0-9]\\$[a-f0-9]{32}\\$[0-9]+\\$[0-9]+\\$[0-9]{2}\\$[a-f0-9]+$",
-    "john": null,
+    "john": "7z",
     "hashcat": "11600",
     "name": "7-Zip",
     "exotic": false,
@@ -145,7 +145,7 @@
   },
   {
     "regex": "^\\$ansible\\$[0-9]\\*[0-9]\\*[a-f0-9]{64}\\*[a-f0-9]{32}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "ansible",
     "hashcat": "16900",
     "name": "Ansible Vault",
     "exotic": false,
@@ -169,7 +169,7 @@
   },
   {
     "regex": "^\\$iwork\\$[0-9]\\$[0-9]\\$[0-9]\\$[0-9]+\\$[a-f0-9]{16}\\$[a-f0-9]{32}\\$[a-f0-9]{128}$",
-    "john": null,
+    "john": "iwork",
     "hashcat": "23300",
     "name": "Apple iWork",
     "exotic": false,
@@ -217,7 +217,7 @@
   },
   {
     "regex": "^\\$axcrypt\\$\\*1\\*[0-9]+\\*[a-f0-9]{32}\\*[a-f0-9]{48}$",
-    "john": null,
+    "john": "axcrypt-opencl",
     "hashcat": "13200",
     "name": "AxCrypt 1",
     "exotic": false,
@@ -225,7 +225,7 @@
   },
   {
     "regex": "^\\$axcrypt_sha1\\$[a-f0-9]{40}$",
-    "john": null,
+    "john": "axcrypt-opencl",
     "hashcat": "13300",
     "name": "AxCrypt 1 in-memory SHA1",
     "exotic": false,
@@ -233,7 +233,7 @@
   },
   {
     "regex": "^\\$axcrypt\\$\\*2\\*[0-9]+\\*[a-z0-9]{128}\\*[a-z0-9]+\\*[0-9]+\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "axcrypt2-opencl",
     "hashcat": "23500",
     "name": "AxCrypt 2 AES-128",
     "exotic": false,
@@ -241,7 +241,7 @@
   },
   {
     "regex": "^\\$axcrypt\\$\\*2\\*[0-9]+\\*[a-z0-9]{128}\\*[a-z0-9]+\\*[0-9]+\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "axcrypt2-opencl",
     "hashcat": "23600",
     "name": "AxCrypt 2 AES-256",
     "exotic": false,
@@ -321,7 +321,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "30901",
     "name": "Bitcoin raw private key (P2PKH), compressed",
     "exotic": false,
@@ -329,7 +329,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "30902",
     "name": "Bitcoin raw private key (P2PKH), uncompressed",
     "exotic": false,
@@ -337,7 +337,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "30905",
     "name": "Bitcoin raw private key (P2SH(P2WPKH)), compressed",
     "exotic": false,
@@ -345,7 +345,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "30906",
     "name": "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
     "exotic": false,
@@ -353,7 +353,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "30903",
     "name": "Bitcoin raw private key (P2WPKH, Bech32), compressed",
     "exotic": false,
@@ -361,7 +361,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "30904",
     "name": "Bitcoin raw private key (P2WPKH, Bech32), uncompressed",
     "exotic": false,
@@ -369,7 +369,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "28501",
     "name": "Bitcoin WIF private key (P2PKH), compressed",
     "exotic": false,
@@ -377,7 +377,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "28502",
     "name": "Bitcoin WIF private key (P2PKH), uncompressed",
     "exotic": false,
@@ -385,7 +385,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "28505",
     "name": "Bitcoin WIF private key (P2SH(P2WPKH)), compressed",
     "exotic": false,
@@ -393,7 +393,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "28506",
     "name": "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
     "exotic": false,
@@ -401,7 +401,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "28503",
     "name": "Bitcoin WIF private key (P2WPKH, Bech32), compressed",
     "exotic": false,
@@ -409,7 +409,7 @@
   },
   {
     "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "28504",
     "name": "Bitcoin WIF private key (P2WPKH, Bech32), uncompressed",
     "exotic": false,
@@ -417,7 +417,7 @@
   },
   {
     "regex": "^\\$bitcoin\\$[0-9]{2}\\$[a-f0-9]{96}\\$[0-9]{2}\\$[0-9]{16}\\$[0-9]{6}\\$[0-9]{2}\\$[0-9]{96}\\$[0-9]{2}\\$[0-9]{66}$",
-    "john": null,
+    "john": "bitcoin",
     "hashcat": "11300",
     "name": "Bitcoin/Litecoin wallet.dat",
     "exotic": false,
@@ -433,7 +433,7 @@
   },
   {
     "regex": "^[a-f0-9]{128}$",
-    "john": null,
+    "john": "bitshares",
     "hashcat": "21000",
     "name": "BitShares v0.x - sha512(sha512_bin(pass))",
     "exotic": false,
@@ -441,7 +441,7 @@
   },
   {
     "regex": "^\\$bitwarden\\$[0-9]\\*[0-9]+\\*[0-9]\\*[a-z0-9/+=]+\\*[a-z0-9/+=]+$",
-    "john": null,
+    "john": "bitwarden",
     "hashcat": "23400",
     "name": "Bitwarden",
     "exotic": false,
@@ -697,7 +697,7 @@
   },
   {
     "regex": "^[a-f0-9]{32}:[0-9]+:[0-9]+$",
-    "john": null,
+    "john": "dahua",
     "hashcat": "3730",
     "name": "Dahua NVR/DVR/HVR (md5($salt1.strtoupper(md5($salt2.$pass))))",
     "exotic": false,
@@ -873,7 +873,7 @@
   },
   {
     "regex": "^\\$electrum\\$[1-3]\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
-    "john": null,
+    "john": "electrum",
     "hashcat": "16600",
     "name": "Electrum Wallet (Salt-Type 1-3)",
     "exotic": false,
@@ -881,7 +881,7 @@
   },
   {
     "regex": "^\\$electrum\\$4\\*[a-z0-9]+\\*[a-z0-9]+\\*[a-z0-9]{64}$",
-    "john": null,
+    "john": "electrum",
     "hashcat": "21700",
     "name": "Electrum Wallet (Salt-Type 4)",
     "exotic": false,
@@ -889,7 +889,7 @@
   },
   {
     "regex": "^\\$electrum\\$5\\*[a-z0-9]+\\*[a-z0-9]+\\*[a-z0-9]{64}$",
-    "john": null,
+    "john": "electrum",
     "hashcat": "21800",
     "name": "Electrum Wallet (Salt-Type 5)",
     "exotic": false,
@@ -953,7 +953,7 @@
   },
   {
     "regex": "^\\$ethereum\\$w\\*[a-f0-9]+\\*[a-f0-9]{40}\\*[a-f0-9]{32}$",
-    "john": null,
+    "john": "ethereum-presale-opencl",
     "hashcat": "16300",
     "name": "Ethereum Pre-Sale Wallet, PBKDF2-HMAC-SHA256",
     "exotic": false,
@@ -961,7 +961,7 @@
   },
   {
     "regex": "^\\$ethereum\\$p\\*[0-9]+\\*[0-9]{64}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "ethereum",
     "hashcat": "15600",
     "name": "Ethereum Wallet, PBKDF2-HMAC-SHA256",
     "exotic": false,
@@ -969,7 +969,7 @@
   },
   {
     "regex": "^\\$ethereum\\$s\\*[0-9]+\\*[0-9]\\*[0-9]\\*[0-9]{64}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "ethereum",
     "hashcat": "15700",
     "name": "Ethereum Wallet, SCRYPT",
     "exotic": false,
@@ -1057,7 +1057,7 @@
   },
   {
     "regex": "^[a-f0-9]{64}$",
-    "john": null,
+    "john": "gost",
     "hashcat": "11700",
     "name": "GOST R 34.11-2012 (Streebog) 256-bit, big-endian",
     "exotic": false,
@@ -1065,7 +1065,7 @@
   },
   {
     "regex": "^[a-f0-9]{128}$",
-    "john": null,
+    "john": "gost",
     "hashcat": "11800",
     "name": "GOST R 34.11-2012 (Streebog) 512-bit, big-endian",
     "exotic": false,
@@ -1081,7 +1081,7 @@
   },
   {
     "regex": "^\\$gpg\\$\\*[0-9]\\*[0-9]+\\*[0-9]+\\*[a-f0-9]+\\*[0-9]\\*[0-9]+\\*[0-9]\\*[0-9]\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]{16}$",
-    "john": null,
+    "john": "gpg",
     "hashcat": "17010",
     "name": "GPG (AES-128/AES-256 (SHA-1($pass)))",
     "exotic": false,
@@ -1089,7 +1089,7 @@
   },
   {
     "regex": "^\\$gpg\\$\\*[0-9]\\*[0-9]+\\*[0-9]+\\*[a-f0-9]+\\*[0-9]\\*[0-9]+\\*[0-9]+\\*[0-9]+\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]{16}$",
-    "john": null,
+    "john": "gpg",
     "hashcat": "17030",
     "name": "GPG (AES-128/AES-256 (SHA-256($pass)))",
     "exotic": false,
@@ -1097,7 +1097,7 @@
   },
   {
     "regex": "^\\$gpg\\$\\*[0-9]\\*[0-9]+\\*[0-9]+\\*[a-f0-9]+\\*[0-9]\\*[0-9]+\\*[0-9]+\\*[0-9]+\\*[0-9]+\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]{16}$",
-    "john": null,
+    "john": "gpg",
     "hashcat": "17020",
     "name": "GPG (AES-128/AES-256 (SHA-512($pass)))",
     "exotic": false,
@@ -1121,7 +1121,7 @@
   },
   {
     "regex": "^[a-f0-9]{40}$",
-    "john": null,
+    "john": "has-160",
     "hashcat": null,
     "name": "HAS-160",
     "exotic": true,
@@ -1337,7 +1337,7 @@
   },
   {
     "regex": "^\\$itunes_backup\\$\\*9\\*[a-f0-9]{80}\\*[0-9]+\\*[a-f0-9]{40}\\*\\*$",
-    "john": null,
+    "john": "itunes-backup",
     "hashcat": "14700",
     "name": "iTunes backup < 10.0",
     "exotic": false,
@@ -1345,7 +1345,7 @@
   },
   {
     "regex": "^\\$itunes_backup\\$\\*10\\*[a-f0-9]{80}\\*[0-9]+\\*[a-f0-9]{40}\\*[0-9]+\\*[a-f0-9]{40}$",
-    "john": null,
+    "john": "itunes-backup",
     "hashcat": "14800",
     "name": "iTunes backup >= 10.0",
     "exotic": false,
@@ -1449,7 +1449,7 @@
   },
   {
     "regex": "^\\$keepass\\$\\*[0-9]\\*[0-9]+\\*[0-9]\\*[a-f0-9]{64}\\*[a-f0-9]{64}\\*[a-f0-9]{32}\\*[a-f0-9]{64}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "keepass",
     "hashcat": "29700",
     "name": "KeePass 1 (AES/Twofish) and KeePass 2 (AES) - keyfile only mode",
     "exotic": false,
@@ -1457,7 +1457,7 @@
   },
   {
     "regex": "^\\$keepass\\$\\*1\\*\\d+\\*\\d\\*[0-9a-f]{32}\\*[0-9a-f]{64}\\*[0-9a-f]{32}\\*[0-9a-f]{64}\\*\\d\\*[^*]*(\\*[0-9a-f]+)?$",
-    "john": "KeePass",
+    "john": "keepass",
     "hashcat": "13400",
     "name": "KeePass 1 AES / without keyfile",
     "exotic": false,
@@ -1569,7 +1569,7 @@
   },
   {
     "regex": "^[a-f0-9]{32}:[0-9]+:[a-z0-9_.+-]+@[a-z0-9-]+\\.[a-z0-9-.]+$",
-    "john": null,
+    "john": "lastpass",
     "hashcat": "6800",
     "name": "LastPass + LastPass sniffed",
     "exotic": false,
@@ -1841,7 +1841,7 @@
   },
   {
     "regex": "^[:$]A[:$]([a-f0-9]{1,8}[:$])?[a-f0-9]{32}$",
-    "john": null,
+    "john": "mediawiki",
     "hashcat": null,
     "name": "MediaWiki",
     "exotic": false,
@@ -1881,7 +1881,7 @@
   },
   {
     "regex": "^\\$mongodb-scram\\$\\*0\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
-    "john": null,
+    "john": "mongodb",
     "hashcat": "24100",
     "name": "MongoDB ServerKey SCRAM-SHA-1",
     "exotic": false,
@@ -1889,7 +1889,7 @@
   },
   {
     "regex": "^\\$mongodb-scram\\$\\*1\\*[a-z0-9+=]+\\*[0-9]+\\*[a-z0-9+=]+\\*[a-z0-9+=/]+$",
-    "john": null,
+    "john": "mongodb",
     "hashcat": "24200",
     "name": "MongoDB ServerKey SCRAM-SHA-256",
     "exotic": false,
@@ -1897,7 +1897,7 @@
   },
   {
     "regex": "^\\$mozilla\\$\\*3des\\*[a-f0-9]{40}\\*[a-f0-9]{40}\\*[a-f0-9]{32}$",
-    "john": null,
+    "john": "mozilla",
     "hashcat": "26000",
     "name": "Mozilla key3.db",
     "exotic": false,
@@ -1905,7 +1905,7 @@
   },
   {
     "regex": "^\\$mozilla\\$\\*aes\\*[a-f0-9]{40}\\*[a-f0-9]{64}\\*[0-9]+\\*[a-f0-9]{32}\\*[a-f0-9]{32}$",
-    "john": null,
+    "john": "mozilla",
     "hashcat": "26100",
     "name": "Mozilla key4.db",
     "exotic": false,
@@ -1921,7 +1921,7 @@
   },
   {
     "regex": "^\\$office\\$\\*2010\\*[0-9]{6}\\*[0-9]{3}\\*[0-9]{2}\\*[a-z0-9]{32}\\*[a-z0-9]{32}\\*[a-z0-9]{64}$",
-    "john": null,
+    "john": "office",
     "hashcat": "9500",
     "name": "MS Office 2010",
     "exotic": false,
@@ -1929,7 +1929,7 @@
   },
   {
     "regex": "^\\$office\\$\\*2013\\*[0-9]{6}\\*[0-9]{3}\\*[0-9]{2}\\*[a-z0-9]{32}\\*[a-z0-9]{32}\\*[a-z0-9]{64}$",
-    "john": null,
+    "john": "office",
     "hashcat": "9600",
     "name": "MS Office 2013",
     "exotic": false,
@@ -1961,7 +1961,7 @@
   },
   {
     "regex": "^\\$oldoffice\\$[34]\\*[a-f0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{40}(:.+)?$",
-    "john": null,
+    "john": "oldoffice",
     "hashcat": "9810",
     "name": "MS Office <= 2003 $3, SHA1 + RC4, collider #1",
     "exotic": false,
@@ -1969,7 +1969,7 @@
   },
   {
     "regex": "^\\$oldoffice\\$[34]\\*[a-f0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{40}(:.+)?$",
-    "john": null,
+    "john": "oldoffice",
     "hashcat": "9820",
     "name": "MS Office <= 2003 $3, SHA1 + RC4, collider #2",
     "exotic": false,
@@ -1985,7 +1985,7 @@
   },
   {
     "regex": "^\\$oldoffice\\$[34]\\*[a-f0-9]{32}\\*[a-f0-9]{32}\\*[a-f0-9]{40}(:.+)?$",
-    "john": null,
+    "john": "oldoffice",
     "hashcat": "9800",
     "name": "MS Office <= 2003 SHA1 + RC4, oldoffice$3, oldoffice$4",
     "exotic": false,
@@ -2177,7 +2177,7 @@
   },
   {
     "regex": "^\\$odf\\$\\*0\\*0\\*[0-9]+\\*[0-9]{2}\\*[a-f0-9]{40}\\*[0-9]\\*[a-f0-9]{16}\\*[0-9]{2}\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+$",
-    "john": null,
+    "john": "odf",
     "hashcat": "18600",
     "name": "Open Document Format (ODF) 1.1 (SHA-1, Blowfish)",
     "exotic": false,
@@ -2185,7 +2185,7 @@
   },
   {
     "regex": "^\\$odf\\$\\*1\\*1\\*[0-9]+\\*32\\*[a-f0-9]{64}\\*16\\*[a-f0-9]{32}\\*16\\*[a-f0-9]{32}\\*0\\*[a-f0-9]+$",
-    "john": null,
+    "john": "odf",
     "hashcat": "18400",
     "name": "Open Document Format (ODF) 1.2 (SHA-256, AES)",
     "exotic": false,
@@ -2321,7 +2321,7 @@
   },
   {
     "regex": "^\\$pdf\\$1\\*2\\*40\\*-1\\*[0-9]\\*[0-9]{2}\\*[0-9]{32}\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}(:.+)?$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "10400",
     "name": "PDF 1.1 - 1.3 (Acrobat 2 - 4)",
     "exotic": false,
@@ -2329,7 +2329,7 @@
   },
   {
     "regex": "^\\$pdf\\$1\\*2\\*40\\*-1\\*[0-9]\\*[0-9]{2}\\*[0-9]{32}\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}(:.+)?$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "10410",
     "name": "PDF 1.1 - 1.3 (Acrobat 2 - 4), collider #1",
     "exotic": false,
@@ -2337,7 +2337,7 @@
   },
   {
     "regex": "^\\$pdf\\$1\\*2\\*40\\*[-0-9]+\\*[0-9]\\*[0-9]{2}\\*[0-9]{32}\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}(:.+)?$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "10420",
     "name": "PDF 1.1 - 1.3 (Acrobat 2 - 4), collider #2",
     "exotic": false,
@@ -2345,7 +2345,7 @@
   },
   {
     "regex": "^\\$pdf\\$2\\*3\\*128\\*[-0-9]+\\*[0-9]\\*[0-9]{2}\\*[a-f0-9]{32}\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "10500",
     "name": "PDF 1.4 - 1.6 (Acrobat 5 - 8)",
     "exotic": false,
@@ -2353,7 +2353,7 @@
   },
   {
     "regex": "^\\$pdf\\$2\\*3\\*128\\*[-0-9]+\\*[0-9]\\*[0-9]{2}\\*[a-f0-9]{32}\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "25400",
     "name": "PDF 1.4 - 1.6 (Acrobat 5 - 8) - user and owner pass",
     "exotic": false,
@@ -2361,7 +2361,7 @@
   },
   {
     "regex": "^\\$pdf\\$5\\*5\\*256\\*-1028\\*[0-9]\\*[0-9]{2}\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+\\*[0-9]+\\*[0-9]+\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "10600",
     "name": "PDF 1.7 Level 3 (Acrobat 9)",
     "exotic": false,
@@ -2369,7 +2369,7 @@
   },
   {
     "regex": "^\\$pdf\\$5\\*6\\*256\\*-1028\\*[0-9]\\*[0-9]{2}\\*[a-f0-9]{32}\\*[0-9]+\\*[a-f0-9]+\\*[0-9]+\\*[0-9]+\\*[0-9]{2}\\*[a-f0-9]{64}\\*[0-9]{2}\\*[a-f0-9]{64}$",
-    "john": null,
+    "john": "pdf",
     "hashcat": "10700",
     "name": "PDF 1.7 Level 8 (Acrobat 10 - 11)",
     "exotic": false,
@@ -2841,7 +2841,7 @@
   },
   {
     "regex": "^\\$scram\\$[0-9]+\\$[a-z0-9/.]{16}\\$sha-1=[a-z0-9/.]{27},sha-256=[a-z0-9/.]{43},sha-512=[a-z0-9/.]{86}$",
-    "john": null,
+    "john": "scram",
     "hashcat": null,
     "name": "SCRAM Hash",
     "exotic": false,
@@ -2849,7 +2849,7 @@
   },
   {
     "regex": "^SCRYPT:[0-9]+:[0-9]:[0-9]:[a-z0-9:/+=]+$",
-    "john": null,
+    "john": "scrypt",
     "hashcat": "8900",
     "name": "scrypt",
     "exotic": false,
@@ -2857,7 +2857,7 @@
   },
   {
     "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*128\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
-    "john": null,
+    "john": "securezip",
     "hashcat": "23001",
     "name": "SecureZIP AES-128",
     "exotic": false,
@@ -2865,7 +2865,7 @@
   },
   {
     "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*192\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
-    "john": null,
+    "john": "securezip",
     "hashcat": "23002",
     "name": "SecureZIP AES-192",
     "exotic": false,
@@ -2873,7 +2873,7 @@
   },
   {
     "regex": "^\\$zip3\\$\\*0\\*[0-9]\\*256\\*[0-9]\\*[a-f0-9]{24}\\*[a-f0-9]+\\*[0-9]\\*[0-9]\\*[0-9]\\*.+$",
-    "john": null,
+    "john": "securezip",
     "hashcat": "23003",
     "name": "SecureZIP AES-256",
     "exotic": false,
@@ -3625,7 +3625,7 @@
   },
   {
     "regex": "^\\$telegram\\$1\\*[0-9]+\\*[a-f0-9]{64}\\*[a-f0-9]{576}$",
-    "john": null,
+    "john": "telegram",
     "hashcat": "22600",
     "name": "Telegram Desktop < v2.1.14 (PBKDF2-HMAC-SHA1)",
     "exotic": false,
@@ -3633,7 +3633,7 @@
   },
   {
     "regex": "^\\$telegram\\$2\\*[0-9]+\\*[a-f0-9]{64}\\*[a-f0-9]{576}$",
-    "john": null,
+    "john": "telegram",
     "hashcat": "24500",
     "name": "Telegram Desktop >= v2.1.14 (PBKDF2-HMAC-SHA512)",
     "exotic": false,
