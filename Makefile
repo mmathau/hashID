@@ -1,23 +1,30 @@
-.PHONY: clean vendor upgrade-dependencies build test run
-
+BUILD_DIR = bin
 BINARY_NAME=hashID
+VERSION= $(shell git describe --tags --always)
 
+.PHONY: clean
 clean:
 	go clean
-	rm -f bin/${BINARY_NAME}
+	rm -f ${BUILD_DIR}/${BINARY_NAME}-*
 
+.PHONY: vendor
 vendor:
 	go mod vendor
 
+.PHONY: upgrade-dependencies
 upgrade-dependencies:
 	go get -u
 	go mod tidy
 
+.PHONY: test
 test:
 	go test -v ./...
 
+.PHONY: build
 build:
-	go build -o bin/${BINARY_NAME} cmd/hashid/main.go
+	mkdir -p ${BUILD_DIR}
+	GOOS=linux GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64-linux cmd/hashid/main.go
+	GOOS=linux GOARCH=arm64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-arm64-linux cmd/hashid/main.go
+	GOOS=darwin GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64-darwin cmd/hashid/main.go
+	GOOS=windows GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64.exe cmd/hashid/main.go
 
-run:
-	bin/${BINARY_NAME} -h
