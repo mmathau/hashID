@@ -3646,25 +3646,24 @@ func TestMain(m *testing.M) {
 	if err != nil {
 		panic(err)
 	}
-	code := m.Run()
-	os.Exit(code)
-}
-
-func testHashType(t *testing.T, hash string, want string) {
-	results := hashid.FindHashType(hash)
-	for _, result := range results {
-		if result.Name() == want {
-			return
-		}
-	}
-	t.Errorf("%q should be %q", hash, want)
+	os.Exit(m.Run())
 }
 
 func TestHashType(t *testing.T) {
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			for _, hash := range tc.hashes {
-				testHashType(t, hash, tc.want)
+				results := hashid.FindHashType(hash)
+				found := false
+				for _, result := range results {
+					if result.Name() == tc.want {
+						found = true
+						break
+					}
+				}
+				if !found {
+					t.Errorf("%q not found in results", tc.want)
+				}
 			}
 		})
 	}
