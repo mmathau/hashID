@@ -1,8 +1,21 @@
 package hashtypes
 
 import (
+	"os"
 	"testing"
 )
+
+var hashid *Hashes
+
+func TestMain(m *testing.M) {
+	var err error
+	hashid, err = New()
+	if err != nil {
+		panic(err)
+	}
+
+	os.Exit(m.Run())
+}
 
 func TestFindHashType(t *testing.T) {
 	tests := []struct {
