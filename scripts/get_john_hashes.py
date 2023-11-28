@@ -25,6 +25,9 @@ for line in lines:
         item = {'name': name, 'hash': hash}
         data.append(item)
 
+    # sort the data by name (case-insensitive)
+    data = sorted(data, key=lambda x: x['name'].lower())
+
     # write list to a JSON file
     with open('output/john_hashes.json', 'w') as outfile:
         json.dump(data, outfile, indent=2)
