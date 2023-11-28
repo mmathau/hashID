@@ -2,4 +2,4 @@
 
 ## v0.0.1
 
-- Rewritten in Go
+- Initial release
