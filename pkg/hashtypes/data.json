@@ -1633,7 +1633,7 @@
   },
   {
     "regex": "^\\([a-z0-9/+]{49}\\)$",
-    "john": null,
+    "john": "dominosec8",
     "hashcat": "9100",
     "name": "Lotus Notes/Domino 8",
     "exotic": false,
@@ -1889,7 +1889,7 @@
   },
   {
     "regex": "^(\\$pst\\$)?[a-f0-9]{8}$",
-    "john": null,
+    "john": "PST",
     "hashcat": null,
     "name": "Microsoft Outlook PST",
     "exotic": false,
