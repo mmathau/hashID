@@ -1608,7 +1608,7 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{16}$",
+    "regex": "^(\\$LM\\$)?[a-f0-9]{16}$",
     "john": "lm",
     "hashcat": "3000",
     "name": "LM",
@@ -3697,7 +3697,7 @@
   },
   {
     "regex": "^[a-z0-9]{10}$",
-    "john": null,
+    "john": "tripcode",
     "hashcat": "16000",
     "name": "Tripcode",
     "exotic": false,
