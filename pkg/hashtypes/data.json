@@ -192,6 +192,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$argon2(i|d|id)\\$(v=[0-9]{1,2}\\$m=[0-9]+,t=[0-9]+,p=[0-9]+\\$)?[a-z0-9\/+=]+\\$[a-z0-9\/+=]+$",
+    "john": null,
+    "hashcat": null,
+    "name": "Argon2",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^[a-f0-9]{50}$",
     "john": null,
     "hashcat": "125",

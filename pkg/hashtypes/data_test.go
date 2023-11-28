@@ -164,6 +164,13 @@ var hashTypeTests = []struct {
 		expected: "Apple iWork",
 	},
 	{
+		name: "Argon2",
+		hashes: []string{
+			"$argon2i$v=19$m=512,t=2,p=2$aI2R0hpDyLm3ltLa+1/rvQ$LqPKjd6n8yniKtAithoR7A",
+		},
+		expected: "Argon2",
+	},
+	{
 		name: "ArubaOS",
 		hashes: []string{
 			"5387280701327dc2162bdeb451d5a465af6d13eff9276efeba",
