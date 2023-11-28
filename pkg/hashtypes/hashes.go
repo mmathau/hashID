@@ -1,6 +1,10 @@
 package hashtypes
 
-import "regexp"
+import (
+	"regexp"
+	"sort"
+	"strconv"
+)
 
 // Hash represents a hash type.
 type Hash struct {
@@ -86,6 +90,56 @@ func (h *Hashes) ExtendedTypes() []Hash {
 	}
 
 	return extended
+}
+
+// HashcatModes returns all hashcat modes.
+func (h *Hashes) HashcatModes() []string {
+	modes := make(map[string]bool)
+	for _, ht := range h.types {
+		mode := ht.Hashcat()
+		if mode != "" {
+			modes[mode] = true
+		}
+	}
+
+	uniqueModes := make([]string, 0, len(modes))
+	for mode := range modes {
+		uniqueModes = append(uniqueModes, mode)
+	}
+
+	// convert string to int, sort and convert back to string
+	intModes := make([]int, 0, len(uniqueModes))
+	for _, mode := range uniqueModes {
+		intMode, _ := strconv.Atoi(mode)
+		intModes = append(intModes, intMode)
+	}
+	sort.Ints(intModes)
+
+	for i, mode := range intModes {
+		uniqueModes[i] = strconv.Itoa(mode)
+	}
+
+	return uniqueModes
+}
+
+// JohnFormats returns all john formats.
+func (h *Hashes) JohnFormats() []string {
+	formats := make(map[string]bool)
+	for _, ht := range h.types {
+		format := ht.John()
+		if format != "" {
+			formats[format] = true
+		}
+	}
+
+	uniqueFormats := make([]string, 0, len(formats))
+	for format := range formats {
+		uniqueFormats = append(uniqueFormats, format)
+	}
+
+	sort.Strings(uniqueFormats)
+
+	return uniqueFormats
 }
 
 // FindHashType finds and returns hash types that match the given hash string.
