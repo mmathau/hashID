@@ -2264,11 +2264,11 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{51}$",
-    "john": null,
+    "regex": "^(\\$palshop\\$)?[a-f0-9]{51}$",
+    "john": "Palshop",
     "hashcat": null,
     "name": "Palshop CMS",
-    "exotic": true,
+    "exotic": false,
     "extended": false
   },
   {

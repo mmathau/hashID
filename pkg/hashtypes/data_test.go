@@ -1672,6 +1672,7 @@ var hashTypeTests = []struct {
 		name: "Palshop CMS",
 		hashes: []string{
 			"a05938cc2e475e64937c057e33bbba227c4d634cfbfbbfc7c5c",
+			"$palshop$68b11ee90ed17ef14aa0f51af494c2c63ad7d281a9888cb593e",
 		},
 		expected: "Palshop CMS",
 	},
