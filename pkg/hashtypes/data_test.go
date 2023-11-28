@@ -2622,6 +2622,13 @@ var tests = []testCases{
 		want: "md5($salt.$pass.$salt)",
 	},
 	{
+		name: "md5($pass.$salt)",
+		hashes: []string{
+			"01dfae6e5d4d90d9892622325959afbe:7050461",
+		},
+		want: "md5($pass.$salt)",
+	},
+	{
 		name: "md5($salt.md5($pass))",
 		hashes: []string{
 			"95248989ec91f6d0439dbde2bd0140be:1234",
@@ -2832,7 +2839,7 @@ var tests = []testCases{
 		want: "sha1(md5($pass))",
 	},
 	{
-		name: "sha1(md5($pass.$salt))",
+		name: "sha1(md5($pass).$salt)",
 		hashes: []string{
 			"53c724b7f34f09787ed3f1b316215fc35c789504:hashcat1",
 		},
@@ -3526,7 +3533,7 @@ var tests = []testCases{
 		want: "ENCsecurity Datavault (MD5/keychain)",
 	},
 	{
-		name: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
+		name: "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
 		hashes: []string{
 			"md5$84143$7f51edecfa6fb401a0b5e63d33fc8c0e",
 			"md5$be7b1$4e9c5b51bd070727b0ed21956cb68de7",
@@ -3649,6 +3656,24 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
+func TestAllHashTypeTestsExist(t *testing.T) {
+	hashTypes := hashid.AllTypes()
+	testsMap := make(map[string]bool)
+
+	for _, hashType := range hashTypes {
+		testsMap[hashType.Name()] = true
+	}
+
+	for _, test := range tests {
+		if _, ok := testsMap[test.name]; ok {
+			delete(testsMap, test.name)
+		} else {
+			t.Errorf("Hash type '%s' does not have a corresponding test", test.name)
+			return
+		}
+	}
+}
+
 func TestHashType(t *testing.T) {
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
@@ -3662,7 +3687,7 @@ func TestHashType(t *testing.T) {
 					}
 				}
 				if !found {
-					t.Errorf("%q not found in results", tc.want)
+					t.Errorf("Hash type '%q' not found in results", tc.want)
 				}
 			}
 		})
