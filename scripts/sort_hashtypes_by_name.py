@@ -5,7 +5,7 @@ import json
 # and writes the sorted list back to a new JSON file.
 
 # open the JSON file and load the data
-with open('../pkg/hashtypes/hashes.json', 'r') as f:
+with open('../pkg/hashtypes/data.json', 'r') as f:
     data = json.load(f)
 
 # ensure data is a list
@@ -16,5 +16,5 @@ if not isinstance(data, list):
 sorted_data = sorted(data, key=lambda item: item.get('name', '').lower())
 
 # write the sorted list back to a new file
-with open('output/hashes_sorted.json', 'w') as f:
+with open('output/data_sorted.json', 'w') as f:
     json.dump(sorted_data, f, indent=2)
