@@ -2216,7 +2216,7 @@
     "extended": false
   },
   {
-    "regex": "^(S:)?[a-f0-9]{40}(:.+)?$",
+    "regex": "^(S:)?[a-f0-9]{40}(:)?([a-f0-9]{20})?$",
     "john": "oracle11",
     "hashcat": "112",
     "name": "Oracle S: Type (Oracle 11+)",
