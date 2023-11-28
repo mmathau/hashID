@@ -736,6 +736,14 @@
     "extended": false
   },
   {
+    "regex": "^argon2\\$argon2(i|d|id)\\$(v=[0-9]{1,2}\\$m=[0-9]+,t=[0-9]+,p=[0-9]+\\$)?[a-z0-9\/+=]+\\$[a-z0-9\/+=]+$",
+    "john": null,
+    "hashcat": null,
+    "name": "Django (Argon2)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^bcrypt(\\$2[axy]|\\$2)\\$[0-9]{2}\\$[a-z0-9/.]{53}$",
     "john": null,
     "hashcat": null,

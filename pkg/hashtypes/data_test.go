@@ -495,6 +495,13 @@ var hashTypeTests = []struct {
 		expected: "Dahua Authentication MD5",
 	},
 	{
+		name: "Django (Argon2)",
+		hashes: []string{
+			"argon2$argon2i$v=19$m=256,t=1,p=1$c29tZXNhbHQ$AJFIsNZTMKTAewB4+ETN1A",
+		},
+		expected: "Django (Argon2)",
+	},
+	{
 		name: "Django (DES Crypt Wrapper)",
 		hashes: []string{
 			"crypt$cd1a4$cdlRbNJGImptk",
