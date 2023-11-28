@@ -25,7 +25,7 @@ type match struct {
 // Console method formats the output for console display.
 func (o output) Console() []byte {
 	var builder strings.Builder
-	builder.WriteString(fmt.Sprintf("Analyzing: '%s'\n", o.Hash))
+	builder.WriteString(fmt.Sprintf("Analyzing: %q\n", o.Hash))
 	if len(o.Match) == 0 {
 		builder.WriteString("[-] Unknown\n")
 		return []byte(builder.String())
