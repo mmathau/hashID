@@ -1450,6 +1450,7 @@ var hashTypeTests = []struct {
 		name: "Oracle S: Type (Oracle 11+)",
 		hashes: []string{
 			"ac5f1e62d21fd0529428b84d42e8955b04966703:38445748184477378130",
+			"S:4143053633E59B4992A8EA17D2FF542C9EDEB335C886EED9C80450C1B4E6",
 		},
 		expected: "Oracle S: Type (Oracle 11+)",
 	},
@@ -3646,16 +3647,13 @@ func TestAllHashTypeTestsExist(t *testing.T) {
 	hashTypes := hashid.AllTypes()
 	testsMap := make(map[string]bool)
 
-	for _, hashType := range hashTypes {
-		testsMap[hashType.Name()] = true
+	for _, test := range hashTypeTests {
+		testsMap[test.name] = true
 	}
 
-	for _, test := range hashTypeTests {
-		if _, ok := testsMap[test.name]; ok {
-			delete(testsMap, test.name)
-		} else {
-			t.Errorf("Hash type  %q does not have a corresponding test", test.name)
-			return
+	for _, hashType := range hashTypes {
+		if _, ok := testsMap[hashType.Name()]; !ok {
+			t.Fatalf("Hash type %q does not have a corresponding test", hashType.Name())
 		}
 	}
 }
