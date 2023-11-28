@@ -1072,16 +1072,16 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{64}$",
-    "john": "gost",
+    "regex": "^(\\$stribog256\\$)?[a-f0-9]{64}$",
+    "john": "Stribog-256",
     "hashcat": "11700",
     "name": "GOST R 34.11-2012 (Streebog) 256-bit, big-endian",
     "exotic": false,
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{128}$",
-    "john": "gost",
+    "regex": "^(\\$stribog512\\$)?[a-f0-9]{128}$",
+    "john": "Stribog-512",
     "hashcat": "11800",
     "name": "GOST R 34.11-2012 (Streebog) 512-bit, big-endian",
     "exotic": false,

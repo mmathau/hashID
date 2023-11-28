@@ -708,6 +708,7 @@ var hashTypeTests = []struct {
 		name: "GOST R 34.11-2012 (Streebog) 256-bit, big-endian",
 		hashes: []string{
 			"57e9e50caec93d72e9498c211d6dc4f4d328248b48ecf46ba7abfa874f666e36",
+			"$stribog256$bbe19c8d2025d99f943a932a0b365a822aa36a4c479d22cc02c8973e219a533f",
 		},
 		expected: "GOST R 34.11-2012 (Streebog) 256-bit, big-endian",
 	},
@@ -715,6 +716,7 @@ var hashTypeTests = []struct {
 		name: "GOST R 34.11-2012 (Streebog) 512-bit, big-endian",
 		hashes: []string{
 			"5d5bdba48c8f89ee6c0a0e11023540424283e84902de08013aeeb626e819950bb32842903593a1d2e8f71897ff7fe72e17ac9ba8ce1d1d2f7e9c4359ea63bdc3",
+			"$stribog512$8a1a1c4cbf909f8ecb81cd1b5c713abad26a4cac2a5fda3ce86e352855712f36a7f0be98eb6cf51553b507b73a87e97946aebc29859255049f86aa09a25d948e",
 		},
 		expected: "GOST R 34.11-2012 (Streebog) 512-bit, big-endian",
 	},
