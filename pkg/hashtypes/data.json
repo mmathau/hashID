@@ -1481,7 +1481,7 @@
   },
   {
     "regex": "^\\$keepass\\$\\*1\\*\\d+\\*\\d\\*[0-9a-f]{32}\\*[0-9a-f]{64}\\*[0-9a-f]{32}\\*[0-9a-f]{64}\\*\\d\\*[^*]*(\\*[0-9a-f]+)?\\*\\d+\\*\\d+\\*[0-9a-f]{64}$",
-    "john": "KeepPass",
+    "john": "keepass",
     "hashcat": "13400",
     "name": "KeePass 1 Twofish / with keyfile",
     "exotic": false,
@@ -1489,7 +1489,7 @@
   },
   {
     "regex": "^\\$keepass\\$\\*2\\*\\d+\\*\\d+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*\\d+\\*\\d+\\*[0-9a-f]+$",
-    "john": "KeePass",
+    "john": "keepass",
     "hashcat": "13400",
     "name": "Keepass 2 AES / with keyfile",
     "exotic": false,
@@ -1497,7 +1497,7 @@
   },
   {
     "regex": "^\\$keepass\\$\\*2\\*\\d+\\*\\d+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+\\*[0-9a-f]+$",
-    "john": "KeePass",
+    "john": "keepass",
     "hashcat": "13400",
     "name": "KeePass 2 AES / without keyfile",
     "exotic": false,
