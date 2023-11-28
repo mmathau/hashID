@@ -9,6 +9,9 @@ result = subprocess.run(['john', '--list=format-details'], capture_output=True, 
 # split it into lines
 lines = result.stdout.splitlines()
 
+# skip the dynamic formats and dummy
+excluded = ['dynamic_', 'dynamic=', "dummy", "plaintext"]
+
 data = []
 for line in lines:
     # split the line into columns
@@ -18,8 +21,7 @@ for line in lines:
     # the hash is the last column
     name = columns[0]
     hash = columns[-1]
-    # skip the dynamic formats
-    if not name.startswith('dynamic_'):
+    if not any(name.startswith(prefix) for prefix in excluded):
         item = {'name': name, 'hash': hash}
         data.append(item)
 
