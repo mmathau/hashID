@@ -457,7 +457,7 @@
   },
   {
     "regex": "^\\$blake2\\$[a-f0-9]{128}$",
-    "john": null,
+    "john": "Raw-Blake2",
     "hashcat": "600",
     "name": "BLAKE2b-512",
     "exotic": false,
@@ -3312,7 +3312,7 @@
     "extended": false
   },
   {
-    "regex": "^\\$siemens-s7\\$\\$[0-9]\\$[a-f0-9]{40}\\$[a-f0-9]{40}$",
+    "regex": "^\\$siemens-s7\\$[0-9]\\$[a-f0-9]{40}\\$[a-f0-9]{40}$",
     "john": "siemens-s7",
     "hashcat": null,
     "name": "Siemens-S7",

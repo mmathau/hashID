@@ -1088,6 +1088,7 @@ var hashTypeTests = []struct {
 		name: "LM",
 		hashes: []string{
 			"299bd128c1101fd6",
+			"$LM$a9c604d244c4e99d",
 		},
 		expected: "LM",
 	},
@@ -2153,7 +2154,7 @@ var hashTypeTests = []struct {
 	{
 		name: "Siemens-S7",
 		hashes: []string{
-			"$siemens-s7$$1$5644714b707234646830473673445631744d4a68$0fea2b913571d06e60b28e6a61fd70f52e456fa1",
+			"$siemens-s7$1$599fe00cdb61f76cc6e949162f22c95943468acb$002e45951f62602b2f5d15df217f49da2f5379cb",
 		},
 		expected: "Siemens-S7",
 	},
