@@ -1749,6 +1749,7 @@ var hashTypeTests = []struct {
 		name: "QNX /etc/shadow (MD5)",
 		hashes: []string{
 			"@m@75f6f129f9c9e77b6b1b78f791ed764a@8741857532330050",
+			"@m@bde10f1a1119328c64594c52df3165cf@6e1f9a390d50a85c",
 		},
 		expected: "QNX /etc/shadow (MD5)",
 	},

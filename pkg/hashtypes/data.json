@@ -2600,15 +2600,15 @@
     "extended": false
   },
   {
-    "regex": "^@m@[a-f0-9]{32}@[0-9]{16}$",
-    "john": null,
+    "regex": "^@m@[a-f0-9]{32}@[a-f0-9]{16}$",
+    "john": "qnx",
     "hashcat": "19000",
     "name": "QNX /etc/shadow (MD5)",
     "exotic": false,
     "extended": false
   },
   {
-    "regex": "^@s@[a-f0-9]{64}@[0-9]{16}$",
+    "regex": "^@s@[a-f0-9]{64}@[a-f0-9]{16}$",
     "john": null,
     "hashcat": "19100",
     "name": "QNX /etc/shadow (SHA256)",
@@ -2616,7 +2616,7 @@
     "extended": false
   },
   {
-    "regex": "^@s@[a-f0-9]{128}@[0-9]{16}$",
+    "regex": "^@s@[a-f0-9]{128}@[a-f0-9]{16}$",
     "john": null,
     "hashcat": "19200",
     "name": "QNX /etc/shadow (SHA512)",
