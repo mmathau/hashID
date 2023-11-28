@@ -1608,7 +1608,7 @@
     "extended": false
   },
   {
-    "regex": "^(\\$LM\\$)?[a-f0-9]{16}$",
+    "regex": "^(\\$lm\\$)?[a-f0-9]{16}$",
     "john": "lm",
     "hashcat": "3000",
     "name": "LM",
@@ -3321,7 +3321,7 @@
   },
   {
     "regex": "^\\$sip\\$\\*[0-9.]+\\*[0-9.]+\\*[a-z0-9]+\\*asterisk\\*register\\*sip\\*[0-9.]+\\*\\*[a-f0-9]{8}[\\*]{4}md5\\*[a-f0-9]{32}$",
-    "john": null,
+    "john": "SIP",
     "hashcat": "11400",
     "name": "SIP digest authentication (MD5)",
     "exotic": false,
