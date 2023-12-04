@@ -2704,7 +2704,7 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{32}$",
+    "regex": "^(\\$ripemd\\$)?[a-f0-9]{32}$",
     "john": "ripemd-128",
     "hashcat": null,
     "name": "RIPEMD-128",
@@ -2712,7 +2712,7 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{40}$",
+    "regex": "^(\\$ripemd\\$)?[a-f0-9]{40}$",
     "john": "ripemd-160",
     "hashcat": "6000",
     "name": "RIPEMD-160",

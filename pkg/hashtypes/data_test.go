@@ -1807,6 +1807,7 @@ var hashTypeTests = []struct {
 		name: "RIPEMD-128",
 		hashes: []string{
 			"cdf26213a150dc3ecb610f18f6b38b46",
+			"$ripemd$cdf26213a150dc3ecb610f18f6b38b46",
 		},
 		expected: "RIPEMD-128",
 	},
@@ -1814,6 +1815,7 @@ var hashTypeTests = []struct {
 		name: "RIPEMD-160",
 		hashes: []string{
 			"012cb9b334ec1aeb71a9c8ce85586082467f7eb6",
+			"$ripemd$9c1185a5c5e9fc54612808977ee8f548b2258d31",
 		},
 		expected: "RIPEMD-160",
 	},
