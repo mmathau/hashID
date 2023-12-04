@@ -3570,6 +3570,14 @@ var hashTypeTests = []struct {
 		expected: "Python Werkzeug SHA1 (HMAC-SHA1 (key = $salt))",
 	},
 	{
+		name: "Python Werkzeug SHA224 (HMAC-SHA224 (key = $salt))",
+		hashes: []string{
+			"sha224$BY08WpEW$ae9cb24fc6839cb4bb289145d82c38ab89bf21aeec07dfcd08ea7398",
+			"sha224$0iluTjCqz9YlhJk5RJ6RbYodLVG1CxUw$678217b476398021c32c8ca2dc8089f97026d96b9c1fe17e868a3da6",
+		},
+		expected: "Python Werkzeug SHA224 (HMAC-SHA224 (key = $salt))",
+	},
+	{
 		name: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 		hashes: []string{
 			"sha256$70108387805$8b9472281c36c3a693703de0",
