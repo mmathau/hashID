@@ -3602,20 +3602,28 @@ var hashTypeTests = []struct {
 		expected: "Python Werkzeug scrypt (scrypt (key = $salt))",
 	},
 	{
-		name: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
-		hashes: []string{
-			"pbkdf2:sha256:600000$MdFcQyXK$6f0610d79e21ac75ca1ed5a4d191e28c50df259e341807b8124ead79eebd7972",
-			"pbkdf2:sha256:600000$h8Xxe8ozyRJaXiYciVIw2OJpQKhIUUdX$b2eab4b0e57bb5bd35f626770d4a8d07b046392ee4707bcde58d8c6272ed15b7",
-		},
-		expected: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
-	},
-	{
 		name: "Python Werkzeug PBKDF2-HMAC-MD5 (key = $salt)",
 		hashes: []string{
 			"pbkdf2:md5:600000$QhX2QHrQ$49cc3851f77779484c28e19329b314e3",
 			"pbkdf2:md5:600000$UUYvlGLR6dM0UktS9ZPlB6g31d3GfGmB$609b8faacaf938b20c4d8200a870901f",
 		},
 		expected: "Python Werkzeug PBKDF2-HMAC-MD5 (key = $salt)",
+	},
+	{
+		name: "Python Werkzeug PBKDF2-HMAC-SHA1 (key = $salt)",
+		hashes: []string{
+			"pbkdf2:sha1:600000$3lGWkOIT$505daf9a81fc1953f4b7a2ea69f656c46c87dfb2",
+			"pbkdf2:sha1:600000$fQ2Cw88BMhFLsemZpVMq6gd6PTJhDFTf$98db7984f6a90d060fdfc843cabbb1c67835c025",
+		},
+		expected: "Python Werkzeug PBKDF2-HMAC-SHA1 (key = $salt)",
+	},
+	{
+		name: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
+		hashes: []string{
+			"pbkdf2:sha256:600000$MdFcQyXK$6f0610d79e21ac75ca1ed5a4d191e28c50df259e341807b8124ead79eebd7972",
+			"pbkdf2:sha256:600000$h8Xxe8ozyRJaXiYciVIw2OJpQKhIUUdX$b2eab4b0e57bb5bd35f626770d4a8d07b046392ee4707bcde58d8c6272ed15b7",
+		},
+		expected: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
 	},
 	{
 		name: "DANE RFC7929/RFC8162 SHA2-256",
