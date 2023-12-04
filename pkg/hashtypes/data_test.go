@@ -83,6 +83,7 @@ var hashTypeTests = []struct {
 		name: "AIX {ssha256}",
 		hashes: []string{
 			"{ssha256}06$aJckFGJAB30LTe10$ohUsB7LBPlgclE3hJg9x042DLJvQyxVCX.nZZLEz.g2",
+			"{ssha256}06$YPhynOx/iJQaJOeV$EXQbOSYZftEo3k01uoanAbA7jEKZRUU9LCCs/tyU.wG",
 		},
 		expected: "AIX {ssha256}",
 	},

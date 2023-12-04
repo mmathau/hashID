@@ -88,7 +88,7 @@
     "extended": false
   },
   {
-    "regex": "^{ssha256}\\d{2}\\$[a-z0-9]{16}\\$[a-z0-9/.]+$",
+    "regex": "^{ssha256}\\d{2}\\$[a-z0-9/.]{16}\\$[a-z0-9/.]+$",
     "john": "aix-ssha256",
     "hashcat": "6400",
     "name": "AIX {ssha256}",
