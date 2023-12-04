@@ -3618,6 +3618,14 @@ var hashTypeTests = []struct {
 		expected: "Python Werkzeug PBKDF2-HMAC-SHA1 (key = $salt)",
 	},
 	{
+		name: "Python Werkzeug PBKDF2-HMAC-SHA224 (key = $salt)",
+		hashes: []string{
+			"pbkdf2:sha224:600000$z0GRcSo8$02f0a17307119fcea06769868738f7eec66459ee91aaba4cb4010c68",
+			"pbkdf2:sha224:600000$RidDKlBPNHJvzywwjQdl0Ly1UjLFcmwN$7a42f0cfc831bb8b9f5c635c4b6294195125ad282c6e16ab2ff82738",
+		},
+		expected: "Python Werkzeug PBKDF2-HMAC-SHA224 (key = $salt)",
+	},
+	{
 		name: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
 		hashes: []string{
 			"pbkdf2:sha256:600000$MdFcQyXK$6f0610d79e21ac75ca1ed5a4d191e28c50df259e341807b8124ead79eebd7972",

@@ -2656,6 +2656,14 @@
     "extended": false
   },
   {
+    "regex": "^pbkdf2:sha224:\\d+\\$[a-z0-9]+\\$[a-f0-9]{56}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Python Werkzeug PBKDF2-HMAC-SHA224 (key = $salt)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^pbkdf2:sha256:\\d+\\$[a-z0-9]+\\$[a-f0-9]{64}$",
     "john": null,
     "hashcat": null,
