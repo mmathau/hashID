@@ -1,3 +1,4 @@
+// Package main is the entry point of the hashID application.
 package main
 
 import (
@@ -70,8 +71,7 @@ func main() {
 		},
 		OnUsageError: func(c *cli.Context, err error, isSubcommand bool) error {
 			fmt.Fprintf(c.App.Writer, "Error: %s\n", err.Error())
-			cli.ShowAppHelp(c)
-			return nil
+			return cli.ShowAppHelp(c)
 		},
 	}
 

@@ -1,3 +1,4 @@
+// Package hashtypes provides a set of types and functions for working with different hash types.
 package hashtypes
 
 import (

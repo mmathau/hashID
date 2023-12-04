@@ -1,3 +1,5 @@
+// Package commands provides the command line interface for the hashID application.
+// It defines the available commands and options, handles input processing and output formatting.
 package commands
 
 import (
