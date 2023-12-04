@@ -990,6 +990,7 @@ var hashTypeTests = []struct {
 		name: "Keccak-256",
 		hashes: []string{
 			"203f88777f18bb4ee1226627b547808f38d90d3e106262b5de9ca943b57137b6",
+			"$keccak256$3b673b24a64aebb286f193e5c985c8e528db8590f997d9130889ca7f5f4cfe6e",
 		},
 		expected: "Keccak-256",
 	},
@@ -1004,6 +1005,7 @@ var hashTypeTests = []struct {
 		name: "Keccak-512",
 		hashes: []string{
 			"2fbf5c9080f0a704de2e915ba8fdae6ab00bbc026b2c1c8fa07da1239381c6b7f4dfd399bf9652500da723694a4c719587dd0219cb30eabe61210a8ae4dc0b03",
+			"$keccak$d135bb84d0439dbac432247ee573a23ea7d3c9deb2a968eb31d47c4fb45f1ef4422d6c531b5b9bd6f449ebcc449ea94d0a8f05f62130fda612da53c79659f609",
 		},
 		expected: "Keccak-512",
 	},
