@@ -2632,6 +2632,14 @@
     "extended": false
   },
   {
+    "regex": "^sha512\\$[a-z0-9]+\\$[a-f0-9]{128}$",
+    "john": null,
+    "hashcat": null,
+    "name": "Python Werkzeug SHA512 (HMAC-SHA512 (key = $salt))",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^@m@[a-f0-9]{32}@[a-f0-9]{16}$",
     "john": "qnx",
     "hashcat": "19000",
