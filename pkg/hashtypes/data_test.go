@@ -1539,13 +1539,6 @@ var hashTypeTests = []struct {
 		expected: "PBKDF2-HMAC-SHA512",
 	},
 	{
-		name: "PBKDF2-SHA256(Werkzeug)",
-		hashes: []string{
-			"pbkdf2:sha256$1tNyTG7rtLMYuIos$fa8b1915621cc59f3967a9747e083ad9b59934806336a6a24afff926044334e1",
-		},
-		expected: "PBKDF2-SHA256(Werkzeug)",
-	},
-	{
 		name: "PDF 1.1 - 1.3 (Acrobat 2 - 4)",
 		hashes: []string{
 			"$pdf$1*2*40*-1*0*16*51726437280452826511473255744374*32*9b09be05c226214fa1178342673d86f273602b95104f2384b6c9b709b2cbc058*32*0000000000000000000000000000000000000000000000000000000000000000",
@@ -3607,6 +3600,14 @@ var hashTypeTests = []struct {
 			"scrypt:32768:8:1$pLaTtGUijpBTu23LHEND5Msf7c5xiOIT$68d61eee291ded6884211192f54830cf78841d6b4398b8a45ed75ee9ca82f2fd953c82c74920aaa88b67595241a60c697cc3c10bb2aeeed0dde548396def7a21",
 		},
 		expected: "Python Werkzeug scrypt (scrypt (key = $salt))",
+	},
+	{
+		name: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
+		hashes: []string{
+			"pbkdf2:sha256:600000$MdFcQyXK$6f0610d79e21ac75ca1ed5a4d191e28c50df259e341807b8124ead79eebd7972",
+			"pbkdf2:sha256:600000$h8Xxe8ozyRJaXiYciVIw2OJpQKhIUUdX$b2eab4b0e57bb5bd35f626770d4a8d07b046392ee4707bcde58d8c6272ed15b7",
+		},
+		expected: "Python Werkzeug PBKDF2-HMAC-SHA256 (key = $salt)",
 	},
 	{
 		name: "DANE RFC7929/RFC8162 SHA2-256",
