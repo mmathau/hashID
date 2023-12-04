@@ -3585,6 +3585,14 @@ var hashTypeTests = []struct {
 		expected: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 	},
 	{
+		name: "Python Werkzeug SHA384 (HMAC-SHA384 (key = $salt))",
+		hashes: []string{
+			"sha384$orWox93X$faca5d655e1354fdc71ed176a077384fccb27f2e9d5d7e1ae95a02b71bf3471d20fa3a4d09e2aa74dd1f64c2ffff0c15",
+			"sha384$ShaQbCQLwqAF7Arv1D0TLjTy5N7c9QGX$5fcae189dcadcc3dbf6e68048a7752acc92b546de76e629315dd2f71b9738e09f4227453938ff618df81e82904614968",
+		},
+		expected: "Python Werkzeug SHA384 (HMAC-SHA384 (key = $salt))",
+	},
+	{
 		name: "DANE RFC7929/RFC8162 SHA2-256",
 		hashes: []string{
 			"127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df",
