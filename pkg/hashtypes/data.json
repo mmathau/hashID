@@ -2408,6 +2408,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$pfxng\\$(1|224|256|384|512)\\$\\d+\\$\\d+\\$\\d+\\$[a-f0-9]{16,40}\\$[a-f0-9]+\\$[a-f0-9]{40,128}$",
+    "john": "pfx",
+    "hashcat": null,
+    "name": "PFX .p12 Certificate",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$[HP]\\$[a-z0-9/.]{31}$",
     "john": "phpass",
     "hashcat": "400",
