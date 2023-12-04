@@ -3642,6 +3642,14 @@ var hashTypeTests = []struct {
 		expected: "Python Werkzeug PBKDF2-HMAC-SHA384 (key = $salt)",
 	},
 	{
+		name: "Python Werkzeug PBKDF2-HMAC-SHA512 (key = $salt)",
+		hashes: []string{
+			"pbkdf2:sha512:600000$WyEo87ON$2a31bd497f7a3805c73b287f425feff822707f1f72f5e1e8a5e83867147c1cc5535d99e1c578efcc9d346362f1470443d6b6de1f62da67da29bad32d071cff11",
+			"pbkdf2:sha512:600000$HIu57TAWiQJqqoY2KWtIzt7ZFzPBoiRL$12d3212f93b2e919842f4212107d9ad6c9b74010ba9f2b3f85874e447cc3cd32c83c71dbf60110f5260352bc4426094e97c5649c81252dcd7dbedc9e55ce7fda",
+		},
+		expected: "Python Werkzeug PBKDF2-HMAC-SHA512 (key = $salt)",
+	},
+	{
 		name: "DANE RFC7929/RFC8162 SHA2-256",
 		hashes: []string{
 			"127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df",
