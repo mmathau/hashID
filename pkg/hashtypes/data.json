@@ -193,7 +193,7 @@
   },
   {
     "regex": "^\\$argon2(i|d|id)\\$(v=\\d{1,2}\\$m=\\d+,t=\\d+,p=\\d+\\$)?[a-z0-9/+=]+\\$[a-z0-9/+=]+$",
-    "john": null,
+    "john": "argon2",
     "hashcat": null,
     "name": "Argon2",
     "exotic": false,
