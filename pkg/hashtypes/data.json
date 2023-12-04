@@ -328,7 +328,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "30901",
     "name": "Bitcoin raw private key (P2PKH), compressed",
@@ -336,7 +336,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "30902",
     "name": "Bitcoin raw private key (P2PKH), uncompressed",
@@ -344,7 +344,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "30905",
     "name": "Bitcoin raw private key (P2SH(P2WPKH)), compressed",
@@ -352,7 +352,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "30906",
     "name": "Bitcoin raw private key (P2SH(P2WPKH)), uncompressed",
@@ -360,7 +360,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "30903",
     "name": "Bitcoin raw private key (P2WPKH, Bech32), compressed",
@@ -368,7 +368,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "30904",
     "name": "Bitcoin raw private key (P2WPKH, Bech32), uncompressed",
@@ -376,7 +376,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "28501",
     "name": "Bitcoin WIF private key (P2PKH), compressed",
@@ -384,7 +384,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "28502",
     "name": "Bitcoin WIF private key (P2PKH), uncompressed",
@@ -392,7 +392,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "28505",
     "name": "Bitcoin WIF private key (P2SH(P2WPKH)), compressed",
@@ -400,7 +400,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "28506",
     "name": "Bitcoin WIF private key (P2SH(P2WPKH)), uncompressed",
@@ -408,7 +408,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "28503",
     "name": "Bitcoin WIF private key (P2WPKH, Bech32), compressed",
@@ -416,7 +416,7 @@
     "extended": false
   },
   {
-    "regex": "^(bc1|[13])[a-za-hj-np-z0-9]{25,39}$",
+    "regex": "^(bc1|[13])[a-z0-9]{25,39}$",
     "john": "bitcoin",
     "hashcat": "28504",
     "name": "Bitcoin WIF private key (P2WPKH, Bech32), uncompressed",
