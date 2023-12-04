@@ -3562,6 +3562,14 @@ var hashTypeTests = []struct {
 		expected: "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
 	},
 	{
+		name: "Python Werkzeug SHA1 (HMAC-SHA1 (key = $salt))",
+		hashes: []string{
+			"sha1$sV9Unoac$8083cab64f3b016e9d70729906ee11ea10a51ad6",
+			"sha1$iQ0LfrHjFg4t5oCzA27HaQpl8zM8C4oI$103aeadda05906e3b6be6625d76c6c309e3daf17",
+		},
+		expected: "Python Werkzeug SHA1 (HMAC-SHA1 (key = $salt))",
+	},
+	{
 		name: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 		hashes: []string{
 			"sha256$70108387805$8b9472281c36c3a693703de0",
