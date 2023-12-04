@@ -3557,7 +3557,7 @@ var hashTypeTests = []struct {
 		name: "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
 		hashes: []string{
 			"md5$84143$7f51edecfa6fb401a0b5e63d33fc8c0e",
-			"md5$be7b1$4e9c5b51bd070727b0ed21956cb68de7",
+			"md5$VgvFxJk7EGQh7Y4yUx7Wlw3WcIhm7YSp$e85dde5d8f419e73fb03b99346ea04fc",
 		},
 		expected: "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
 	},

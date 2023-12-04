@@ -2592,7 +2592,7 @@
     "extended": false
   },
   {
-    "regex": "^md5\\$[a-f0-9]+\\$[a-f0-9]{32}$",
+    "regex": "^md5\\$[a-z0-9]+\\$[a-f0-9]{32}$",
     "john": null,
     "hashcat": "30000",
     "name": "Python Werkzeug MD5 (HMAC-MD5 (key = $salt))",
