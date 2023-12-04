@@ -3580,7 +3580,7 @@ var hashTypeTests = []struct {
 	{
 		name: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 		hashes: []string{
-			"sha256$70108387805$8b9472281c36c3a693703de0",
+			"sha256$70108387805$8b9472281c36c3a693703de0e0f1ffab8fc0ecdd3bc5ead04c76dd74ef431e49",
 		},
 		expected: "Python Werkzeug SHA256 (HMAC-SHA256 (key = $salt))",
 	},
