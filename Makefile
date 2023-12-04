@@ -11,10 +11,14 @@ clean:
 vendor:
 	go mod vendor
 
-.PHONY: upgrade-dependencies
-upgrade-dependencies:
+.PHONY: updep
+updep:
 	go get -u
 	go mod tidy
+
+.PHONY: lint
+lint:
+	golangci-lint run ./...
 
 .PHONY: test
 test:
