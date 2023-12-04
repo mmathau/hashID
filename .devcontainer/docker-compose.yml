@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  hashID-dev:
-    image: mcr.microsoft.com/devcontainers/go:1-1.21-bookworm
-    container_name: hashID-dev
+  hashid-dev:
+    image: mcr.microsoft.com/devcontainers/base:bookworm
+    container_name: hashid-dev
     volumes:
       - ..:/workspace:cached
     cap_add:
