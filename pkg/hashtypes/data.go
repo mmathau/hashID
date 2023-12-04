@@ -26,7 +26,6 @@ func load() ([]Hash, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error opening embedded file: %w", err)
 	}
-	defer file.Close()
 
 	var ht []hashType
 	decoder := json.NewDecoder(file)
@@ -51,5 +50,5 @@ func load() ([]Hash, error) {
 		hashes = append(hashes, hash)
 	}
 
-	return hashes, nil
+	return hashes, file.Close()
 }

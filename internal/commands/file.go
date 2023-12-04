@@ -53,7 +53,6 @@ func IdentifyHashesFromFile(c *cli.Context) error {
 	if err != nil {
 		return cli.Exit(fmt.Errorf("error opening file: %w", err), 1)
 	}
-	defer file.Close()
 
 	var line string
 	withJohn := make(map[string][]string)
@@ -108,12 +107,12 @@ func writeFile(filename string, contents []string) error {
 	if err != nil {
 		return err
 	}
-	defer f.Close()
 
 	_, err = f.WriteString(strings.Join(contents, "\n"))
 	if err != nil {
+		_ = f.Close() // write error takes precedence
 		return err
 	}
 
-	return nil
+	return f.Close()
 }
