@@ -3675,6 +3675,14 @@ var hashTypeTests = []struct {
 		},
 		expected: "PFX .p12 Certificate",
 	},
+	{
+		name: "ZipMonster",
+		hashes: []string{
+			"$zipmonster$e0f68d6f40c5f157c169e9ca0a6f09fe",
+			"4dac447f100ee85327db2b47e295e50d",
+		},
+		expected: "ZipMonster",
+	},
 }
 
 func TestAllHashTypeTestsExist(t *testing.T) {

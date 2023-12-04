@@ -4166,5 +4166,13 @@
     "name": "XMPP SCRAM PBKDF2-SHA1",
     "exotic": false,
     "extended": false
+  },
+  {
+    "regex": "^(\\$zipmonster\\$)?[a-f0-9]{32}",
+    "john": "ZipMonster",
+    "hashcat": null,
+    "name": "ZipMonster",
+    "exotic": true,
+    "extended": false
   }
 ]
