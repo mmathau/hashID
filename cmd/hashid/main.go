@@ -45,7 +45,7 @@ func main() {
 				Category: categoryHashOptions,
 				Name:     "john",
 				Aliases:  []string{"j"},
-				Usage:    "show JohntheRipper format",
+				Usage:    "show JohnTheRipper format",
 			},
 			&cli.StringFlag{
 				Name:    "output",
