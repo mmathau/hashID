@@ -465,6 +465,7 @@ var hashTypeTests = []struct {
 		name: "DNSSEC (NSEC3)",
 		hashes: []string{
 			"7b5n74kq8r441blc2c5qbbat19baj79r:.lvdsiqfj.net:33164473:1",
+			"pi6a89u8tca930h8mvolklmesefc5gmn:.fnmlbsik.net:35537886:1",
 		},
 		expected: "DNSSEC (NSEC3)",
 	},

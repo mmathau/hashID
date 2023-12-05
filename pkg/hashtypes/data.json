@@ -2419,7 +2419,7 @@
     "regex": "^\\$H\\$[a-z0-9/.]{31}$",
     "john": "phpass",
     "hashcat": "400",
-    "name": "phpass, phpBB3 (MD5)",
+    "name": "PHPass, phpBB3 (MD5)",
     "exotic": false,
     "extended": false
   },
@@ -2427,7 +2427,7 @@
     "regex": "^\\$P\\$[a-z0-9/.]{31}$",
     "john": "phpass",
     "hashcat": "400",
-    "name": "phpass, WordPress (MD5), Joomla (MD5)",
+    "name": "PHPass, WordPress (MD5), Joomla (MD5)",
     "exotic": false,
     "extended": false
   },
@@ -2563,7 +2563,7 @@
     "regex": "^\\$pbkdf2(-sha1)?\\$\\d+\\$[a-z0-9/.]+\\$[a-z0-9/.]{27}$",
     "john": null,
     "hashcat": "20400",
-    "name": "Python passlib pbkdf2-sha1",
+    "name": "Python passlib PBKDF2-SHA1",
     "exotic": false,
     "extended": false
   },
@@ -2571,7 +2571,7 @@
     "regex": "^\\$pbkdf2-sha256\\$\\d+\\$[a-z0-9/.]+\\$[a-z0-9/.]{43}$",
     "john": "pbkdf2-hmac-sha256",
     "hashcat": "20300",
-    "name": "Python passlib pbkdf2-sha256",
+    "name": "Python passlib PBKDF2-SHA256",
     "exotic": false,
     "extended": false
   },
@@ -2579,7 +2579,7 @@
     "regex": "^\\$pbkdf2-sha512\\$\\d+\\$[a-z0-9/.]+\\$[a-z0-9/.]{86}$",
     "john": null,
     "hashcat": "20200",
-    "name": "Python passlib pbkdf2-sha512",
+    "name": "Python passlib PBKDF2-SHA512",
     "exotic": false,
     "extended": false
   },
@@ -2859,7 +2859,7 @@
     "regex": "^[a-f0-9]{40}:[a-f0-9]{40}$",
     "john": null,
     "hashcat": "27200",
-    "name": "Ruby on Rails Restful Auth (one round, no sitekey)",
+    "name": "Ruby on Rails Restful-Authentication (one round, no sitekey)",
     "exotic": false,
     "extended": false
   },
@@ -4163,7 +4163,7 @@
     "regex": "^pbkdf2\\(\\d+,\\d{1,3},sha512\\)\\$\\d+\\$[a-f0-9]{40}$",
     "john": null,
     "hashcat": "21600",
-    "name": "Web2py pbkdf2-sha512",
+    "name": "Web2py PBKDF2-SHA512",
     "exotic": false,
     "extended": false
   },
