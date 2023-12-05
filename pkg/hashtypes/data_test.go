@@ -570,6 +570,7 @@ var hashTypeTests = []struct {
 		name: "Domain Cached Credentials 2 (DCC2), MS Cache 2",
 		hashes: []string{
 			"$DCC2$10240#tom#e4e938d12fe5974dc42a90120bd9c90f",
+			"$DCC2$10000#Twelve_chars#54236c670e185043c8016006c001e982",
 		},
 		expected: "Domain Cached Credentials 2 (DCC2), MS Cache 2",
 	},
