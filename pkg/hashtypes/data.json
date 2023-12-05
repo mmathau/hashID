@@ -1584,7 +1584,7 @@
     "extended": false
   },
   {
-    "regex": "^[a-f0-9]{32}:\\d+:[a-z0-9_.+-]+@[a-z0-9-]+\\.[a-z0-9-.]+$",
+    "regex": "^[a-f0-9]{32}:([\\d]+:)?[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}(:[a-f0-9]{32})?$",
     "john": "lastpass",
     "hashcat": "6800",
     "name": "LastPass + LastPass sniffed",
