@@ -68,6 +68,7 @@ func main() {
 		Commands: []*cli.Command{
 			commands.HashCommand(),
 			commands.FileCommand(),
+			commands.ListCommand(),
 		},
 		OnUsageError: func(c *cli.Context, err error, isSubcommand bool) error {
 			fmt.Fprintf(c.App.Writer, "Error: %s\n", err.Error())
