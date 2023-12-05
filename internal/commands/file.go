@@ -28,12 +28,12 @@ func FileCommand() *cli.Command {
 				Usage: "split hashes into files for each John format",
 			},
 		},
-		Action: IdentifyHashesFromFile,
+		Action: identifyHashesFromFile,
 	}
 }
 
 // IdentifyHashesFromFile identifies hashes from a file.
-func IdentifyHashesFromFile(c *cli.Context) error {
+func identifyHashesFromFile(c *cli.Context) error {
 	if !c.Args().Present() {
 		return cli.ShowAppHelp(c)
 	}
