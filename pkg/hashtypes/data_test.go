@@ -1103,6 +1103,7 @@ var hashTypeTests = []struct {
 		name: "LastPass + LastPass sniffed",
 		hashes: []string{
 			"a2d1f7b7a1862d0d4a52644e72d59df5:500:lp@trash-mail.com",
+			"02eb97e869e0ddc7dc760fc633b4b54d:100100:pmix@trash-mail.com:9b071db7b8e265d4cadd3eb65ac0864a",
 		},
 		expected: "LastPass + LastPass sniffed",
 	},
@@ -1726,25 +1727,25 @@ var hashTypeTests = []struct {
 		expected: "PunBB",
 	},
 	{
-		name: "Python passlib pbkdf2-sha1",
+		name: "Python passlib PBKDF2-SHA1",
 		hashes: []string{
 			"$pbkdf2$131000$r5WythYixPgfQ2jt3buXcg$8Kdr.QQEOaZIXNOrrru36I/.6Po",
 		},
-		expected: "Python passlib pbkdf2-sha1",
+		expected: "Python passlib PBKDF2-SHA1",
 	},
 	{
-		name: "Python passlib pbkdf2-sha256",
+		name: "Python passlib PBKDF2-SHA256",
 		hashes: []string{
 			"$pbkdf2-sha256$29000$x9h7j/Ge8x6DMEao1VqrdQ$kra3R1wEnY8mPdDWOpTqOTINaAmZvRMcYd8u5OBQP9A",
 		},
-		expected: "Python passlib pbkdf2-sha256",
+		expected: "Python passlib PBKDF2-SHA256",
 	},
 	{
-		name: "Python passlib pbkdf2-sha512",
+		name: "Python passlib PBKDF2-SHA512",
 		hashes: []string{
 			"$pbkdf2-sha512$25000$LyWE0HrP2RsjZCxlDGFMKQ$1vC5Ohk2mCS9b6akqsEfgeb4l74SF8XjH.SljXf3dMLHdlY1GK9ojcCKts6/asR4aPqBmk74nCDddU3tvSCJvw",
 		},
-		expected: "Python passlib pbkdf2-sha512",
+		expected: "Python passlib PBKDF2-SHA512",
 	},
 	{
 		name: "QNX /etc/shadow (MD5)",
@@ -1890,11 +1891,11 @@ var hashTypeTests = []struct {
 		expected: "Redmine",
 	},
 	{
-		name: "Ruby on Rails Restful Auth (one round, no sitekey)",
+		name: "Ruby on Rails Restful-Authentication (one round, no sitekey)",
 		hashes: []string{
 			"3999d08db95797891ec77f07223ca81bf43e1be2:5dcc47b04c49d3c8e1b9e4ec367fddeed21b7b85",
 		},
-		expected: "Ruby on Rails Restful Auth (one round, no sitekey)",
+		expected: "Ruby on Rails Restful-Authentication (one round, no sitekey)",
 	},
 	{
 		name: "Ruby on Rails Restful-Authentication",
@@ -2471,11 +2472,11 @@ var hashTypeTests = []struct {
 		expected: "WPA-PMKID-PMK",
 	},
 	{
-		name: "Web2py pbkdf2-sha512",
+		name: "Web2py PBKDF2-SHA512",
 		hashes: []string{
 			"pbkdf2(1000,20,sha512)$744943$c5f8cdef76e3327c908d8d96d4abdb3d8caba14c",
 		},
-		expected: "Web2py pbkdf2-sha512",
+		expected: "Web2py PBKDF2-SHA512",
 	},
 	{
 		name: "WebEdition CMS",
@@ -2772,18 +2773,18 @@ var hashTypeTests = []struct {
 		expected: "osCommerce, xt:Commerce",
 	},
 	{
-		name: "phpass, WordPress (MD5), Joomla (MD5)",
+		name: "PHPass, WordPress (MD5), Joomla (MD5)",
 		hashes: []string{
 			"$P$984478476IagS59wHZvyQMArzfx58u.",
 		},
-		expected: "phpass, WordPress (MD5), Joomla (MD5)",
+		expected: "PHPass, WordPress (MD5), Joomla (MD5)",
 	},
 	{
-		name: "phpass, phpBB3 (MD5)",
+		name: "PHPass, phpBB3 (MD5)",
 		hashes: []string{
 			"$H$984478476IagS59wHZvyQMArzfx58u.",
 		},
-		expected: "phpass, phpBB3 (MD5)",
+		expected: "PHPass, phpBB3 (MD5)",
 	},
 	{
 		name: "scrypt",
