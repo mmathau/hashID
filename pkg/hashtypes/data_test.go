@@ -563,6 +563,7 @@ var hashTypeTests = []struct {
 		name: "Domain Cached Credentials (DCC), MS Cache",
 		hashes: []string{
 			"4dd8965d1d476fa0d026722989a6b772:3060147285011",
+			"M$test2#ab60bdb4493822b175486810ac2abe63",
 		},
 		expected: "Domain Cached Credentials (DCC), MS Cache",
 	},
