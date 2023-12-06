@@ -40,6 +40,10 @@ Analyzing: '8743b52063cd84097a65d1633f5c74f5'
 [+] PostgreSQL
 ```
 
+## Disclaimer
+
+hashID started in 2013 as a learning project for regular expressions and Python. Since then, other hash identifiers like [Name-That-Hash](https://github.com/HashPals/Name-That-Hash) and [Haiti](https://github.com/noraj/haiti) have appeared, expanding and updating the database of regular expressions. If you require more than a simple CLI tool, consider these alternatives. This version, rewritten in Go, offers similar functionality to the original, with an updated database of hashes and regular expressions.
+
 ## Resources
 
 - [https://passlib.readthedocs.io/en/stable/index.html](https://passlib.readthedocs.io/en/stable/index.html)
