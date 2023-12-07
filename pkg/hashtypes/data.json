@@ -2016,8 +2016,8 @@
     "extended": false
   },
   {
-    "regex": "^v1;pph1_md4,\\d+,\\d+,[a-f0-9]{64}$",
-    "john": null,
+    "regex": "^v1;pph1_md4,[a-f0-9]+,\\d+,[a-f0-9]{64}(;)?$",
+    "john": "AzureAD",
     "hashcat": "12800",
     "name": "MS-AzureSync PBKDF2-HMAC-SHA256",
     "exotic": false,
