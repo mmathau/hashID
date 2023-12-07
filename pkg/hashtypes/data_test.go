@@ -1371,6 +1371,8 @@ var hashTypeTests = []struct {
 		name: "MyBB 1.2+, IPB2+ (Invision Power Board)",
 		hashes: []string{
 			"8d2129083ef35f4b365d5d87487e1207:47204",
+			"$IPB2$2e75504633$d891f03a7327639bc632d62a7f302604",
+			"$IPB2$735a213a4e$4f23de7bb115139660db5e953153f28a",
 		},
 		expected: "MyBB 1.2+, IPB2+ (Invision Power Board)",
 	},
