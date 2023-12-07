@@ -246,6 +246,7 @@ var hashTypeTests = []struct {
 		name: "BSDi Crypt, Extended DES",
 		hashes: []string{
 			"_9G..8147mpcfKT8g0U.",
+			"_J9..CCCCXBrJUJV154M",
 		},
 		expected: "BSDi Crypt, Extended DES",
 	},
@@ -587,6 +588,8 @@ var hashTypeTests = []struct {
 		name: "EPi",
 		hashes: []string{
 			"0x326C6D7B4E4F794B79474E36704F35723958397163735263516265456E31 0xAFC55E260B8F45C0C6512BCE776C1AD8312B56E6",
+			"0x5F1D84A6DE97E2BEFB637A3CB5318AFEF0750B856CF1836BD1D4470175BE 0x4D5EFDFA143EDF74193076F174AC47CEBF2F417F",
+			"0x4F5233704337716F63526A7066344B52784F7A6363316750516A72335668 0x7346DA02479E55973E052FC9A173A3FEA4644FF8",
 		},
 		expected: "EPi",
 	},
@@ -594,6 +597,7 @@ var hashTypeTests = []struct {
 		name: "Eggdrop IRC Bot",
 		hashes: []string{
 			"+3nynz1ThEqm.",
+			"+9F93o1OxwgK1",
 		},
 		expected: "Eggdrop IRC Bot",
 	},
@@ -1132,6 +1136,7 @@ var hashTypeTests = []struct {
 		name: "Lotus Notes/Domino 6",
 		hashes: []string{
 			"(GDpOtD35gGlyDksQRxEU)",
+			"(GVMroLzc50YK/Yd+L8KH)",
 		},
 		expected: "Lotus Notes/Domino 6",
 	},
@@ -1139,6 +1144,7 @@ var hashTypeTests = []struct {
 		name: "Lotus Notes/Domino 8",
 		hashes: []string{
 			"(HsjFebq0Kh9kH7aAZYc7kY30mC30mC3KmC30mCluagXrvWKj1)",
+			"(HosOQowHtnaYQqFo/XlScup0mC30mC3KmC30mCeACAxpjQN2u)",
 		},
 		expected: "Lotus Notes/Domino 8",
 	},

@@ -945,7 +945,7 @@
   },
   {
     "regex": "^0x[a-f0-9]{60}\\s0x[a-f0-9]{40}$",
-    "john": null,
+    "john": "EPI",
     "hashcat": "123",
     "name": "EPi",
     "exotic": true,
