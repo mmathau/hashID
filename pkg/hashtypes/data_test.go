@@ -1605,6 +1605,7 @@ var hashTypeTests = []struct {
 		name: "PHPS",
 		hashes: []string{
 			"$PHPS$34323438373734$5b07e065b9d78d69603e71201c6cf29f",
+			"$PHPS$73616c$aba22b2ceb7c841473c03962b145feb3",
 		},
 		expected: "PHPS",
 	},
