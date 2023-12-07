@@ -18,7 +18,7 @@ hashID [global options] command [command options] [arguments...]
 $ hashID '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 Analyzing '$P$8ohUJ.1sdFw09/bMaAQPTGDNi2BIUt1'
 [+] PHPass' Portable Hash
-[+] phpass, WordPress (MD5), Joomla (MD5)
+[+] PHPass, WordPress (MD5), Joomla (MD5)
 
 $ hashID -mj '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
 Analyzing: '$racf$*AAAAAAAA*3c44ee7f409c9a9b'
@@ -42,11 +42,12 @@ Analyzing: '8743b52063cd84097a65d1633f5c74f5'
 
 ## Disclaimer
 
-hashID started in 2013 as a learning project for regular expressions and Python. Since then, other hash identifiers like [Name-That-Hash](https://github.com/HashPals/Name-That-Hash) and [Haiti](https://github.com/noraj/haiti) have appeared, expanding and updating the database of regular expressions. If you require more than a simple CLI tool, consider these alternatives. This version, rewritten in Go, offers similar functionality to the original, with an updated database of hashes and regular expressions.
+hashID started in 2013 as a learning project for regular expressions and Python. Since then, other hash identifiers like [Name-That-Hash](https://github.com/HashPals/Name-That-Hash) and [Haiti](https://github.com/noraj/haiti) have appeared, expanding and updating the database of regular expressions and offering additional features. If you require more than a simple CLI tool, consider these alternatives. This version, rewritten in Go, offers similar functionality to the original, with an updated database of hashes and regular expressions.
 
 ## Resources
 
 - [https://passlib.readthedocs.io/en/stable/index.html](https://passlib.readthedocs.io/en/stable/index.html)
-- [http://openwall.info/wiki/john](http://openwall.info/wiki/john)
-- [http://openwall.info/wiki/john/sample-hashes](http://openwall.info/wiki/john/sample-hashes)
-- [http://hashcat.net/wiki/doku.php?id=example_hashes](http://hashcat.net/wiki/doku.php?id=example_hashes)
+- [https://openwall.info/wiki/john/sample-hashes](https://openwall.info/wiki/john/sample-hashes)
+- [https://github.com/openwall/john/tree/bleeding-jumbo/src](https://github.com/openwall/john/tree/bleeding-jumbo/src)
+- [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+- [https://github.com/hashcat/hashcat/tree/master/src/modules](https://github.com/hashcat/hashcat/tree/master/src/modules)
