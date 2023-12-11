@@ -1333,6 +1333,14 @@ var hashTypeTests = []struct {
 		expected: "Mozilla key4.db",
 	},
 	{
+		name: "MSCHAPv2 C/R",
+		hashes: []string{
+			"$MSCHAPv2$d07054459a1fdbc266a006f0220e6fac$33c8331a9b03b7e003f09dd253d740a2bead544143cc8bde$3545cb1d89b507a5de104435e81b14a4$testuser1",
+			"$MSCHAPv2$d94e7c7972b2376b28c268583e162de7$eba25a3b04d2c7085d01f842e2befc91745c40db0f792356$0677ca7318fd7f65ae1b4f58c9f4f400$lameuser",
+		},
+		expected: "MSCHAPv2 C/R",
+	},
+	{
 		name: "MultiBit Classic .key (MD5)",
 		hashes: []string{
 			"$multibit$1*e5912fe5c84af3d5*5f0391c219e8ef62c06505b1f6232858f5bcaa739c2b471d45dd0bd8345334de",

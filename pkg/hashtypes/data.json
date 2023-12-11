@@ -1888,6 +1888,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$MSCHAPv2\\$[a-f0-9]{32}\\$[a-f0-9]{48}\\$[a-f0-9]{32}(\\$.+)?$",
+    "john": "mschapv2-naive",
+    "hashcat": null,
+    "name": "MSCHAPv2 C/R",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^(\\$pst\\$)?[a-f0-9]{8}$",
     "john": "PST",
     "hashcat": null,
