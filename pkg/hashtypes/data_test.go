@@ -1839,6 +1839,8 @@ var hashTypeTests = []struct {
 		name: "RACF",
 		hashes: []string{
 			"$racf$*USER*FC2577C6EBE6265B",
+			"$racf$*AAAAAAA*CA2E330B2FD1820E",
+			"$racf$*TTTTTTTT*424B258AF8B9061B",
 		},
 		expected: "RACF",
 	},

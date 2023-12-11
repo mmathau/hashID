@@ -2769,7 +2769,7 @@
   },
   {
     "regex": "^(user-.+:)?\\$racf\\$\\*.+\\*[a-f0-9]{16}$",
-    "john": "racf",
+    "john": "RACF",
     "hashcat": "8500",
     "name": "RACF",
     "exotic": false,
