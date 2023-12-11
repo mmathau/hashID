@@ -1,6 +1,6 @@
-BUILD_DIR = bin
+BUILD_DIR=bin
 BINARY_NAME=hashID
-VERSION= $(shell git describe --tags --always)
+VERSION=$(shell git describe --tags --always)
 
 .PHONY: clean
 clean:
@@ -27,8 +27,8 @@ test:
 .PHONY: build
 build:
 	mkdir -p ${BUILD_DIR}
-	GOOS=linux GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64-linux cmd/hashid/main.go
-	GOOS=linux GOARCH=arm64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-arm64-linux cmd/hashid/main.go
-	GOOS=darwin GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64-darwin cmd/hashid/main.go
-	GOOS=windows GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64.exe cmd/hashid/main.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64-linux cmd/hashid/main.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-arm64-linux cmd/hashid/main.go
+	CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64-darwin cmd/hashid/main.go
+	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o ${BUILD_DIR}/${BINARY_NAME}-${VERSION}-amd64.exe cmd/hashid/main.go
 
