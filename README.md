@@ -9,17 +9,8 @@ hashID is also capable of including the corresponding [hashcat](https://hashcat.
 ## Usage
 
 ```console
-NAME:
-   hashID - hash identifier
-
 USAGE:
    hashID [global options] [command [command options]] [arguments...]
-
-VERSION:
-   0.0.2
-
-DESCRIPTION:
-   Identify the different types of hashes used to encrypt data and especially passwords.
 
 COMMANDS:
    hash, id  Identify hash from input string
