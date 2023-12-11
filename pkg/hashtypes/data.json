@@ -2489,7 +2489,7 @@
   },
   {
     "regex": "^\\$PHPS\\$.+\\$[a-f0-9]{32}$",
-    "john": "phps",
+    "john": "PHPS",
     "hashcat": "2612",
     "name": "PHPS",
     "exotic": false,
