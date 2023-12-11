@@ -745,7 +745,7 @@
   },
   {
     "regex": "^\\$diskcryptor\\$0\\*[a-f0-9]+$",
-    "john": "DiskCryptor",
+    "john": "diskcryptor",
     "hashcat": null,
     "name": "DiskCryptor (PBKDF2-SHA512)",
     "exotic": false,
