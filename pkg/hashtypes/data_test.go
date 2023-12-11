@@ -492,6 +492,22 @@ var hashTypeTests = []struct {
 		expected: "DPAPI masterkey file v2 + Active Directory domain context",
 	},
 	{
+		name: "DragonFly BSD $3$ w/ bug, 32-bit",
+		hashes: []string{
+			"$3$z$EBG66iBCGfUfENOfqLUH/r9xQxI1cG373/hRop6j.oWs",
+			"$3$jWhDSrS$bad..Dy7UAyabPyfrEi3fgQ2qtT.5fE7C5EMNo/n.Qk5",
+		},
+		expected: "DragonFly BSD $3$ w/ bug, 32-bit",
+	},
+	{
+		name: "DragonFly BSD $3$ w/ bug, 64-bit",
+		hashes: []string{
+			"$3$z$sNV7KLtLxvJRsj2MfBtGZFuzXP3CECITaFq/rvsy.Y.Q",
+			"$3$jWhDSrS$5yBH7KFPmsg.PhPeDMj1MY4fv9061zdbYumPe2Ve.Y5J",
+		},
+		expected: "DragonFly BSD $3$ w/ bug, 64-bit",
+	},
+	{
 		name: "Dahua Authentication MD5",
 		hashes: []string{
 			"GRuHbyVp",
