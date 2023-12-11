@@ -880,6 +880,22 @@
     "extended": false
   },
   {
+    "regex": "^\\$4\\$[a-z0-9]+\\$[a-z0-9/.]+$",
+    "john": "dragonfly4-32",
+    "hashcat": null,
+    "name": "DragonFly BSD $4$ w/ bug, 32-bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
+    "regex": "^\\$4\\$[a-z0-9]+\\$[a-z0-9/.]+$",
+    "john": "dragonfly4-64",
+    "hashcat": null,
+    "name": "DragonFly BSD $4$ w/ bug, 64-bit",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$S\\$[a-z0-9/.]{52}$",
     "john": "drupal7",
     "hashcat": "7900",

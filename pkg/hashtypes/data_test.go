@@ -508,6 +508,22 @@ var hashTypeTests = []struct {
 		expected: "DragonFly BSD $3$ w/ bug, 64-bit",
 	},
 	{
+		name: "DragonFly BSD $4$ w/ bug, 32-bit",
+		hashes: []string{
+			"$4$7E48ul$K4u43llx1P184KZBoILl2hnFLBHj6.486TtxWA.EA1pLZuQS7P5k0LQqyEULux47.5vttDbSo/Cbpsez.AUI",
+			"$4$dw7uRHW$Cs6rbZqAVEEp9dsYOl4w/U84YydqdsEYyxHNvAtd2bcLz2Eem9L7FI/aGD2ayAybmprtYZLq2AtdXBio.cX0",
+		},
+		expected: "DragonFly BSD $4$ w/ bug, 32-bit",
+	},
+	{
+		name: "DragonFly BSD $4$ w/ bug, 64-bit",
+		hashes: []string{
+			"$4$7E48ul$9or6.L/T.iChtPIGY4.vIgdYEmMkTW7Ru4OJxtGJtonCQo.wu3.bS4UPlUc2B8CAfGo1Oi5PgQvfhzNQ.A8v",
+			"$4$dw7uRHW$17b2EzV3m0ziCLQoSKzUElTVgkL7cHXQzZzeeuNnkee/bchs0VHGqzjXrMZtWVfK2OW8.GfHvtZgzqGF.IUZ",
+		},
+		expected: "DragonFly BSD $4$ w/ bug, 64-bit",
+	},
+	{
 		name: "Dahua Authentication MD5",
 		hashes: []string{
 			"GRuHbyVp",
