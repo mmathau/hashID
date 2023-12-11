@@ -1,7 +1,7 @@
 [
   {
-    "regex": "^\\d{4}:[a-f0-9]{16}:[a-f0-9]+$",
-    "john": null,
+    "regex": "^(\\d+:[a-f0-9]{16}:[a-f0-9]+$|\\$agilekeychain\\$\\d\\*\\d+\\*\\d\\*[a-f0-9]{16}\\*\\d+\\*[a-f0-9]+$)$",
+    "john": "agilekeychain",
     "hashcat": "6600",
     "name": "1Password(Agile Keychain)",
     "exotic": false,
