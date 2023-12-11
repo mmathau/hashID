@@ -6,8 +6,8 @@
 
 - New `list` command to display information about supported hash types
 - New hash type:
-  - PFX .p12 Certificate type
-  - ZipMonster type
+  - PFX .p12 Certificate
+  - ZipMonster
   - Python Werkzeug SHA1 (HMAC-SHA1 (key = $salt))
   - Python Werkzeug SHA224 (HMAC-SHA224 (key = $salt))
   - Python Werkzeug SHA384 (HMAC-SHA384 (key = $salt))
