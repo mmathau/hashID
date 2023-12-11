@@ -2,117 +2,106 @@ package commands
 
 import (
 	"bufio"
+	"context"
 	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 
 	"ntwrk.space/mmaths/hashid/pkg/hashtypes"
 )
 
-// FileCommand returns the file command.
-func FileCommand() *cli.Command {
+// fileCommand returns the file command.
+func fileCommand() *cli.Command {
 	return &cli.Command{
 		Name:      "file",
 		Usage:     "Identify hashes from input file",
+		Aliases:   []string{"fn"},
 		ArgsUsage: "FILE",
 		Flags: []cli.Flag{
 			&cli.BoolFlag{
-				Name:  "split-hashcat",
-				Usage: "split hashes into files for each hashcat mode",
+				Name:     "hashcat",
+				Usage:    "show hashcat mode",
+				Aliases:  []string{"m"},
+				OnlyOnce: true,
 			},
 			&cli.BoolFlag{
-				Name:  "split-john",
-				Usage: "split hashes into files for each John format",
+				Name:     "john",
+				Usage:    "show JohnTheRipper format",
+				Aliases:  []string{"j"},
+				OnlyOnce: true,
+			},
+			&cli.BoolFlag{
+				Name:     "unknown",
+				Usage:    "hide unknown hash types",
+				Aliases:  []string{"u"},
+				OnlyOnce: true,
+			},
+			&cli.BoolFlag{
+				Name:       "quiet",
+				Usage:      "suppress all output",
+				Aliases:    []string{"q"},
+				OnlyOnce:   true,
+				Persistent: true,
 			},
 		},
-		Action: identifyHashesFromFile,
+		UseShortOptionHandling: true,
+		Commands: []*cli.Command{
+			splitCommand(),
+		},
+		Action: func(ctx context.Context, c *cli.Command) error {
+			if c.Args().Len() != 1 {
+				return cli.ShowSubcommandHelp(c)
+			}
+
+			_, err := processInputFile(c, c.Args().First())
+			if err != nil {
+				return err
+			}
+
+			return nil
+		},
 	}
 }
 
-// IdentifyHashesFromFile identifies hashes from a file.
-func identifyHashesFromFile(c *cli.Context) error {
-	if !c.Args().Present() {
-		return cli.ShowAppHelp(c)
-	}
-
-	hashid, err := hashtypes.New()
+// processInputFile processes the input file.
+func processInputFile(c *cli.Command, filename string) (map[string][]hashtypes.Hash, error) {
+	results := make(map[string][]hashtypes.Hash, 0)
+	htypes, err := hashtypes.New()
 	if err != nil {
-		return cli.Exit(fmt.Errorf("error initializing hashtypes: %w", err), 1)
+		return results, err
 	}
-
-	inputFile := c.Args().Get(0)
-	path, err := filepath.Abs(inputFile)
+	path, err := filepath.Abs(filename)
 	if err != nil {
-		return cli.Exit(fmt.Errorf("error getting absolute path: %w", err), 1)
+		return results, fmt.Errorf("error getting absolute path: %w", err)
 	}
 
 	file, err := os.Open(path)
 	if err != nil {
-		return cli.Exit(fmt.Errorf("error opening file: %w", err), 1)
+		return results, fmt.Errorf("error opening file: %w", err)
 	}
 
-	var line string
-	withJohn := make(map[string][]string)
-	withHashcat := make(map[string][]string)
-	contents := bufio.NewScanner(file)
-	for contents.Scan() {
-		line = strings.TrimSpace(contents.Text())
-		matches, err := process(c, hashid, line)
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		result := htypes.FindHashType(line)
+		filtered := filterResults(c, result)
+		results[line] = filtered
+
+		if c.IsSet("quiet") || (c.IsSet("unknown") && len(filtered) == 0) {
+			continue
+		}
+		o, err := formatOutput(c, line, filtered)
 		if err != nil {
-			return err
+			return results, err
 		}
-		for _, m := range matches {
-			hc := m.Hashcat()
-			if hc != "" {
-				withHashcat[hc] = append(withHashcat[hc], line)
-			}
-			jtr := m.John()
-			if jtr != "" {
-				withJohn[jtr] = append(withJohn[jtr], line)
-			}
-		}
+		fmt.Fprintf(c.Root().Writer, "%s\n", o)
 	}
-	if err := contents.Err(); err != nil {
-		return cli.Exit(fmt.Errorf("error reading file: %w", err), 1)
-
+	if err := scanner.Err(); err != nil {
+		return results, fmt.Errorf("error reading file: %w", err)
 	}
 
-	if c.IsSet("split-hashcat") {
-		for k, v := range withHashcat {
-			// create a file for each hashcat mode
-			err := writeFile(fmt.Sprintf("mode_%s.txt", k), v)
-			if err != nil {
-				return cli.Exit(fmt.Errorf("error writing file: %w", err), 1)
-			}
-		}
-	}
-	if c.IsSet("split-john") {
-		for k, v := range withJohn {
-			// create a file for each john format
-			err := writeFile(fmt.Sprintf("format_%s.txt", k), v)
-			if err != nil {
-				return cli.Exit(fmt.Errorf("error writing file: %w", err), 1)
-			}
-		}
-	}
-
-	return nil
-}
-
-func writeFile(filename string, contents []string) error {
-	f, err := os.Create(filename)
-	if err != nil {
-		return err
-	}
-
-	_, err = f.WriteString(strings.Join(contents, "\n"))
-	if err != nil {
-		_ = f.Close() // write error takes precedence
-		return err
-	}
-
-	return f.Close()
+	return results, nil
 }
