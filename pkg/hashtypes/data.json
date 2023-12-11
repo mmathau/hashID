@@ -2328,6 +2328,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$pwsafe\\$\\*\\d\\*[a-f0-9]{64}\\*\\d{1,4}\\*[a-f0-9]{64}$",
+    "john": "pwsafe",
+    "hashcat": null,
+    "name": "Password Safe",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$p5k2\\$\\d+\\$[a-z0-9/+=-]+\\$[a-z0-9/+-]{27}=$",
     "john": null,
     "hashcat": null,

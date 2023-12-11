@@ -1736,6 +1736,14 @@ var hashTypeTests = []struct {
 		expected: "PKZIP Master Key (6 byte optimization)",
 	},
 	{
+		name: "Password Safe",
+		hashes: []string{
+			"$pwsafe$*3*fefc1172093344c9d5577b25f5b4b6e5d2942c94f9fc24c21733e28ae6527521*2048*88cbaf7d8668c1a98263f5dce7cb39c3304c49a3e0d76a7ea475dc02ab2f97a7",
+			"$pwsafe$*3*581cd1135b9b993ccb0f6b01c1fcfacd799c69960496c96286f94fe1400c1b25*2048*4ab3c2d3af251e94eb2f753fdf30fb9da074bec6bac0fa9d9d152b95fc5795c6",
+		},
+		expected: "Password Safe",
+	},
+	{
 		name: "Palshop CMS",
 		hashes: []string{
 			"a05938cc2e475e64937c057e33bbba227c4d634cfbfbbfc7c5c",
