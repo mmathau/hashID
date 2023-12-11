@@ -520,6 +520,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$cardano\\$\\d\\$[a-f0-9]{256}$",
+    "john": "cardano",
+    "hashcat": null,
+    "name": "Cardano Encrypted 128-byte Secret Key (a.k.a XPrv)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^\\$chacha20\\$\\*\\d{16}\\*\\d{2}\\*\\d{16}\\*\\d{16}\\*[a-f0-9]{16}$",
     "john": null,
     "hashcat": "15400",

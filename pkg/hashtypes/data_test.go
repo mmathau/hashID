@@ -300,6 +300,13 @@ var hashTypeTests = []struct {
 		expected: "Blockchain, My Wallet V2",
 	},
 	{
+		name: "Cardano Encrypted 128-byte Secret Key (a.k.a XPrv)",
+		hashes: []string{
+			"$cardano$1$b57361ebe335fa171a260fea7d3277579c212dc74fc2a408d6cbd8a6e7a847cab3c44c5fb190705ddd2698f2d5390798893349b4321e7474b1ce06c9d410b3d6055b42d4a95f19cb34b516a160a306c0eaef398e70ea91da450ccb2a7819e95b0102030405060708091011121314151617181920212223242526272829303132",
+		},
+		expected: "Cardano Encrypted 128-byte Secret Key (a.k.a XPrv)",
+	},
+	{
 		name: "CRAM-MD5",
 		hashes: []string{
 			"$cram_md5$PG5vLXJlcGx5QGhhc2hjYXQubmV0Pg==$dXNlciA0NGVhZmQyMmZlNzY2NzBmNmIyODc5MDgxYTdmNWY3MQ==",
