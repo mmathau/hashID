@@ -2776,6 +2776,14 @@
     "extended": false
   },
   {
+    "regex": "^(user-.+:)?\\$racf\\$\\*.+\\*[a-f0-9]{96}$",
+    "john": "RACF-KDFAES",
+    "hashcat": null,
+    "name": "RACF-KDFAES",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^(\\$radmin2\\$)?[a-f0-9]{32}$",
     "john": "radmin",
     "hashcat": "9900",
