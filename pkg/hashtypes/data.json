@@ -736,6 +736,14 @@
     "extended": false
   },
   {
+    "regex": "^\\$diskcryptor\\$0\\*[a-f0-9]+$",
+    "john": "DiskCryptor",
+    "hashcat": null,
+    "name": "DiskCryptor (PBKDF2-SHA512)",
+    "exotic": false,
+    "extended": false
+  },
+  {
     "regex": "^argon2\\$argon2(i|d|id)\\$(v=\\d{1,2}\\$m=\\d+,t=\\d+,p=\\d+\\$)?[a-z0-9/+=]+\\$[a-z0-9/+=]+$",
     "john": null,
     "hashcat": null,
